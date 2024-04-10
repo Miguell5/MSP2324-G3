@@ -5,8 +5,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class ReportService {
 
+    private final ReportRepository 
+
     public ReportDAO createReport(ReportDAO report){
-        return null;
+
+
     }
 
     public ReportDAO updateReport(ReportDAO report){
