@@ -1,0 +1,75 @@
+package com.api.api.Appointment;
+
+import com.api.api.backoffice.doctor.DoctorDAO;
+import com.api.api.backoffice.doctor.DoctorRepository;
+import com.api.api.exam.ExamDAO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
+@Service
+public class AppointmentService {
+
+    private final AppointmentRepository appointmentRepository;
+    private final DoctorRepository doctorRepository;
+
+    @Autowired
+    public AppointmentService(AppointmentRepository appointmentRepository,  DoctorRepository doctorRepository) {
+        this.appointmentRepository = appointmentRepository;
+        this.doctorRepository = doctorRepository;
+    }
+
+    public AppointmentDAO createAppointment(AppointmentDAO appointment){
+
+        if(!appointment.isValidToCreate())
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Parameters are not valid.");
+
+        DoctorDAO doctorDAO = doctorRepository.getDoctor(appointment.getDoctor());
+
+        if(doctorDAO == null)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Doctor " + appointment.getDoctor() +  " does not exist.");
+
+        // TODO verificar horarios de compatibilidade com o doctor
+
+        return appointmentRepository.createAppointment(appointment);
+
+    }
+    public AppointmentDAO updateAppointment(AppointmentDAO appointment){
+
+        if(!appointment.isValidToUpdate())
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Parameters are not valid.");
+
+        AppointmentDAO appointmentDAO = appointmentRepository.getAppointment(appointment.getId());
+
+        if(appointmentDAO == null)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Appointment " + appointment.getId() +  " does not exist.");
+
+        // TODO verificar novos horarios de compatibilidade com o doctor
+        // TODO update AppointmentDAO with appointment new data
+
+        return appointmentRepository.updateAppointment(appointmentDAO);
+    }
+    public String deleteAppointment(String id){
+
+        AppointmentDAO appointmentDAO = appointmentRepository.getAppointment(id);
+
+        if(appointmentDAO == null)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Appointment " + id +  " does not exist.");
+
+        // TODO verificar se o exame pertence ao paciente e so deletar nesse caso
+
+        return appointmentRepository.deleteAppointment(id);
+
+    }
+    public AppointmentDAO getAppointment(String id){
+        AppointmentDAO appointmentDAO = appointmentRepository.getAppointment(id);
+
+        if(appointmentDAO == null)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Appointment " + id +  " does not exist.");
+
+        // TODO verificar se o appointmentDAO pertence ao paciente ou ao doctor e so retornar nesse caso
+
+        return appointmentDAO;
+    }
+}
