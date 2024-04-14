@@ -1,12 +1,13 @@
-package com.api.api.Appointment;
+package com.api.api.appointment;
 
 import com.api.api.backoffice.doctor.DoctorDAO;
 import com.api.api.backoffice.doctor.DoctorRepository;
-import com.api.api.exam.ExamDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
 
 @Service
 public class AppointmentService {
@@ -71,5 +72,28 @@ public class AppointmentService {
         // TODO verificar se o appointmentDAO pertence ao paciente ou ao doctor e so retornar nesse caso
 
         return appointmentDAO;
+    }
+
+    public boolean checkin(String appointmentId){
+
+        AppointmentDAO appointmentDAO = appointmentRepository.getAppointment(appointmentId);
+
+        if(appointmentDAO == null)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Appointment " + appointmentId +  " does not exist.");
+
+        // TODO verificar se o exame é mesmo do paciente
+        // TODO verificar se esta quase na hora que o exame esta marcado
+
+        appointmentDAO.setCheckIn(true);
+
+        return true;
+    }
+
+    public List<AppointmentDAO> getAppointmentsByPatient(String patient){
+
+        // TODO se user e igual ao paciente
+
+        return appointmentRepository.appointmentsByPatient(patient);
+
     }
 }

@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 @Service
 public class ExamService {
 
@@ -74,6 +76,30 @@ public class ExamService {
         // TODO verificar se o exame pertence ao paciente e so deletar nesse caso
 
         return examRepository.deleteExam(id);
+
+    }
+
+    public boolean checkin(String examId){
+
+        ExamDAO examDAO = examRepository.getExam(examId);
+
+        if(examDAO == null)
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Exam " + examId +  " does not exist.");
+
+        // TODO verificar se o exame é mesmo do paciente
+        // TODO verificar se esta quase na hora que o exame esta marcado
+
+        examDAO.setCheckIn(true);
+
+        return true;
+
+    }
+
+    public List<ExamDAO> getExamsByPatient(String patient){
+
+        // TODO se usar e igual ao paciente
+
+        return examRepository.examsByPatient(patient);
 
     }
 }

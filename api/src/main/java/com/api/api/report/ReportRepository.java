@@ -2,6 +2,8 @@ package com.api.api.report;
 
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface ReportRepository {
 
@@ -9,4 +11,5 @@ public interface ReportRepository {
     ReportDAO updateReport(ReportDAO reportDAO);
     String deleteReport(String id);
     ReportDAO getReport(String id);
+    List<ReportDAO> reportsByPatient(String patient);
 }

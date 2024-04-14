@@ -1,5 +1,7 @@
 package com.api.api.report;
 
+import java.util.UUID;
+
 public class ReportDAO {
 
     private String id;
@@ -7,15 +9,26 @@ public class ReportDAO {
     private String description;
     private String doctor;
     private String patient;
+    private String type; //exam report or appointment report
 
     public ReportDAO(){}
 
-    public ReportDAO(String id, String title, String description, String doctor, String patient) {
-        this.id = id;
+    public ReportDAO(String id, String title, String description, String doctor, String patient, String type) {
+        this.id = UUID.randomUUID().toString();
         this.title = title;
         this.description = description;
         this.doctor = doctor;
         this.patient = patient;
+    }
+
+    public boolean isValidToCreate(){
+        //TODO
+        return true;
+    }
+
+    public boolean isValidToUpdate(){
+        //TODO
+        return true;
     }
 
     public String getId() {
@@ -56,5 +69,13 @@ public class ReportDAO {
 
     public void setPatient(String patient) {
         this.patient = patient;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

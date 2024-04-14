@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/exam")
 public class ExamController {
@@ -47,4 +49,19 @@ public class ExamController {
 
         return ResponseEntity.ok("Exam with ID " + examID + " has been deleted.");
     }
+
+    @PutMapping(path = "/{id}/checkin")
+    public ResponseEntity<String> checkin(@PathVariable String id){
+
+        boolean val = examService.checkin(id);
+
+        return ResponseEntity.ok("Patient that arrived for exam with ID " + id + " has checked-in.");
+    }
+
+    @GetMapping(path = "/{id}/getExamsPatient", consumes = "application/json")
+    public ResponseEntity<List<ExamDAO>> getExamsByPatient(@PathVariable String id) {
+
+        return  ResponseEntity.ok(examService.getExamsByPatient(id));
+    }
+
 }

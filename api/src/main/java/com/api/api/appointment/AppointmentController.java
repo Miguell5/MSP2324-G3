@@ -1,9 +1,14 @@
-package com.api.api.Appointment;
+package com.api.api.appointment;
 
+import com.api.api.exam.ExamDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@RestController
+@RequestMapping(path = "/appointment")
 public class AppointmentController {
 
     private final AppointmentService appointmentService;
@@ -44,5 +49,19 @@ public class AppointmentController {
         String appointmentID = appointmentService.deleteAppointment(id);
 
         return ResponseEntity.ok("Appointment with ID " + appointmentID + " has been deleted.");
+    }
+
+    @PutMapping(path = "/{id}/checkin")
+    public ResponseEntity<String> checkin(@PathVariable String id){
+
+        appointmentService.checkin(id);
+
+        return ResponseEntity.ok("Patient that arrived for appointment with ID " + id + " has checked-in.");
+    }
+
+    @GetMapping(path = "/{id}/appointmentsPatient", consumes = "application/json")
+    public ResponseEntity<List<AppointmentDAO>> getAppointmentsByPatient(@PathVariable String id) {
+
+        return  ResponseEntity.ok(appointmentService.getAppointmentsByPatient(id));
     }
 }

@@ -1,4 +1,4 @@
-package com.api.api.Appointment;
+package com.api.api.appointment;
 
 import java.util.UUID;
 
@@ -7,6 +7,7 @@ public class AppointmentDAO {
     private String patient;
     private String doctor;
     private String date;
+    private boolean checkIn;
 
     public AppointmentDAO(){}
 
@@ -15,6 +16,7 @@ public class AppointmentDAO {
         this.doctor = doctor;
         this.date = date;
         this.id = UUID.randomUUID().toString();
+        this.checkIn = false;
     }
 
     public boolean isValidToCreate(){
@@ -59,4 +61,11 @@ public class AppointmentDAO {
         this.date = date;
     }
 
+    public boolean isCheckIn() {
+        return checkIn;
+    }
+
+    public void setCheckIn(boolean checkIn) {
+        this.checkIn = checkIn;
+    }
 }

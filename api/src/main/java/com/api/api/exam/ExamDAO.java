@@ -8,6 +8,7 @@ public class ExamDAO {
     private String doctor;
     private String date;
     private String examType;
+    private boolean checkIn;
 
     public ExamDAO(){}
 
@@ -17,6 +18,7 @@ public class ExamDAO {
         this.date = date;
         this.examType = examType;
         this.id = UUID.randomUUID().toString();
+        this.checkIn = false;
     }
 
     public boolean isValidToCreate(){
@@ -66,5 +68,13 @@ public class ExamDAO {
 
     public String getExamType() {
         return examType;
+    }
+
+    public boolean isCheckIn() {
+        return checkIn;
+    }
+
+    public void setCheckIn(boolean val) {
+        this.checkIn = val;
     }
 }

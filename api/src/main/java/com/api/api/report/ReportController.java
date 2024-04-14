@@ -1,5 +1,13 @@
 package com.api.api.report;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(path = "/report")
 public class ReportController {
 
     private final ReportService reportService;
@@ -12,33 +20,41 @@ public class ReportController {
     @PostMapping(path = "/create", consumes = "application/json")
     public ResponseEntity<String> createReport(@RequestBody ReportDAO report){
 
-        AppointmentDAO appointmentDAO = appointmentService.createAppointment(appointment);
+        ReportDAO reportDAO = reportService.createReport(report);
 
-        return ResponseEntity.ok("Appointment booked by " + appointmentDAO.getPatient() + " for Doctor " + appointmentDAO.getDoctor()
-                + " on " + appointmentDAO.getDate() + " has been created.");
+        return ResponseEntity.ok("Report made by " + reportDAO.getDoctor() + " for " + reportDAO.getPatient()
+                + " for their " + reportDAO.getType() + " has been created.");
     }
 
     @GetMapping(path = "/{id}/get", consumes = "application/json")
-    public ResponseEntity<AppointmentDAO> getAppointment(@RequestBody String id){
+    public ResponseEntity<ReportDAO> getReport(@RequestBody String id){
 
-        AppointmentDAO appointmentDAO = appointmentService.getAppointment(id);
+        ReportDAO reportDAO = reportService.getReport(id);
 
-        return ResponseEntity.ok(appointmentDAO);
+        return ResponseEntity.ok(reportDAO);
     }
 
     @PutMapping(path = "/{id}/update", consumes = "application/json")
-    public ResponseEntity<String> updateAppointment(@RequestBody AppointmentDAO appointment){
+    public ResponseEntity<String> updateReport(@RequestBody ReportDAO report){
 
-        AppointmentDAO appointmentDAO = appointmentService.updateAppointment(appointment);
+        ReportDAO reportDAO = reportService.updateReport(report);
 
-        return ResponseEntity.ok("Appointment with ID " + appointmentDAO.getId() + " has been updated.");
+        return ResponseEntity.ok("Report with ID " + reportDAO.getId() + " has been updated.");
     }
 
     @DeleteMapping(path = "/{id}/delete")
-    public ResponseEntity<String> deleteAppointment(@PathVariable String id){
+    public ResponseEntity<String> deleteReport(@PathVariable String id){
 
-        String appointmentID = appointmentService.deleteAppointment(id);
+        reportService.deleteReport(id);
 
-        return ResponseEntity.ok("Appointment with ID " + appointmentID + " has been deleted.");
+        return ResponseEntity.ok("Report with ID " + id + " has been deleted.");
+    }
+
+    @GetMapping(path = "/{id}/reportsPatient", consumes = "application/json")
+    public ResponseEntity<List<ReportDAO>> getAppointmentsByPatient(@PathVariable String id) {
+
+        return  ResponseEntity.ok(reportService.getReportsByPatient(id));
     }
 }
+
+
