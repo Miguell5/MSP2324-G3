@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '@mui/system';
 import { Typography, Container, Box } from '@mui/material';
 import backgroundImageCar from './../assets/blur-hospital.jpg';
+import Button from '@mui/material/Button';
 
 const Root = styled('div')({
   position: 'relative',
@@ -18,12 +19,11 @@ const Root = styled('div')({
 
 const Overlay = styled('div')({
   position: 'absolute',
-  top: '50%',
+  top: '30%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  backgroundColor: 'rgba(255, 255, 255, 0.8)',
   padding: '16px',
-  borderRadius: '4px',
+
 });
 
 const Pagina = () => {
@@ -31,13 +31,16 @@ const Pagina = () => {
     <Root>
       <Container maxWidth="sm">
         <Overlay>
-          <Typography variant="h3" gutterBottom>
-            Seu Texto Aqui
+          <Typography variant="h3" gutterBottom color='#3373d6'>
+            A cuidar de si
           </Typography>
-          <Typography variant="body1">
-            Descrição do seu texto.
+          <Typography variant="body1" color='#3373d6'>
+            Desde 2002
           </Typography>
+          <Button variant="contained" sx={{marginTop:5,borderRadius:10}}>Saiba mais</Button>
+
         </Overlay>
+
       </Container>
     </Root>
   );
