@@ -45,7 +45,7 @@ export default function NavBar() {
       >
         <BottomNavigationAction label="Home" icon={<HomeIcon />} />
         <BottomNavigationAction label="My Health" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Schedule" icon={<AddCircleIcon />} />
+        <BottomNavigationAction label="Schedule" icon={<AddCircleIcon color='warning'/>} />
         <BottomNavigationAction label="Agenda" icon={<AutoStoriesIcon />} />
         <BottomNavigationAction label="Profile" icon={<AccountCircleIcon />} />
       </BottomNavigation>

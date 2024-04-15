@@ -21,7 +21,7 @@ function App() {
   <div style={{Height:"110%"}}>
 
 
-      {loginState && <AppBar/>}
+      {loginState && <AppBar setLoginState={setLoginState}/>}
       <Routes >
           {
             !loginState &&
