@@ -6,6 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import DatePicker from "../components/DatePicker";
+import TimePicker from "../components/TimePicker";
 
 export default function ScheduleAppointment() {
   const [clinic, setClinic] = React.useState("");
@@ -73,6 +74,13 @@ export default function ScheduleAppointment() {
       </label>
       <FormControl fullWidth>
         <DatePicker />
+      </FormControl>
+      <div style={{ marginBottom: "16px" }}></div>
+      <label id="speciality-label" sx={{ marginBottom: "4px" }}>
+        Time
+      </label>
+      <FormControl fullWidth>
+        <TimePicker />
       </FormControl>
       <div style={{ marginBottom: "16px" }}></div>
 
