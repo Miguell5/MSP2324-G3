@@ -4,6 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import ScheduleAppointment from '../pages/ScheduleAppointment';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,15 +47,15 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%',marginTop: '5px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" sx={{ bgcolor: 'white' }}>
           <Tab label="Appointment" {...a11yProps(0)} />
           <Tab label="Exam" {...a11yProps(1)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        Item One
+      <ScheduleAppointment/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         Item Two
