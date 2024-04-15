@@ -6,7 +6,8 @@ import Loading from './components/Loading';
 import NavBar from './components/NavBar';
 import PageTeste from "./pages/teste";
 import Profile from "./pages/Profile";
-import { Height } from '@mui/icons-material';
+import SchedulePage from "./pages/Schedule";
+import { Height, Schedule } from '@mui/icons-material';
 
 function App() {
 
@@ -31,14 +32,9 @@ function App() {
               <h1>Check-In</h1>
             </Suspense>
           }/>
-          <Route path='/schedule/appointment' element={
+          <Route path='/schedule' element={
             <Suspense fallback={<Loading />}>
-              <h1>schedule appointment</h1>
-            </Suspense>
-          }/>
-          <Route path='/schedule/exam' element={
-            <Suspense fallback={<Loading />}>
-              <h1>schedule exam</h1>
+              <SchedulePage/>
             </Suspense>
           }/>
           <Route path='/profile' element={
