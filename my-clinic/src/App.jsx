@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Loading from './components/Loading';
 import NavBar from './components/NavBar';
 import AppBar from './components/AppBar';
-import PageTeste from "./pages/teste";
+import HomePage from "./pages/Home";
 import Profile from "./pages/Profile";
 import LoginPage from "./pages/Login";
 import SchedulePage from "./pages/Schedule";
@@ -36,7 +36,7 @@ function App() {
             <>
           <Route path='/' element={
             <Suspense fallback={<Loading />}>
-              <PageTeste />
+              <HomePage />
             </Suspense>
           }/>
           <Route path='/register/patient' element={
