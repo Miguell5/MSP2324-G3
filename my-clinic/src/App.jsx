@@ -7,6 +7,8 @@ import NavBar from './components/NavBar';
 import AppBar from './components/AppBar';
 import HomePage from "./pages/Home";
 import Profile from "./pages/Profile";
+import CalendarPage from "./pages/AppointmentPage";
+
 import LoginPage from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
@@ -15,7 +17,7 @@ import { Height, Schedule } from '@mui/icons-material';
 
 function App() {
 
-  const [loginState,setLoginState] = useState(false);
+  const [loginState,setLoginState] = useState(true);
 
 
   return (
@@ -63,9 +65,10 @@ function App() {
           }/>
           <Route path='/profile' element={
             <Suspense fallback={<Loading />}>
-              <Profile/>
+              <CalendarPage/>
             </Suspense>
           }/>
+
           </>}
       </Routes>
     </div>
