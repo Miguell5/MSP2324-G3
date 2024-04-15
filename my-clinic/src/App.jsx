@@ -6,13 +6,16 @@ import Loading from './components/Loading';
 import NavBar from './components/NavBar';
 import PageTeste from "./pages/teste";
 import Profile from "./pages/Profile";
+import { Height } from '@mui/icons-material';
 
 function App() {
 
   return (
     <>
-    
-      <Routes>
+  <div style={{Height:"110%"}}>
+
+  
+      <Routes >
           <Route path='/' element={
             <Suspense fallback={<Loading />}>
               <PageTeste />
@@ -44,7 +47,9 @@ function App() {
             </Suspense>
           }/>
       </Routes>
+    </div>
       <NavBar/>
+    
     </>
   )
 }
