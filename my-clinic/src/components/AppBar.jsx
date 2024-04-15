@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import ClinicLogo from '../assets/logoMyClinic.png';
+import { useNavigate } from "react-router-dom";
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -20,6 +21,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 function ResponsiveAppBar({setLoginState}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,7 +38,8 @@ function ResponsiveAppBar({setLoginState}) {
     setAnchorElUser(null);
     if(setting==='Logout')
       setLoginState(false);
-  };
+      navigate("/");
+  }
 
   return (
     <AppBar position="static" sx={{backgroundColor:'white'}}>
