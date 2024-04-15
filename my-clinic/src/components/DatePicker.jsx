@@ -10,10 +10,11 @@ export default function BasicDatePicker() {
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
-      <DemoContainer components={['DatePicker']}>
+      <DemoContainer components={['DateTimePicker']}>
         <DatePicker
           label="Please pick a date"
           minDate={today}
+          sx={{ backgroundColor: 'white' }} // Definir o fundo como branco
         />
       </DemoContainer>
     </LocalizationProvider>
