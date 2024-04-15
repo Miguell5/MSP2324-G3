@@ -32,12 +32,12 @@ const Pagina = () => {
       <Container maxWidth="sm">
         <Overlay>
           <Typography variant="h3" gutterBottom color='#3373d6'>
-            A cuidar de si
+            My Clinic
           </Typography>
           <Typography variant="body1" color='#3373d6'>
-            Desde 2002
+            taking care of you since 2002
           </Typography>
-          <Button variant="contained" sx={{marginTop:5,borderRadius:10}}>Saiba mais</Button>
+          <Button variant="contained" sx={{marginTop:5,borderRadius:10}}>know more</Button>
 
         </Overlay>
 
