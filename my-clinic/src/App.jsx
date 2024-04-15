@@ -8,6 +8,8 @@ import AppBar from './components/AppBar';
 import HomePage from "./pages/Home";
 import Profile from "./pages/Profile";
 import LoginPage from "./pages/Login";
+import SignUp from "./pages/SignUp";
+
 import SchedulePage from "./pages/Schedule";
 import { Height, Schedule } from '@mui/icons-material';
 
@@ -31,6 +33,11 @@ function App() {
               <LoginPage setLoginState={setLoginState}/>
             </Suspense>
           }/>}
+          <Route path='/sign-up' element={
+            <Suspense fallback={<Loading />}>
+              <SignUp setLoginState={setLoginState}/>
+            </Suspense>
+          }/>
           {
             loginState &&
             <>

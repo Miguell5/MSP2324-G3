@@ -4,7 +4,7 @@ import ClinicLogo from '../assets/logoMyClinic.png';
 import ImagePlaceholder from '../assets/img_medicos.png';
 import { useNavigate } from "react-router-dom";
 
-function LoginPage({setLoginState}){
+function SignUp(){
   const navigate = useNavigate();
   return (
 
@@ -34,10 +34,24 @@ function LoginPage({setLoginState}){
             alt="Clinic Logo"
             sx={{ width: 150, height: 150, marginBottom: 3 }} // Ajuste o tamanho e margens conforme necessário
           />
-
+        <Typography variant="h6" gutterBottom>
+          Welcome to our comunity
+        </Typography>
         <TextField
           style={{ margin: 10, width: '100%' }}
-          label="Username"
+          label="First Name"
+          variant="outlined"
+          size="small"
+        />
+        <TextField
+          style={{ margin: 10, width: '100%' }}
+          label="Last Name"
+          variant="outlined"
+          size="small"
+        />
+        <TextField
+          style={{ margin: 10, width: '100%' }}
+          label="Email"
           variant="outlined"
           size="small"
         />
@@ -48,19 +62,27 @@ function LoginPage({setLoginState}){
           variant="outlined"
           size="small"
         />
+        <TextField
+          style={{ margin: 10, width: '100%' }}
+          label="Password confirmation"
+          type="password"
+          variant="outlined"
+          size="small"
+        />
         <Button
           style={{ margin: '20px 0' }}
           variant="contained"
           color="primary"
           fullWidth
-          onClick={() => setLoginState(true)}
+          onClick={()=>navigate("/")}
         >
-          Sign In
+          Sign Up
         </Button>
 
-        <Typography variant="caption" display="block" onClick={()=>navigate("/sign-up")} gutterBottom>
-          Sign Up
+        <Typography variant="caption" display="block" onClick={()=>navigate("/")} gutterBottom>
+          Sign In
         </Typography>
+
       </Paper>
       </Grid>
     </Grid>
@@ -68,5 +90,5 @@ function LoginPage({setLoginState}){
   );
 };
 
-export default LoginPage;
+export default SignUp;
 
