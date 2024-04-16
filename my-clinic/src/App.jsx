@@ -17,7 +17,7 @@ import { Height, Schedule } from '@mui/icons-material';
 
 function App() {
 
-  const [loginState,setLoginState] = useState(true);
+  const [loginState,setLoginState] = useState(false);
 
 
   return (
@@ -64,6 +64,11 @@ function App() {
             </Suspense>
           }/>
           <Route path='/profile' element={
+            <Suspense fallback={<Loading />}>
+              <Profile/>
+            </Suspense>
+          }/>
+          <Route path='/agenda' element={
             <Suspense fallback={<Loading />}>
               <CalendarPage/>
             </Suspense>
