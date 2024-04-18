@@ -58,7 +58,7 @@ export default function BasicTabs() {
       <ScheduleAppointment/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+      <ScheduleAppointment/>
       </CustomTabPanel>
     </Box>
   );

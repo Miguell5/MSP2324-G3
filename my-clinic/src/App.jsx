@@ -7,7 +7,7 @@ import NavBar from './components/NavBar';
 import AppBar from './components/AppBar';
 import HomePage from "./pages/Home";
 import Profile from "./pages/Profile";
-import CalendarPage from "./pages/AppointmentPage";
+import AgendaPage from "./pages/AgendaPage";
 
 import LoginPage from "./pages/Login";
 import SignUp from "./pages/SignUp";
@@ -17,7 +17,7 @@ import { Height, Schedule } from '@mui/icons-material';
 
 function App() {
 
-  const [loginState,setLoginState] = useState(false);
+  const [loginState,setLoginState] = useState(true);
 
 
   return (
@@ -70,7 +70,7 @@ function App() {
           }/>
           <Route path='/agenda' element={
             <Suspense fallback={<Loading />}>
-              <CalendarPage/>
+              <AgendaPage/>
             </Suspense>
           }/>
 

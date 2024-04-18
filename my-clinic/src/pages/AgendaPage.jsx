@@ -4,33 +4,43 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Tooltip from '@mui/material/Tooltip';
+import Button from '@mui/material/Button';
+import UpdateIcon from '@mui/icons-material/Update';
+import ErrorIcon from '@mui/icons-material/Error';
 
 const appointments = [
   {
+    id:"5",
     date:"14/04/2024",
     AppointmentType:"Consulta",
     specialty:"Otorrinolaringologia",
     hour:"9:30",
     doctor:"Dr. José Correia",
-    status:"toDo"
+    status:"toDo",
+    checkIn:"",
     },
   {
+    id:"4",
     date:"21/06/2023",
     AppointmentType:"Consulta",
     specialty:"Otorrinolaringologia",
     hour:"15:30",
     doctor:"Dr. José Correia",
-    status:"done"
+    status:"done",
+    checkIn:"",
     },
   {
+    id:"3",
     date:"9/06/2023",
     AppointmentType:"Consulta",
     specialty:"Estomatologia",
     hour:"11:00",
     doctor:"Dr. José Correia",
-    status:"done"
+    status:"done",
+    checkIn:"",
   },
   {
+    id:"2",
     date:"5/02/2023",
     AppointmentType:"Consulta",
     specialty:"Otorrinolaringologia",
@@ -39,20 +49,24 @@ const appointments = [
     status:"didNotOccur"
   },
   {
+    id:"1",
     date:"5/02/2023",
     AppointmentType:"Consulta",
     specialty:"Otorrinolaringologia",
     hour:"17:00",
     doctor:"Dr. José Correia",
-    status:"done"
+    status:"done",
+    checkIn:"",
   },
   {
+    id:"0",
     date:"5/02/2023",
     AppointmentType:"Consulta",
     specialty:"Otorrinolaringologia",
     hour:"17:00",
     doctor:"Dr. José Correia",
-    status:"done"
+    status:"done",
+    checkIn:"",
   },
   ];
 
@@ -83,13 +97,13 @@ const AppointmentsPage = () => {
     <div style={{margin:"5%"}}>
       {/* Iterar sobre cada grupo de compromissos */}
       {Object.keys(groupedAppointments).map(monthYearKey => (
-        <div key={monthYearKey} style={{ marginBottom: 20 }}>
-          <Typography variant="body1" style={{ marginBottom: 10 }}>
+        <div key={monthYearKey} >
+          <Typography variant="overline" style={{ marginBottom: 10 }}>
             {monthYearKey}
           </Typography>
           {/* Iterar sobre os compromissos dentro do grupo */}
           {groupedAppointments[monthYearKey].map((appointment, index) => (
-            <Paper key={index} elevation={3} style={{ padding: 20, marginBottom: 10,borderRadius:20 }}>
+            <Paper key={index} elevation={3} style={{ padding: 20, marginBottom: 10,borderRadius:10 }}>
             <Box
               sx={{
                 display: 'flex',
@@ -101,44 +115,59 @@ const AppointmentsPage = () => {
               }}
             >
               <Grid container alignItems="flex-start" justifyContent="flex-start">
-
-              <Grid item >
-                  <Grid container  direction="column" alignItems="flex-start" justifyContent="flex-start">
+              <Stack
+                  direction="row"
+                  divider={<Divider orientation="vertical" flexItem />}
+                  spacing={2}
+                >
+                <Grid item >
+                  <Grid container  direction="column" alignItems="center" justifyContent="center">
                     <Grid item xs={12}>
                       <Tooltip title={appointment.status}>
                         {appointment.status==="done" &&
-                          <CheckCircleIcon style={{marginLeft:"100%"}} color="success"/>}
+                          <CheckCircleIcon color="success"/>}
                         {appointment.status==="toDo" &&
-                          <CheckCircleIcon style={{marginLeft:"100%"}} color="warning"/>}
+                          <UpdateIcon color="warning"/>}
                         {appointment.status==="didNotOccur" &&
-                          <CheckCircleIcon style={{marginLeft:"100%"}} color="error"/>}
+                          <ErrorIcon color="error"/>}
                       </Tooltip>
                     </Grid>
                     <Grid item xs={12}>
                       <Typography variant="body1">{appointment.date}</Typography>
                     </Grid>
                     <Grid item xs={12}>
-                      <Typography variant="body1">{`Hora: ${appointment.hour}`}</Typography>
+                      <Typography variant="body1">{appointment.hour}</Typography>
                     </Grid>
                 
                   </Grid>
               </Grid>
 
-              <Divider orientation="vertical" variant="middle" flexItem sx={{border: '1px solid',marginLeft:"2%",marginRight:"2%"}}/>
-
-              <Grid item xs={8}>
+              <Grid item >
                   <Grid container  direction="column" alignItems="flex-start" justifyContent="flex-start">
                     <Grid item xs={12}>
-                      <b><Typography variant="body1">{appointment.AppointmentType}</Typography></b>
+                      <b><Typography variant="body1" display="block">{appointment.AppointmentType}</Typography></b>
                     </Grid>
                     <Grid item xs={12}>
-                      <Typography variant="body1">{`Consulta de ${appointment.specialty}`}</Typography>
+                      <Typography variant="h6" sx={{textAlign:"left",width:"100%"}}>{`Consulta de ${appointment.specialty}`}</Typography>
                     </Grid>
                     <Grid item xs={12}>
-                      <Typography variant="body1">{appointment.doctor}</Typography>
+                      <Typography variant="caption">{appointment.doctor}</Typography>
                     </Grid>
+                    { appointment.status==="toDo" && <Grid item xs={12}>
+                      <Button variant="outlined">Check-In</Button>
+                    </Grid>}
+                    
                   </Grid>
               </Grid>
+
+              
+                  
+                </Stack>
+
+              
+
+
+              
               </Grid>
               
             </Box>              
