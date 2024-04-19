@@ -6,17 +6,21 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import DatePicker from "../components/DatePicker";
-import TimePicker from "../components/TimePicker";
+
 
 export default function ScheduleAppointment() {
   const [clinic, setClinic] = React.useState("");
   const [doctor, setDoctor] = React.useState("");
+  const [selectedDate, setSelectedDate] = React.useState(null);
 
   const handleChangeClinic = (event) => {
     setClinic(event.target.value);
   };
   const handleChangeDoctor = (event) => {
     setDoctor(event.target.value);
+  };
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
   };
 
   return (
@@ -73,17 +77,9 @@ export default function ScheduleAppointment() {
         Date
       </label>
       <FormControl fullWidth>
-        <DatePicker />
+        <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
       </FormControl>
       <div style={{ marginBottom: "16px" }}></div>
-      <label id="speciality-label" sx={{ marginBottom: "4px" }}>
-        Time
-      </label>
-      <FormControl fullWidth>
-        <TimePicker />
-      </FormControl>
-      <div style={{ marginBottom: "16px" }}></div>
-
       <FormControl fullWidth>
         <Button variant="contained">Continue</Button>
       </FormControl>

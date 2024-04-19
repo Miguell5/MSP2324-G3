@@ -3,10 +3,10 @@ import moment from 'moment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { DatePicker, TimePicker } from '@mui/x-date-pickers';
 
-export default function BasicDatePicker() {
-  const today = moment(); 
+export default function BasicDatePicker({ selectedDate, onChange }) {
+  const today = moment().add(1, 'day');
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
@@ -14,7 +14,15 @@ export default function BasicDatePicker() {
         <DatePicker
           label="Please pick a date"
           minDate={today}
-          sx={{ backgroundColor: 'white' }} // Definir o fundo como branco
+          value={selectedDate}
+          onChange={onChange}
+          sx={{ backgroundColor: 'white' }}
+        />
+        <TimePicker
+          label="Please pick a time"
+          value={selectedDate}
+          onChange={onChange}
+          sx={{ backgroundColor: 'white' }}
         />
       </DemoContainer>
     </LocalizationProvider>
