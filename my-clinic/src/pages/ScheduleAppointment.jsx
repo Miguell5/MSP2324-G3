@@ -22,6 +22,7 @@ export default function ScheduleAppointment() {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+  const isFormValid = clinic && doctor && selectedDate;
 
   return (
     <Box
@@ -81,7 +82,7 @@ export default function ScheduleAppointment() {
       </FormControl>
       <div style={{ marginBottom: "16px" }}></div>
       <FormControl fullWidth>
-        <Button variant="contained">Continue</Button>
+        <Button variant="contained" disabled={!isFormValid}>Continue</Button>
       </FormControl>
     </Box>
   );
