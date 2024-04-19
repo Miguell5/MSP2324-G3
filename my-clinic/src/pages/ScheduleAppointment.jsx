@@ -6,12 +6,14 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import DatePicker from "../components/DatePicker";
-
+import { SimpleDialog } from "../components/Dialog";
 
 export default function ScheduleAppointment() {
   const [clinic, setClinic] = React.useState("");
   const [doctor, setDoctor] = React.useState("");
   const [selectedDate, setSelectedDate] = React.useState(null);
+
+  const [open, setOpen] = React.useState(false);
 
   const handleChangeClinic = (event) => {
     setClinic(event.target.value);
@@ -21,6 +23,14 @@ export default function ScheduleAppointment() {
   };
   const handleDateChange = (date) => {
     setSelectedDate(date);
+  };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+
   };
   const isFormValid = clinic && doctor && selectedDate;
 
@@ -82,7 +92,11 @@ export default function ScheduleAppointment() {
       </FormControl>
       <div style={{ marginBottom: "16px" }}></div>
       <FormControl fullWidth>
-        <Button variant="contained" disabled={!isFormValid}>Continue</Button>
+        <Button variant="contained" disabled={!isFormValid} onClick={handleClickOpen}>Continue</Button>
+        <SimpleDialog
+        open={open}
+        onClose={handleClose}
+      />
       </FormControl>
     </Box>
   );
