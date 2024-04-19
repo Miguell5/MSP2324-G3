@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import ScheduleAppointment from '../pages/ScheduleAppointment';
+import ExamAppointment from '../pages/ExamAppointment';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -58,7 +59,7 @@ export default function BasicTabs() {
       <ScheduleAppointment/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-      <ScheduleAppointment/>
+      <ExamAppointment/>
       </CustomTabPanel>
     </Box>
   );

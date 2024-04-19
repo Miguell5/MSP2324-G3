@@ -11,7 +11,7 @@ import { SimpleDialog } from "../components/Dialog";
 export default function ScheduleAppointment() {
   const [clinic, setClinic] = React.useState("");
   const [doctor, setDoctor] = React.useState("");
-  const [appointmentType, setAppointmentType] = React.useState("");
+  const [examType, setExamtType] = React.useState("");
   const [selectedDate, setSelectedDate] = React.useState(null);
 
   const [open, setOpen] = React.useState(false);
@@ -22,8 +22,8 @@ export default function ScheduleAppointment() {
   const handleChangeDoctor = (event) => {
     setDoctor(event.target.value);
   };
-  const handleAppointmentType = (event) => {
-    setAppointmentType(event.target.value);
+  const handleChangeExam = (event) => {
+    setExamtType(event.target.value);
   };
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -88,21 +88,21 @@ export default function ScheduleAppointment() {
 
       <div style={{ marginBottom: "16px" }}></div>
       <label id="speciality-label" sx={{ marginBottom: "4px" }}>
-      Specialty
+      Exam
       </label>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Choose the Specialty</InputLabel>
+        <InputLabel id="demo-simple-select-label">Choose the Exam</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={appointmentType}
-          label="AppointmentType"
-          onChange={handleAppointmentType}
+          value={examType}
+          label="ExamType"
+          onChange={handleChangeExam}
           sx={{ bgcolor: "white" }}
         >
-          <MenuItem value={"Cardiology"}>Cardiology</MenuItem>
-          <MenuItem value={"General clinic"}>General clinic</MenuItem>
-          <MenuItem value={"Neurology"}>Neurology</MenuItem>
+          <MenuItem value={"Clinical Analysis"}>Clinical Analysis</MenuItem>
+          <MenuItem value={"Abdominal Ultasound"}>Abdominal Ultasound</MenuItem>
+          <MenuItem value={"X-ray"}>X-ray</MenuItem>
         </Select>
       </FormControl>
 
