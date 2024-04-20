@@ -18,7 +18,7 @@ public class DoctorService {
     }
 
     public DoctorDAO createDoctor(DoctorDAO doctor){
-        DoctorDAO doctorDAO = doctorRepository.getDoctor(doctor.getId());
+        DoctorDAO doctorDAO = doctorRepository.getDoctor(doctor.getEmail());
 
         if(doctorDAO != null)
             throw new ResponseStatusException(HttpStatus.CONFLICT,"Already exists a Doctor with that ID");
@@ -29,7 +29,7 @@ public class DoctorService {
     }
 
     public DoctorDAO updateDoctor(DoctorDAO doctor){
-        DoctorDAO doctorDAO = doctorRepository.getDoctor(doctor.getId());
+        DoctorDAO doctorDAO = doctorRepository.getDoctor(doctor.getEmail());
 
         if(doctorDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,"There is no Doctor with that ID.");

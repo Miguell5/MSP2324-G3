@@ -47,7 +47,7 @@ public class PatientService {
         if(patientDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,"There is no account with that email.");
 
-        return patientRepository.deleteUser(email);
+        return patientRepository.deletePatient(email);
     }
 
     public PatientDAO getPatient(String email){

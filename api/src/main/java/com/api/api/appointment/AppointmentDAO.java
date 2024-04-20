@@ -1,5 +1,8 @@
 package com.api.api.appointment;
 
+import com.api.api.patient.PatientDAO;
+import org.bson.Document;
+
 import java.util.UUID;
 
 public class AppointmentDAO {
@@ -67,5 +70,25 @@ public class AppointmentDAO {
 
     public void setCheckIn(boolean checkIn) {
         this.checkIn = checkIn;
+    }
+
+    public static AppointmentDAO fromDocument(Document doc){
+
+        AppointmentDAO appointmentDAO = new AppointmentDAO();
+        appointmentDAO.setDate(doc.getString("date"));
+        appointmentDAO.setDoctor(doc.getString("doctor"));
+        appointmentDAO.setCheckIn(doc.getString("checkin").equals("true"));
+        appointmentDAO.setPatient(doc.getString("patient"));
+        appointmentDAO.setId(doc.getString("id"));
+        return appointmentDAO;
+    }
+
+    public static Document toDocument(AppointmentDAO appointment){
+
+        return new Document("date", appointment.getDate())
+                .append("doctor", appointment.getDoctor())
+                .append("checkin", appointment.isCheckIn())
+                .append("patient", appointment.getPatient())
+                .append("id", appointment.getId());
     }
 }

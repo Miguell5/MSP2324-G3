@@ -1,4 +1,7 @@
 package com.api.api.backoffice.doctor;
+import com.api.api.patient.PatientDAO;
+import org.bson.Document;
+
 import java.util.UUID;
 
 public class DoctorDAO {
@@ -8,7 +11,6 @@ public class DoctorDAO {
     private String firstName;
     private String lastName;
     private String expertise;
-    private String id;
 
     public DoctorDAO(){}
 
@@ -18,7 +20,6 @@ public class DoctorDAO {
         this.firstName = firstName;
         this.lastName = lastName;
         this.expertise = expertise;
-        this.id = UUID.randomUUID().toString();
     }
 
     public boolean isValidCreate(){
@@ -66,11 +67,26 @@ public class DoctorDAO {
     public void setExpertise(String expertise) {
         this.expertise = expertise;
     }
-    public String getId() {
-        return id;
+
+    public static DoctorDAO fromDocument(Document doc){
+
+        DoctorDAO doctorDAO = new DoctorDAO();
+        doctorDAO.setEmail(doc.getString("email"));
+        doctorDAO.setFirstName(doc.getString("firstName"));
+        doctorDAO.setPwd(doc.getString("pwd"));
+        doctorDAO.setLastName(doc.getString("lastName"));
+        doctorDAO.setExpertise(doc.getString("expertise"));
+
+        return doctorDAO;
     }
-    public void setId(String id) {
-        this.id = id;
+
+    public static Document toDocument(DoctorDAO doctor){
+
+        return new Document("email", doctor.getEmail())
+                .append("firstName", doctor.getFirstName())
+                .append("pwd", doctor.getPwd())
+                .append("lastName", doctor.getLastName())
+                .append("expertise", doctor.getExpertise());
     }
 
 }

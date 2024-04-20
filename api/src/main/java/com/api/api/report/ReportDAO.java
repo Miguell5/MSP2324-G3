@@ -1,5 +1,8 @@
 package com.api.api.report;
 
+
+import org.bson.Document;
+
 import java.util.UUID;
 
 public class ReportDAO {
@@ -77,5 +80,28 @@ public class ReportDAO {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+
+    public static ReportDAO fromDocument(Document doc){
+
+        ReportDAO reportDAO = new ReportDAO();
+        reportDAO.setId(doc.getString("id"));
+        reportDAO.setTitle(doc.getString("title"));
+        reportDAO.setDescription(doc.getString("description"));
+        reportDAO.setDoctor(doc.getString("doctor"));
+        reportDAO.setPatient(doc.getString("patient"));
+        reportDAO.setType(doc.getString("type"));
+        return reportDAO;
+    }
+
+    public static Document toDocument(ReportDAO reportDAO){
+
+        return new Document("id", reportDAO.getId())
+                .append("title", reportDAO.getTitle())
+                .append("description", reportDAO.getDescription())
+                .append("doctor", reportDAO.getDoctor())
+                .append("patient", reportDAO.getPatient())
+                .append("type", reportDAO.getType());
     }
 }

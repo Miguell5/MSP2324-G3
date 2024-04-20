@@ -1,5 +1,7 @@
 package com.api.api.exam;
 
+import org.bson.Document;
+
 import java.util.UUID;
 
 public class ExamDAO {
@@ -76,5 +78,27 @@ public class ExamDAO {
 
     public void setCheckIn(boolean val) {
         this.checkIn = val;
+    }
+
+    public static ExamDAO fromDocument(Document doc){
+
+        ExamDAO examDAO = new ExamDAO();
+        examDAO.setCheckIn(doc.getString("checkin").equals("true"));
+        examDAO.setDate(doc.getString("date"));
+        examDAO.setExamType(doc.getString("examType"));
+        examDAO.setDoctor(doc.getString("doctor"));
+        examDAO.setId(doc.getString("id"));
+        examDAO.setPatient(doc.getString("patient"));
+        return examDAO;
+    }
+
+    public static Document toDocument(ExamDAO exam){
+
+        return new Document("id", exam.getId())
+                .append("examType", exam.getExamType())
+                .append("doctor", exam.getDoctor())
+                .append("checkin", exam.isCheckIn())
+                .append("patient", exam.getPatient())
+                .append("date", exam.getDate());
     }
 }

@@ -1,5 +1,7 @@
 package com.api.api.patient;
 
+import org.bson.Document;
+
 public class PatientDAO {
 
     private String email;
@@ -55,6 +57,24 @@ public class PatientDAO {
     }
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public static PatientDAO fromDocument(Document doc){
+
+        PatientDAO patientDAO = new PatientDAO();
+        patientDAO.setEmail(doc.getString("email"));
+        patientDAO.setFirstName(doc.getString("firstName"));
+        patientDAO.setPwd(doc.getString("pwd"));
+        patientDAO.setLastName(doc.getString("lastName"));
+        return patientDAO;
+    }
+
+    public static Document toDocument(PatientDAO patient){
+
+        return new Document("email", patient.getEmail())
+                .append("firstName", patient.getFirstName())
+                .append("pwd", patient.getPwd())
+                .append("lastName", patient.getLastName());
     }
 
 }
