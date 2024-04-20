@@ -77,7 +77,7 @@ export default function FormDialog({open,setOpen}) {
             id="pwd"
             name="pwd"
             label="Password"
-            type="text"
+            type="password"
             fullWidth
             variant="standard"
           />
@@ -88,7 +88,7 @@ export default function FormDialog({open,setOpen}) {
             id="pwdConfirmation"
             name="pwd"
             label="Password confirmation"
-            type="text"
+            type="password"
             fullWidth
             variant="standard"
           />
