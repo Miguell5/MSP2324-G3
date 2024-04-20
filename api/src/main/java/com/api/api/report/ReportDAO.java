@@ -22,16 +22,17 @@ public class ReportDAO {
         this.description = description;
         this.doctor = doctor;
         this.patient = patient;
+        this.type = type;
     }
 
     public boolean isValidToCreate(){
-        //TODO
-        return true;
+        return this.id!=null && this.title!=null && this.description!=null
+                && this.doctor!=null && this.patient!=null && this.type!=null;
     }
 
     public boolean isValidToUpdate(){
-        //TODO
-        return true;
+        return this.id==null && this.title!=null || this.description!=null
+                || this.doctor!=null || this.patient!=null || this.type!=null;
     }
 
     public String getId() {

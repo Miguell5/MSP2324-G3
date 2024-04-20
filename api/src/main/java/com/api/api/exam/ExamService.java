@@ -46,47 +46,54 @@ public class ExamService {
         if(examDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Exam " + exam.getId() +  " does not exist.");
 
+        if(!examDAO.getPatient().equals(exam.getPatient()))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
+
         // TODO verificar novos horarios de compatibilidade com o doctor
         // TODO update examDAO with exam new data
 
         return examRepository.updateExam(examDAO);
     }
 
-    public ExamDAO getExam(String id){
+    public ExamDAO getExam(String id, String patient){
 
         ExamDAO examDAO = examRepository.getExam(id);
 
         if(examDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Exam " + id +  " does not exist.");
 
-        // TODO verificar se o exame pertence ao paciente ou ao doctor e so retornar nesse caso
+        if(!examDAO.getPatient().equals(patient))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
 
         return examDAO;
 
 
     }
 
-    public String deleteExam(String id){
+    public String deleteExam(String id, String patient){
 
         ExamDAO examDAO = examRepository.getExam(id);
 
         if(examDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Exam " + id +  " does not exist.");
 
-        // TODO verificar se o exame pertence ao paciente e so deletar nesse caso
+        if(!examDAO.getPatient().equals(patient))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
 
         return examRepository.deleteExam(id);
 
     }
 
-    public boolean checkin(String examId){
+    public boolean checkin(String examId, String patient){
 
         ExamDAO examDAO = examRepository.getExam(examId);
 
         if(examDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Exam " + examId +  " does not exist.");
 
-        // TODO verificar se o exame é mesmo do paciente
+        if(!examDAO.getPatient().equals(patient))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
+
         // TODO verificar se esta quase na hora que o exame esta marcado
 
         examDAO.setCheckIn(true);
@@ -96,9 +103,6 @@ public class ExamService {
     }
 
     public List<ExamDAO> getExamsByPatient(String patient){
-
-        // TODO se usar e igual ao paciente
-
         return examRepository.examsByPatient(patient);
 
     }

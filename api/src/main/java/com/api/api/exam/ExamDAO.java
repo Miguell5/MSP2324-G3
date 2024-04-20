@@ -24,13 +24,14 @@ public class ExamDAO {
     }
 
     public boolean isValidToCreate(){
-        //TODO
-        return true;
+        return this.patient != null  && this.doctor != null
+                && this.date != null && this.id != null
+                && this.examType != null;
     }
 
     public boolean isValidToUpdate(){
-        //TODO
-        return true;
+        return this.id == null && this.examType == null && (this.patient != null  || this.doctor != null
+                || this.date != null);
     }
     public String getId() {
         return id;

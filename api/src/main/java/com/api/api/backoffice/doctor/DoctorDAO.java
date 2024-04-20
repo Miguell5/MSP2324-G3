@@ -34,7 +34,7 @@ public class DoctorDAO {
 
     public boolean isValidUpdate(){
         // TODO verify parameters that can be updated
-        return false;
+        return this.email == null && (this.pwd != null || this.expertise != null);
     }
 
     public String getEmail() {

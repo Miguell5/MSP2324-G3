@@ -1,6 +1,5 @@
 package com.api.api.exam;
 
-import com.api.api.patient.PatientDAO;
 import com.api.api.utils.MongoClient;
 import com.api.api.utils.MongoCollections;
 import com.mongodb.MongoWriteException;
@@ -80,16 +79,16 @@ public class ExamRepository {
         return doc == null ? null : ExamDAO.fromDocument(doc);
     }
 
-    public List<PatientDAO> examsByPatient(String patient){
+    public List<ExamDAO> examsByPatient(String patient){
         List<Document> docs = examsCollection.find(Filters.eq("patient", patient)).into(new ArrayList<>());
 
-        return docs.stream().map(PatientDAO :: fromDocument).collect(Collectors.toList());
+        return docs.stream().map(ExamDAO :: fromDocument).collect(Collectors.toList());
     }
 
-    public List<PatientDAO> examsByDoctor(String doctor){
+    public List<ExamDAO> examsByDoctor(String doctor){
         List<Document> docs = examsCollection.find(Filters.eq("doctor", doctor)).into(new ArrayList<>());
 
-        return docs.stream().map(PatientDAO :: fromDocument).collect(Collectors.toList());
+        return docs.stream().map(ExamDAO :: fromDocument).collect(Collectors.toList());
     }
 
 

@@ -45,40 +45,39 @@ public class ReportService {
         if(reportDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Report: " + report.getId() + " does not exist.");
 
-        // TODO confirmar se é o doctor correto
+        if(!reportDAO.getDoctor().equals(report.getDoctor()))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"");
 
         return reportRepository.updateReport(report);
-
     }
 
-    public String deleteReport(String reportId){
+    public String deleteReport(String reportId, String doctorEmail){
 
         ReportDAO reportDAO = reportRepository.getReport(reportId);
 
         if(reportDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Report: " + reportId + " does not exist.");
 
-        // TODO confirmar se é o doctor correto
+        if(!reportDAO.getDoctor().equals(doctorEmail))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
 
         return reportRepository.deleteReport(reportId);
     }
 
-    public ReportDAO getReport(String reportID){
+    public ReportDAO getReport(String reportID, String email){
 
         ReportDAO reportDAO = reportRepository.getReport(reportID);
 
         if(reportDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Report: " + reportID + " does not exist.");
-
-        // TODO verificar se é o doctor ou o pateint do report
+        
+        if(!reportDAO.getPatient().equals(email) && !reportDAO.getDoctor().equals(email))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
 
         return reportDAO;
-
     }
 
     public List<ReportDAO> getReportsByPatient(String patientId){
-
-        // TODO se usar e igual ao paciente
 
         return reportRepository.reportsByPatient(patientId);
     }

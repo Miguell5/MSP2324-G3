@@ -1,6 +1,9 @@
 package com.api.api.backoffice.doctor;
 
+import com.api.api.patient.PatientDAO;
+import com.api.api.token.TokenManager;
 import com.api.api.utils.hash;
+import com.api.api.utils.roles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -56,6 +59,16 @@ public class DoctorService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,"There is no Doctor with that ID.");
 
         return doctorDAO;
+    }
+
+    public String auth(String email, String pwd){
+
+        DoctorDAO doctor = doctorRepository.getDoctor(email);
+
+        if(doctor == null || !hash.checkPwd(pwd,doctor.getPwd()) )
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Username or password are incorrect.");
+
+        return TokenManager.generateToken(email, roles.PATIENT.getValue());
     }
 
 }

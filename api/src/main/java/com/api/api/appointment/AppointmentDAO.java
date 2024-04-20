@@ -1,6 +1,6 @@
 package com.api.api.appointment;
 
-import com.api.api.patient.PatientDAO;
+
 import org.bson.Document;
 
 import java.util.UUID;
@@ -23,13 +23,12 @@ public class AppointmentDAO {
     }
 
     public boolean isValidToCreate(){
-        //TODO
-        return true;
+        return this.patient != null  && this.doctor != null
+            && this.date != null;
     }
 
     public boolean isValidToUpdate(){
-        //TODO
-        return true;
+        return this.date != null;
     }
 
     public String getId() {

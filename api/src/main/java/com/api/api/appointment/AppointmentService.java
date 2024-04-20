@@ -46,42 +46,49 @@ public class AppointmentService {
         if(appointmentDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Appointment " + appointment.getId() +  " does not exist.");
 
+        if(!appointmentDAO.getPatient().equals(appointment.getPatient()))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
+
         // TODO verificar novos horarios de compatibilidade com o doctor
         // TODO update AppointmentDAO with appointment new data
 
         return appointmentRepository.updateAppointment(appointmentDAO);
     }
-    public String deleteAppointment(String id){
+    public String deleteAppointment(String id, String patient){
 
         AppointmentDAO appointmentDAO = appointmentRepository.getAppointment(id);
 
         if(appointmentDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Appointment " + id +  " does not exist.");
 
-        // TODO verificar se o exame pertence ao paciente e so deletar nesse caso
+        if(!appointmentDAO.getPatient().equals(patient))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
 
         return appointmentRepository.deleteAppointment(id);
 
     }
-    public AppointmentDAO getAppointment(String id){
+    public AppointmentDAO getAppointment(String id, String patient){
         AppointmentDAO appointmentDAO = appointmentRepository.getAppointment(id);
 
         if(appointmentDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Appointment " + id +  " does not exist.");
 
-        // TODO verificar se o appointmentDAO pertence ao paciente ou ao doctor e so retornar nesse caso
+        if(!appointmentDAO.getPatient().equals(patient))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
 
         return appointmentDAO;
     }
 
-    public boolean checkin(String appointmentId){
+    public boolean checkin(String appointmentId, String patient){
 
         AppointmentDAO appointmentDAO = appointmentRepository.getAppointment(appointmentId);
 
         if(appointmentDAO == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Appointment " + appointmentId +  " does not exist.");
 
-        // TODO verificar se o exame é mesmo do paciente
+        if(!appointmentDAO.getPatient().equals(patient))
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "");
+
         // TODO verificar se esta quase na hora que o exame esta marcado
 
         appointmentDAO.setCheckIn(true);
@@ -90,10 +97,6 @@ public class AppointmentService {
     }
 
     public List<AppointmentDAO> getAppointmentsByPatient(String patient){
-
-        // TODO se user e igual ao paciente
-
         return appointmentRepository.appointmentsByPatient(patient);
-
     }
 }

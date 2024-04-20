@@ -19,9 +19,7 @@ public class PatientDAO {
         this.lastName = lastName;
     }
 
-    public boolean isValidCreate(){
-
-        //TODO verify email ,names and pwd validity
+    public boolean isValidToCreate(){
         return this.email != null && this.pwd != null && this.firstName != null && this.lastName != null;
     }
 
@@ -29,9 +27,9 @@ public class PatientDAO {
         return this.email != null && this.pwd != null;
     }
 
-    public boolean isValidUpdate(){
-        // TODO verify parameters that can be updated
-        return false;
+    public boolean isValidToUpdate(){
+
+        return this.email == null && (this.pwd != null || this.firstName != null || this.lastName != null);
     }
 
     public String getEmail() {

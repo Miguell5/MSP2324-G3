@@ -1,7 +1,9 @@
 package com.api.api.patient;
 
 
+import com.api.api.token.TokenManager;
 import com.api.api.utils.hash;
+import com.api.api.utils.roles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -27,6 +29,16 @@ public class PatientService {
         patient.setPwd(hash.hashPwd(patient.getPwd()));
 
         return patientRepository.createPatient(patient);
+    }
+
+    public String auth(String email, String pwd){
+
+        PatientDAO patient = patientRepository.getPatient(email);
+
+        if(patient == null || !hash.checkPwd(pwd,patient.getPwd()) )
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Username or password are incorrect.");
+
+        return TokenManager.generateToken(email, roles.PATIENT.getValue());
     }
 
     public PatientDAO updatePatient(PatientDAO patient){
