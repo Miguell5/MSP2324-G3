@@ -20,7 +20,7 @@ export default function NavBar() {
         navigate("/");
         break;
       case 1:
-        navigate("/my-health");
+        navigate("/myHealth");
         break;
       case 2:
         navigate("/schedule");

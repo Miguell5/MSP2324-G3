@@ -10,6 +10,16 @@ import ErrorIcon from '@mui/icons-material/Error';
 
 const appointments = [
   {
+    id:"6",
+    date:"2/06/2024",
+    AppointmentType:"Consulta",
+    specialty:"Clinica geral",
+    hour:"18:15",
+    doctor:"Dr. José Correia",
+    status:"toDo",
+    checkIn:"",
+    },
+  {
     id:"5",
     date:"14/04/2024",
     AppointmentType:"Consulta",
@@ -94,7 +104,7 @@ const AppointmentsPage = () => {
   const groupedAppointments = groupAppointmentsByMonth();
 
   return (
-    <div style={{margin:"5%"}}>
+    <div style={{margin:"5%",marginBottom:"150px"}}>
       {/* Iterar sobre cada grupo de compromissos */}
       {Object.keys(groupedAppointments).map(monthYearKey => (
         <div key={monthYearKey} >

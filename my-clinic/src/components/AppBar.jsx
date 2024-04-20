@@ -15,8 +15,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 import ClinicLogo from '../assets/logoMyClinic.png';
 import { useNavigate } from "react-router-dom";
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [];
+const settings = ['Account','Logout'];
 
 function ResponsiveAppBar({setLoginState}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,9 +36,14 @@ function ResponsiveAppBar({setLoginState}) {
 
   function handleCloseUserMenu(setting){
     setAnchorElUser(null);
-    if(setting==='Logout')
+    if(setting==='Logout'){
       setLoginState(false);
       navigate("/");
+    }
+    else if(setting==='Account'){
+      navigate("/profile");
+    }
+      
   }
 
   return (

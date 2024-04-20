@@ -8,7 +8,7 @@ import AppBar from './components/AppBar';
 import HomePage from "./pages/Home";
 import Profile from "./pages/Profile";
 import AgendaPage from "./pages/AgendaPage";
-
+import HealthPage from "./pages/HealthPage";
 import LoginPage from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
@@ -71,6 +71,11 @@ function App() {
           <Route path='/agenda' element={
             <Suspense fallback={<Loading />}>
               <AgendaPage/>
+            </Suspense>
+          }/>
+          <Route path='/myHealth' element={
+            <Suspense fallback={<Loading />}>
+              <HealthPage/>
             </Suspense>
           }/>
 
