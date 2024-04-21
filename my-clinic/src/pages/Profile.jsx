@@ -9,14 +9,28 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import SendIcon from '@mui/icons-material/Send';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import ViewListIcon from '@mui/icons-material/ViewList';
+import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
+import PaymentIcon from '@mui/icons-material/Payment';
+import PasswordIcon from '@mui/icons-material/Password';
+import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
+import DialogCreateDoctorAccount from './../components/DialogCreateDoctorAccount';
+
 function Profile() {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.only('xs'));
+  const [open,setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
   return (
     <>
     
-      <Grid container spacing={2} sx={{marginTop :"2%"}}>
+      <Grid container spacing={2} sx={{margin:"2%", marginBottom:"150px"}}>
         <Grid item xs={12} sm={4} >
           <Avatar sx={{height:"30vh",width:"30vh", margin:"auto"}}/>
         </Grid>
@@ -28,22 +42,67 @@ function Profile() {
           <Typography variant="h6" gutterBottom>
             rms.costa@campus.fct.unl.pt
           </Typography>
+          <Typography variant="h6" gutterBottom>
+            <b>Admin</b>
+          </Typography>
         </Stack>
         </Grid>
-        <Grid item xs="12" >
-          <Stack spacing={2} direction="row" sx={{margin:"2%"}}>
-            <Button variant="outlined">Insurance</Button>
-            <Button variant="outlined">Payment Method</Button>
-            <Button variant="outlined">Change Pin Code</Button>
-            <Button variant="outlined">Familiy</Button>
+        <Grid item xs="12" sx={{marginTop:"2%"}}>
+          <Stack spacing={2} direction="row" >
+            <Typography variant="h5" gutterBottom>
+              My settings
+            </Typography>
           </Stack>
+          <Grid container direction="row"
+              justifyContent="flex-start"
+              alignItems="flex-start"
+              spacing={2}>
+  
+            <Grid item >
+              <Button variant="outlined" startIcon={<HealthAndSafetyIcon/>}>Insurance</Button>
+            </Grid>
+            <Grid item >
+              <Button variant="outlined" startIcon={<PaymentIcon/>}>Payment Method</Button>
+            </Grid>
+            <Grid item >
+              <Button variant="outlined" startIcon={<PasswordIcon/>}>Change Pin Code</Button>
+            </Grid>
+            <Grid item >
+              <Button variant="outlined" startIcon={<FamilyRestroomIcon/>}>Familiy</Button>
+            </Grid>
+
+          </Grid>
+
+        </Grid>
+        <Grid item xs="12" sx={{marginTop:"2%"}}>
+          
+          <Stack spacing={2} direction="row" >
+          <Typography variant="h5" gutterBottom>
+            System Management <i>(Admin only)</i>
+          </Typography>
+          
+          </Stack>
+          <Grid container direction="row"
+              justifyContent="flex-start"
+              alignItems="flex-start"
+              spacing={2}>
+  
+            <Grid item >
+              <Button variant="outlined" startIcon={<PersonAddIcon />} onClick={handleClickOpen}>Create doctor account</Button>
+            </Grid>
+            <Grid item >
+              <Button variant="outlined" startIcon={<ViewListIcon />}>Accounts List</Button>
+            </Grid>
+
+          </Grid>
+          
         </Grid>
 
       </Grid>
-    
+      <DialogCreateDoctorAccount open={open} setOpen={setOpen}/>
       
     </>
   )
 }
 
-export default Profile
+export default Profile;

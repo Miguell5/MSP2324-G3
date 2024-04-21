@@ -8,7 +8,17 @@ import Button from '@mui/material/Button';
 import UpdateIcon from '@mui/icons-material/Update';
 import ErrorIcon from '@mui/icons-material/Error';
 
-const appointments = [
+/*const appointments = [
+  {
+    id:"6",
+    date:"2/06/2024",
+    AppointmentType:"Consulta",
+    specialty:"Clinica geral",
+    hour:"18:15",
+    doctor:"Dr. José Correia",
+    status:"toDo",
+    checkIn:"toDo",
+    },
   {
     id:"5",
     date:"14/04/2024",
@@ -17,7 +27,7 @@ const appointments = [
     hour:"9:30",
     doctor:"Dr. José Correia",
     status:"toDo",
-    checkIn:"",
+    checkIn:"toDo",
     },
   {
     id:"4",
@@ -27,7 +37,7 @@ const appointments = [
     hour:"15:30",
     doctor:"Dr. José Correia",
     status:"done",
-    checkIn:"",
+    checkIn:"done",
     },
   {
     id:"3",
@@ -37,7 +47,7 @@ const appointments = [
     hour:"11:00",
     doctor:"Dr. José Correia",
     status:"done",
-    checkIn:"",
+    checkIn:"done",
   },
   {
     id:"2",
@@ -56,7 +66,7 @@ const appointments = [
     hour:"17:00",
     doctor:"Dr. José Correia",
     status:"done",
-    checkIn:"",
+    checkIn:"done",
   },
   {
     id:"0",
@@ -66,17 +76,96 @@ const appointments = [
     hour:"17:00",
     doctor:"Dr. José Correia",
     status:"done",
-    checkIn:"",
+    checkIn:"done",
   },
-  ];
+  ];*/
 
 const AppointmentsPage = () => {
   // Função para agrupar os compromissos por mês
+  const [appointments,setAppointments] = React.useState([
+    {
+      id:0,
+      date:"5/02/2023",
+      AppointmentType:"Consulta",
+      specialty:"Otorrinolaringologia",
+      hour:"17:00",
+      doctor:"Dr. José Correia",
+      status:"done",
+      checkIn:"done",
+    },
+    {
+      id:1,
+      date:"5/02/2023",
+      AppointmentType:"Consulta",
+      specialty:"Otorrinolaringologia",
+      hour:"17:00",
+      doctor:"Dr. José Correia",
+      status:"done",
+      checkIn:"done",
+    },
+    {
+      id:2,
+      date:"5/02/2023",
+      AppointmentType:"Consulta",
+      specialty:"Otorrinolaringologia",
+      hour:"17:00",
+      doctor:"Dr. José Correia",
+      status:"didNotOccur"
+    },
+    {
+      id:3,
+      date:"9/06/2023",
+      AppointmentType:"Consulta",
+      specialty:"Estomatologia",
+      hour:"11:00",
+      doctor:"Dr. José Correia",
+      status:"done",
+      checkIn:"done",
+    },
+    
+    {
+      id:4,
+      date:"21/06/2023",
+      AppointmentType:"Consulta",
+      specialty:"Otorrinolaringologia",
+      hour:"15:30",
+      doctor:"Dr. José Correia",
+      status:"done",
+      checkIn:"done",
+      },
+      {
+        id:5,
+        date:"14/04/2024",
+        AppointmentType:"Consulta",
+        specialty:"Otorrinolaringologia",
+        hour:"9:30",
+        doctor:"Dr. José Correia",
+        status:"toDo",
+        checkIn:"toDo",
+        },
+    {
+      id:6,
+      date:"2/06/2024",
+      AppointmentType:"Consulta",
+      specialty:"Clinica geral",
+      hour:"18:15",
+      doctor:"Dr. José Correia",
+      status:"toDo",
+      checkIn:"toDo",
+      },
+    
+    
+    
+    
+    
+    ]);
+
   const groupAppointmentsByMonth = () => {
     const groupedAppointments = {};
+    
 
     // Iterar sobre cada compromisso
-    appointments.forEach(appointment => {
+    appointments.reverse().forEach(appointment => {
       const [day, month, year] = appointment.date.split('/');
       const monthYearKey = `${month}/${year}`;
 
@@ -93,8 +182,23 @@ const AppointmentsPage = () => {
 
   const groupedAppointments = groupAppointmentsByMonth();
 
+  function CheckIn(appointment){
+    const appointmentIndex = appointments.findIndex(item => item.id === appointment.id);
+    console.log(appointmentIndex);
+    if (appointmentIndex !== -1) {
+
+        var updatedAppointments = [...appointments]; // Faz uma cópia da lista appointments
+        updatedAppointments[appointmentIndex] = { ...updatedAppointments[appointmentIndex], checkIn: "done" }; // Atualiza o campo checkIn do objeto no índice encontrado
+        console.log(updatedAppointments);
+        setAppointments(updatedAppointments); // Atualiza o estado com a nova lista modificada
+
+    } else {
+        console.log("Appointment not found");
+    }
+  }
+
   return (
-    <div style={{margin:"5%"}}>
+    <div style={{margin:"5%",marginBottom:"150px"}}>
       {/* Iterar sobre cada grupo de compromissos */}
       {Object.keys(groupedAppointments).map(monthYearKey => (
         <div key={monthYearKey} >
@@ -148,13 +252,13 @@ const AppointmentsPage = () => {
                       <b><Typography variant="body1" display="block">{appointment.AppointmentType}</Typography></b>
                     </Grid>
                     <Grid item xs={12}>
-                      <Typography variant="h6" sx={{textAlign:"left",width:"100%"}}>{`Consulta de ${appointment.specialty}`}</Typography>
+                      <Typography variant="h6" sx={{textAlign:"left",width:"100%"}}>{appointment.specialty}</Typography>
                     </Grid>
                     <Grid item xs={12}>
                       <Typography variant="caption">{appointment.doctor}</Typography>
                     </Grid>
                     { appointment.status==="toDo" && <Grid item xs={12}>
-                      <Button variant="outlined">Check-In</Button>
+                      <Button variant="outlined" onClick={()=>CheckIn(appointment)} disabled={appointment.checkIn==="done"}>{appointment.checkIn=="toDo"? "Check-In":"Check-In done"}</Button>
                     </Grid>}
                     
                   </Grid>
