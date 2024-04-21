@@ -82,6 +82,14 @@ import ErrorIcon from '@mui/icons-material/Error';
 
 const AppointmentsPage = () => {
   // Função para agrupar os compromissos por mês
+  function getTodaysDate() {
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    const yyyy = today.getFullYear();
+    const currentDate = dd + '/' + mm + '/' + yyyy;
+    return currentDate;
+  }
   const [appointments,setAppointments] = React.useState([
     {
       id:0,
@@ -95,7 +103,7 @@ const AppointmentsPage = () => {
     },
     {
       id:1,
-      date:"5/02/2023",
+      date:"05/02/2023",
       AppointmentType:"Consulta",
       specialty:"Otorrinolaringologia",
       hour:"17:00",
@@ -105,7 +113,7 @@ const AppointmentsPage = () => {
     },
     {
       id:2,
-      date:"5/02/2023",
+      date:"05/02/2023",
       AppointmentType:"Consulta",
       specialty:"Otorrinolaringologia",
       hour:"17:00",
@@ -114,7 +122,7 @@ const AppointmentsPage = () => {
     },
     {
       id:3,
-      date:"9/06/2023",
+      date:"09/06/2023",
       AppointmentType:"Consulta",
       specialty:"Estomatologia",
       hour:"11:00",
@@ -135,17 +143,17 @@ const AppointmentsPage = () => {
       },
       {
         id:5,
-        date:"14/04/2024",
+        date:getTodaysDate(),
         AppointmentType:"Consulta",
         specialty:"Otorrinolaringologia",
-        hour:"9:30",
+        hour:"17:45",
         doctor:"Dr. José Correia",
         status:"toDo",
         checkIn:"toDo",
         },
     {
       id:6,
-      date:"2/06/2024",
+      date:"02/06/2024",
       AppointmentType:"Consulta",
       specialty:"Clinica geral",
       hour:"18:15",
@@ -198,7 +206,9 @@ const AppointmentsPage = () => {
   }
 
   return (
+    <>
     <div style={{margin:"5%",marginBottom:"150px"}}>
+      
       {/* Iterar sobre cada grupo de compromissos */}
       {Object.keys(groupedAppointments).map(monthYearKey => (
         <div key={monthYearKey} >
@@ -257,20 +267,23 @@ const AppointmentsPage = () => {
                     <Grid item xs={12}>
                       <Typography variant="caption">{appointment.doctor}</Typography>
                     </Grid>
-                    { appointment.status==="toDo" && <Grid item xs={12}>
-                      <Button variant="outlined" onClick={()=>CheckIn(appointment)} disabled={appointment.checkIn==="done"}>{appointment.checkIn=="toDo"? "Check-In":"Check-In done"}</Button>
-                    </Grid>}
+                    { appointment.status==="toDo" && appointment.date===getTodaysDate() && 
+                    <>
+                      <Grid item xs={12}>
+                        <Button variant="outlined" onClick={()=>CheckIn(appointment)} disabled={appointment.checkIn==="done"}>{appointment.checkIn=="toDo"? "Check-In":"Check-In done"}</Button>
+                      </Grid>
+                      {appointment.checkIn==="done" && 
+                      <Grid item xs={12}>
+                        <Typography variant="caption"> wait for them to call your name. (floor 4)</Typography>
+                      </Grid>}
+                    </>
+                    }
+
                     
                   </Grid>
               </Grid>
-
-              
-                  
+       
                 </Stack>
-
-              
-
-
               
               </Grid>
               
@@ -280,6 +293,7 @@ const AppointmentsPage = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

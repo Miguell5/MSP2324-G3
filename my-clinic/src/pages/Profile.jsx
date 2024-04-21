@@ -32,7 +32,7 @@ function Profile() {
     
       <Grid container spacing={2} sx={{margin:"2%", marginBottom:"150px"}}>
         <Grid item xs={12} sm={4} >
-          <Avatar sx={{height:"30vh",width:"30vh", margin:"auto"}}/>
+          <Avatar sx={{height:"20vh",width:"20vh", margin:"auto"}}/>
         </Grid>
         <Grid item  xs={12} sm={8} justifyContent="center" alignItems="flex-start">
         <Stack spacing={2} sx={{ textAlign: isXsScreen ? 'center' : 'left',height:"100%" }} justifyContent={isXsScreen ? 'center' : 'center'} alignItems={isXsScreen ? 'center' : 'flex-start'}>

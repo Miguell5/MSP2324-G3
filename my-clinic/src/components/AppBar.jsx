@@ -93,26 +93,19 @@ function ResponsiveAppBar({setLoginState}) {
                 </MenuItem>
               ))}
             </Menu>
+            <Avatar
+              src={ClinicLogo}
+              sx={{
+                display: { xs: 'flex', md: 'none' },
+                flexGrow: 0.01,
+                width:'50px',
+              }}
+              alt="Clinic Logo"
+            />
           </Box>
        
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: '#3373d6',
-              textDecoration: 'none',
-            }}
-          >
-            My Clinic
-          </Typography>
+
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button

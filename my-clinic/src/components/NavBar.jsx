@@ -7,11 +7,24 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 
 export default function NavBar() {
-  const [value, setValue] = React.useState(0);
+  
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Mapeamento entre paths e valores do BottomNavigation
+  const pathToValue = {
+    "/": 0,
+    "/myHealth": 1,
+    "/schedule": 2,
+    "/agenda": 3,
+    "/profile": 4
+  };
+
+  const initialValue = pathToValue[location.pathname] || 0;
+  const [value, setValue] = React.useState(initialValue);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

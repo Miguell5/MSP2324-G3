@@ -23,7 +23,7 @@ export default function HealthPage() {
       <Grid container spacing={2}>
         {options.map((option) => (
               
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4} key={option}>
             <Item>
             <Stack
                 direction="row"
