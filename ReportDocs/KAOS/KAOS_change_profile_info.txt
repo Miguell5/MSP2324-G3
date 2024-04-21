@@ -1,0 +1,389 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "93cd2c16-b6e7-4017-9949-3de21ac28085",
+      "text": "change profile info satisfied",
+      "type": "kaos.BehavioralGoal",
+      "x": 470,
+      "y": 150,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "6549f300-be1d-49c2-b6c8-37f95569e321",
+      "text": "patient",
+      "type": "kaos.Agent",
+      "x": 457,
+      "y": 605
+    },
+    {
+      "id": "02eac8b6-9e9c-4ff3-acd4-4f3b5bfae700",
+      "text": "change data",
+      "type": "kaos.BehavioralGoal",
+      "x": 460,
+      "y": 494,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "e731ae26-0c5e-4349-af95-1b7087545a72",
+      "text": "verify data",
+      "type": "kaos.BehavioralGoal",
+      "x": 461,
+      "y": 399,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "34a34f01-d315-48d0-9735-ba1489a16973",
+      "text": "error on data",
+      "type": "kaos.BehavioralGoal",
+      "x": 642,
+      "y": 313,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "fa83380c-d49a-4581-98cd-76e260f8a89c",
+      "text": "warn user",
+      "type": "kaos.BehavioralGoal",
+      "x": 671,
+      "y": 215,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "888de1cb-95ee-424b-9ff7-e1beb31f4d6b",
+      "text": "verified with success",
+      "type": "kaos.BehavioralGoal",
+      "x": 435,
+      "y": 282,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "8ba0440b-f84e-48eb-9fb9-7391025bb649",
+      "text": "server is down",
+      "type": "kaos.BehavioralGoal",
+      "x": 266,
+      "y": 219,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "hub": {
+        "id": "34beba05-a0d8-4577-8969-3472aa39e70b",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 508,
+        "y": 451,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "60252138-a87e-4264-8a7d-060400f51157",
+          "type": "kaos.RefinementLinkStart",
+          "source": "02eac8b6-9e9c-4ff3-acd4-4f3b5bfae700",
+          "target": "34beba05-a0d8-4577-8969-3472aa39e70b"
+        }
+      ],
+      "end": {
+        "id": "e49bac02-27f6-4ae1-b819-3b840c919546",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "34beba05-a0d8-4577-8969-3472aa39e70b",
+        "target": "e731ae26-0c5e-4349-af95-1b7087545a72"
+      }
+    },
+    {
+      "hub": {
+        "id": "1021c612-6622-4d37-9199-d93cf93889ec",
+        "type": "kaos.RefinementLinkHub",
+        "x": 503,
+        "y": 350,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "38e98c94-f52e-4920-af69-c9851918dcd4",
+          "type": "kaos.RefinementLinkStart",
+          "source": "e731ae26-0c5e-4349-af95-1b7087545a72",
+          "target": "1021c612-6622-4d37-9199-d93cf93889ec"
+        }
+      ],
+      "end": {
+        "id": "2a45838d-b9f5-4326-887b-6d6595b63263",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "1021c612-6622-4d37-9199-d93cf93889ec",
+        "target": "888de1cb-95ee-424b-9ff7-e1beb31f4d6b"
+      }
+    },
+    {
+      "hub": {
+        "id": "9a5a7a2e-6993-4e3b-830e-a2fe42ce7e9d",
+        "type": "kaos.RefinementLinkHub",
+        "x": 699,
+        "y": 267,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "0a45e594-fb47-4020-b90f-149abe952b71",
+          "type": "kaos.RefinementLinkStart",
+          "source": "34a34f01-d315-48d0-9735-ba1489a16973",
+          "target": "9a5a7a2e-6993-4e3b-830e-a2fe42ce7e9d"
+        }
+      ],
+      "end": {
+        "id": "11b98e99-d587-4577-a829-632c3ad922c7",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "9a5a7a2e-6993-4e3b-830e-a2fe42ce7e9d",
+        "target": "fa83380c-d49a-4581-98cd-76e260f8a89c"
+      }
+    },
+    {
+      "hub": {
+        "id": "75bc0cf9-13a2-403c-818c-5dfb7a2fea02",
+        "type": "kaos.RefinementLinkHub",
+        "x": 509,
+        "y": 234,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "1596f4ee-eea7-4df5-9723-0e4caa0e470b",
+          "type": "kaos.RefinementLinkStart",
+          "source": "888de1cb-95ee-424b-9ff7-e1beb31f4d6b",
+          "target": "75bc0cf9-13a2-403c-818c-5dfb7a2fea02"
+        }
+      ],
+      "end": {
+        "id": "8c98c8ea-6dc4-46d5-95dc-c4b0f9842bcc",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "75bc0cf9-13a2-403c-818c-5dfb7a2fea02",
+        "target": "93cd2c16-b6e7-4017-9949-3de21ac28085"
+      }
+    },
+    {
+      "hub": {
+        "id": "9a7c6ac6-2cf0-4bab-8c16-6e4296fee874",
+        "type": "kaos.RefinementLinkHub",
+        "x": 607.5,
+        "y": 352.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "9d47161f-5a04-4955-876a-69ece42a7b2c",
+          "type": "kaos.RefinementLinkStart",
+          "source": "e731ae26-0c5e-4349-af95-1b7087545a72",
+          "target": "9a7c6ac6-2cf0-4bab-8c16-6e4296fee874"
+        }
+      ],
+      "end": {
+        "id": "994f0b92-b2f0-44cc-9032-9c7efc197942",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "9a7c6ac6-2cf0-4bab-8c16-6e4296fee874",
+        "target": "34a34f01-d315-48d0-9735-ba1489a16973"
+      }
+    },
+    {
+      "hub": {
+        "id": "a6547388-8350-4aa8-ab0e-8edc0646f567",
+        "type": "kaos.RefinementLinkHub",
+        "x": 436,
+        "y": 193,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "4a93f414-22fb-4566-8e94-597fec084aa6",
+          "type": "kaos.RefinementLinkStart",
+          "source": "93cd2c16-b6e7-4017-9949-3de21ac28085",
+          "target": "a6547388-8350-4aa8-ab0e-8edc0646f567"
+        }
+      ],
+      "end": {
+        "id": "f5f47b4b-f7eb-4028-b2f4-294b191e35f8",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "a6547388-8350-4aa8-ab0e-8edc0646f567",
+        "target": "8ba0440b-f84e-48eb-9fb9-7391025bb649"
+      }
+    },
+    {
+      "hub": {
+        "id": "3c62d523-2556-4893-918f-64aa61887651",
+        "type": "kaos.RefinementLinkHub",
+        "x": 399,
+        "y": 165,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "00ec56ef-39f5-46dc-a54e-1d247204bdb0",
+          "type": "kaos.RefinementLinkStart",
+          "source": "8ba0440b-f84e-48eb-9fb9-7391025bb649",
+          "target": "3c62d523-2556-4893-918f-64aa61887651"
+        }
+      ],
+      "end": {
+        "id": "a6d50d4a-1663-4410-8e71-cb3868067c3e",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "3c62d523-2556-4893-918f-64aa61887651",
+        "target": "93cd2c16-b6e7-4017-9949-3de21ac28085"
+      }
+    },
+    {
+      "id": "37098e05-6aa1-4129-88a7-e78d1f4785e1",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "6549f300-be1d-49c2-b6c8-37f95569e321",
+      "target": "02eac8b6-9e9c-4ff3-acd4-4f3b5bfae700"
+    },
+    {
+      "id": "9eab3598-0de8-47fd-8953-de0c3186d763",
+      "type": "kaos.Conflict",
+      "source": "888de1cb-95ee-424b-9ff7-e1beb31f4d6b",
+      "target": "34a34f01-d315-48d0-9735-ba1489a16973",
+      "customProperties": {
+        "BoundaryCondition": ""
+      }
+    }
+  ],
+  "display": {
+    "888de1cb-95ee-424b-9ff7-e1beb31f4d6b": {
+      "width": 154.203125,
+      "height": 51
+    },
+    "1021c612-6622-4d37-9199-d93cf93889ec": {
+      "width": 20,
+      "height": 20
+    },
+    "9a5a7a2e-6993-4e3b-830e-a2fe42ce7e9d": {
+      "width": 20,
+      "height": 20
+    },
+    "75bc0cf9-13a2-403c-818c-5dfb7a2fea02": {
+      "width": 20,
+      "height": 20
+    },
+    "9a7c6ac6-2cf0-4bab-8c16-6e4296fee874": {
+      "width": 20,
+      "height": 20
+    },
+    "8ba0440b-f84e-48eb-9fb9-7391025bb649": {
+      "backgroundColor": "#FA0000"
+    },
+    "a6547388-8350-4aa8-ab0e-8edc0646f567": {
+      "width": 20,
+      "height": 20
+    },
+    "3c62d523-2556-4893-918f-64aa61887651": {
+      "width": 20,
+      "height": 20
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Sun, 21 Apr 2024 09:03:09 GMT",
+  "diagram": {
+    "width": 2000,
+    "height": 1300,
+    "customProperties": {
+      "Description": ""
+    }
+  }
+}
