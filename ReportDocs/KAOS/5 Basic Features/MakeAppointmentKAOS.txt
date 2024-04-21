@@ -1,0 +1,359 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "e65c3101-c748-411e-bdcf-20550f6e31a3",
+      "text": "Patient",
+      "type": "kaos.Agent",
+      "x": 336,
+      "y": 729
+    },
+    {
+      "id": "71b8d630-6477-4fcf-a791-e03faeaf11e1",
+      "text": "Register Appointment Success",
+      "type": "kaos.BehavioralGoal",
+      "x": 391,
+      "y": 121,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "61b17971-93c5-4294-a682-590eebbd7c2f",
+      "text": "Appointment Confirmed",
+      "type": "kaos.BehavioralGoal",
+      "x": 360,
+      "y": 258,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "8628db08-0025-4f40-ba2c-a35b3e660999",
+      "text": "Choose Doctor",
+      "type": "kaos.BehavioralGoal",
+      "x": 250,
+      "y": 537,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "e41a6223-52f8-44c2-a7fa-0fc3b386bcb6",
+      "text": "Choose Time",
+      "type": "kaos.BehavioralGoal",
+      "x": 446,
+      "y": 545,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "c9863661-42be-4979-af2e-49dbd7c47010",
+      "text": "Doctor is Available",
+      "type": "kaos.BehavioralGoal",
+      "x": 325,
+      "y": 379,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "3290847b-1022-4b53-a0b2-f907de1943ed",
+      "text": "Hospital Controller",
+      "type": "kaos.Agent",
+      "x": 699,
+      "y": 734
+    },
+    {
+      "id": "736e5d3c-9c51-4c51-8a27-35250616d2aa",
+      "text": "Check Doctor Availability",
+      "type": "kaos.BehavioralGoal",
+      "x": 575,
+      "y": 462,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "6459813d-44e2-4a51-b6b5-21c39f918960",
+      "text": "update BD",
+      "type": "kaos.BehavioralGoal",
+      "x": 680,
+      "y": 287,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "hub": {
+        "id": "67b73ae6-8b20-4be3-8a24-c982a35a1fcf",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 437,
+        "y": 195,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "f8a4abcf-4ab7-44fb-b6c2-5ac2603db068",
+          "type": "kaos.RefinementLinkStart",
+          "source": "61b17971-93c5-4294-a682-590eebbd7c2f",
+          "target": "67b73ae6-8b20-4be3-8a24-c982a35a1fcf"
+        }
+      ],
+      "end": {
+        "id": "79458c3d-3be5-4ffc-801f-31f8d84e967b",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "67b73ae6-8b20-4be3-8a24-c982a35a1fcf",
+        "target": "71b8d630-6477-4fcf-a791-e03faeaf11e1"
+      }
+    },
+    {
+      "hub": {
+        "id": "c0a1c9f1-10d8-4f62-a32e-2d63e8c6fdc5",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 400,
+        "y": 433,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "59974e4d-5ff9-479e-aa8a-4bdea8b861e0",
+          "type": "kaos.RefinementLinkStart",
+          "source": "8628db08-0025-4f40-ba2c-a35b3e660999",
+          "target": "c0a1c9f1-10d8-4f62-a32e-2d63e8c6fdc5"
+        }
+      ],
+      "end": {
+        "id": "da7de056-0a76-4d72-9fba-6f823ec9938f",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "c0a1c9f1-10d8-4f62-a32e-2d63e8c6fdc5",
+        "target": "c9863661-42be-4979-af2e-49dbd7c47010"
+      }
+    },
+    {
+      "hub": {
+        "id": "1ca9d133-9f01-4ae3-9272-0f448298112d",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 400,
+        "y": 433,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "6f12ed5b-2ce5-4099-8161-121fdc6e893f",
+          "type": "kaos.RefinementLinkStart",
+          "source": "e41a6223-52f8-44c2-a7fa-0fc3b386bcb6",
+          "target": "1ca9d133-9f01-4ae3-9272-0f448298112d"
+        }
+      ],
+      "end": {
+        "id": "3adba730-30c4-4484-a79b-499b5c4183ad",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "1ca9d133-9f01-4ae3-9272-0f448298112d",
+        "target": "c9863661-42be-4979-af2e-49dbd7c47010"
+      }
+    },
+    {
+      "hub": {
+        "id": "e54858ea-1d56-419c-8813-b8d18e47cea2",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 400,
+        "y": 318,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "5be727a0-9ae2-4ddd-a225-d556ea49cc9a",
+          "type": "kaos.RefinementLinkStart",
+          "source": "c9863661-42be-4979-af2e-49dbd7c47010",
+          "target": "e54858ea-1d56-419c-8813-b8d18e47cea2"
+        }
+      ],
+      "end": {
+        "id": "88de1a0b-e92c-43a0-bd46-feb8c67f2382",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "e54858ea-1d56-419c-8813-b8d18e47cea2",
+        "target": "61b17971-93c5-4294-a682-590eebbd7c2f"
+      }
+    },
+    {
+      "hub": {
+        "id": "9a820b27-3b73-4a10-9f08-07c59670cbc9",
+        "type": "kaos.RefinementLinkHub",
+        "x": 400,
+        "y": 434,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "5b1612e4-deda-4f9d-9da9-0129218e5dbf",
+          "type": "kaos.RefinementLinkStart",
+          "source": "736e5d3c-9c51-4c51-8a27-35250616d2aa",
+          "target": "9a820b27-3b73-4a10-9f08-07c59670cbc9"
+        }
+      ],
+      "end": {
+        "id": "afa2827d-7d3f-4384-9c72-ad44ca9af87e",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "9a820b27-3b73-4a10-9f08-07c59670cbc9",
+        "target": "c9863661-42be-4979-af2e-49dbd7c47010"
+      }
+    },
+    {
+      "hub": {
+        "id": "dde1dcaa-60dd-4112-9ec4-da8aa4050094",
+        "type": "kaos.RefinementLinkHub",
+        "x": 438,
+        "y": 195,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "114fbcc6-a73a-4e9e-9c9e-e5f7304a3a63",
+          "type": "kaos.RefinementLinkStart",
+          "source": "6459813d-44e2-4a51-b6b5-21c39f918960",
+          "target": "dde1dcaa-60dd-4112-9ec4-da8aa4050094"
+        }
+      ],
+      "end": {
+        "id": "727a944c-8533-4bdd-866d-26aa4fb893b5",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "dde1dcaa-60dd-4112-9ec4-da8aa4050094",
+        "target": "71b8d630-6477-4fcf-a791-e03faeaf11e1"
+      }
+    },
+    {
+      "id": "892e0c0f-0ca7-4186-892e-37b6a708fdec",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "e65c3101-c748-411e-bdcf-20550f6e31a3",
+      "target": "e41a6223-52f8-44c2-a7fa-0fc3b386bcb6"
+    },
+    {
+      "id": "62e441bc-460f-4b9d-837d-5982cae9d863",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "e65c3101-c748-411e-bdcf-20550f6e31a3",
+      "target": "8628db08-0025-4f40-ba2c-a35b3e660999"
+    },
+    {
+      "id": "826b37b4-5a32-411e-9010-94bc22b220f5",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "3290847b-1022-4b53-a0b2-f907de1943ed",
+      "target": "736e5d3c-9c51-4c51-8a27-35250616d2aa"
+    },
+    {
+      "id": "741c0205-c077-4c59-8670-1133643c7b47",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "3290847b-1022-4b53-a0b2-f907de1943ed",
+      "target": "6459813d-44e2-4a51-b6b5-21c39f918960"
+    }
+  ],
+  "display": {
+    "9a820b27-3b73-4a10-9f08-07c59670cbc9": {
+      "width": 20,
+      "height": 20
+    },
+    "dde1dcaa-60dd-4112-9ec4-da8aa4050094": {
+      "width": 20,
+      "height": 20
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Sat, 20 Apr 2024 14:15:39 GMT",
+  "diagram": {
+    "width": 2000,
+    "height": 1300,
+    "name": "Example KAOS goal model",
+    "customProperties": {
+      "Description": "The tool for KAOS goal models has two noteworthy features: \n - Creation of links with multiple sources (e.g., the AND-refinement of Reliability;\n - Pre-defined properties in goals, refinement links (in the circle) and conflict links"
+    }
+  }
+}
