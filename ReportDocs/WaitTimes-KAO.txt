@@ -1,0 +1,418 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "4334c7fa-6d45-4d6c-9a07-61a39af070d0",
+      "text": "Queue Time display satisfied",
+      "type": "kaos.BehavioralGoal",
+      "x": 796.5,
+      "y": 16,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "5ec4e3a4-1114-415b-8d2b-094a83ca0b09",
+      "text": "Patients Check-in Correctly",
+      "type": "kaos.BehavioralGoal",
+      "x": 578,
+      "y": 105,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "f2d1b21e-8b62-45dd-890b-447e8830e836",
+      "text": "Calculate number people waiting",
+      "type": "kaos.BehavioralGoal",
+      "x": 770,
+      "y": 130,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "bbe7f898-0bb0-47b4-9121-892e49ed4ef6",
+      "text": "User",
+      "type": "kaos.Agent",
+      "x": 471,
+      "y": 218
+    },
+    {
+      "id": "094846b0-7440-4f5b-af98-c98c48ea6319",
+      "text": "Estimate average wait time",
+      "type": "kaos.BehavioralGoal",
+      "x": 992,
+      "y": 122,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "7f3f1292-dfea-453c-8d0e-a09c50621f85",
+      "text": "Keep track of people waiting",
+      "type": "kaos.BehavioralGoal",
+      "x": 746,
+      "y": 237,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "7d3ae4e5-1537-4a35-83a5-3e26aa7636eb",
+      "text": "Store wait times of patients",
+      "type": "kaos.BehavioralGoal",
+      "x": 946,
+      "y": 233,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "03eed3ca-96db-48f5-94c1-dca540cc49ab",
+      "text": "Calculate average wait time",
+      "type": "kaos.BehavioralGoal",
+      "x": 1198,
+      "y": 242,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "a8a7bc6d-b456-418c-bce4-fbbdbf0730b8",
+      "text": "Waiting room controller",
+      "type": "kaos.Agent",
+      "x": 738,
+      "y": 365
+    },
+    {
+      "id": "073624ea-88e8-4ab2-aebb-86800bf453d0",
+      "text": "Queue controller",
+      "type": "kaos.Agent",
+      "x": 1068,
+      "y": 359
+    },
+    {
+      "id": "e0adccdc-6372-4b28-8db0-b825b43c3d3b",
+      "text": "System Failure",
+      "type": "kaos.BehavioralGoal",
+      "x": 513,
+      "y": 326,
+      "customProperties": {
+        "Type": "Obstacle",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "hub": {
+        "id": "ba826ac6-2230-4754-9fd9-24ae31ec8034",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 828,
+        "y": 70,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "416fbf7a-a68d-4dab-b886-32aa4d24c2a6",
+          "type": "kaos.RefinementLinkStart",
+          "source": "5ec4e3a4-1114-415b-8d2b-094a83ca0b09",
+          "target": "ba826ac6-2230-4754-9fd9-24ae31ec8034"
+        }
+      ],
+      "end": {
+        "id": "f8d47d18-9b10-4c96-8c13-c3b0a6e4cfdb",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "ba826ac6-2230-4754-9fd9-24ae31ec8034",
+        "target": "4334c7fa-6d45-4d6c-9a07-61a39af070d0"
+      }
+    },
+    {
+      "hub": {
+        "id": "6ce9e478-0c07-4884-ab6f-75e2ca99adf8",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 828,
+        "y": 70,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "336fb84b-4bc3-4681-8798-5e659cce2b5a",
+          "type": "kaos.RefinementLinkStart",
+          "source": "f2d1b21e-8b62-45dd-890b-447e8830e836",
+          "target": "6ce9e478-0c07-4884-ab6f-75e2ca99adf8"
+        }
+      ],
+      "end": {
+        "id": "75680e8b-fd21-4bbb-83de-c41bf7d651c4",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "6ce9e478-0c07-4884-ab6f-75e2ca99adf8",
+        "target": "4334c7fa-6d45-4d6c-9a07-61a39af070d0"
+      }
+    },
+    {
+      "hub": {
+        "id": "dc83b70c-5a2b-4938-8528-113a0764edb9",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 829,
+        "y": 70,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "99a9b816-fcbb-4ba2-ace9-cc0673f0a372",
+          "type": "kaos.RefinementLinkStart",
+          "source": "094846b0-7440-4f5b-af98-c98c48ea6319",
+          "target": "dc83b70c-5a2b-4938-8528-113a0764edb9"
+        }
+      ],
+      "end": {
+        "id": "482d1746-f955-48f3-86dc-8df9e669ccef",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "dc83b70c-5a2b-4938-8528-113a0764edb9",
+        "target": "4334c7fa-6d45-4d6c-9a07-61a39af070d0"
+      }
+    },
+    {
+      "hub": {
+        "id": "3a618426-bc59-48fd-b4ec-caac5d557e9c",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 1076,
+        "y": 188,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "f4c57f15-469f-406d-97a6-fda0fa8f3921",
+          "type": "kaos.RefinementLinkStart",
+          "source": "7d3ae4e5-1537-4a35-83a5-3e26aa7636eb",
+          "target": "3a618426-bc59-48fd-b4ec-caac5d557e9c"
+        }
+      ],
+      "end": {
+        "id": "74b32c9a-e694-4722-a368-3aa5fe48490d",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "3a618426-bc59-48fd-b4ec-caac5d557e9c",
+        "target": "094846b0-7440-4f5b-af98-c98c48ea6319"
+      }
+    },
+    {
+      "hub": {
+        "id": "a945099f-4546-4885-81aa-f916d3700119",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 1076,
+        "y": 187,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "884f5698-c83d-4d26-b361-e59dcf28b905",
+          "type": "kaos.RefinementLinkStart",
+          "source": "03eed3ca-96db-48f5-94c1-dca540cc49ab",
+          "target": "a945099f-4546-4885-81aa-f916d3700119"
+        }
+      ],
+      "end": {
+        "id": "98f05c8b-5d27-4afc-9f36-6e56ac370f4e",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "a945099f-4546-4885-81aa-f916d3700119",
+        "target": "094846b0-7440-4f5b-af98-c98c48ea6319"
+      }
+    },
+    {
+      "hub": {
+        "id": "b02d2534-d61c-4883-9ecf-ecac4695f45e",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 807,
+        "y": 184,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "bcb72fa7-1737-4d2a-8427-d49f667b82ea",
+          "type": "kaos.RefinementLinkStart",
+          "source": "7f3f1292-dfea-453c-8d0e-a09c50621f85",
+          "target": "b02d2534-d61c-4883-9ecf-ecac4695f45e"
+        }
+      ],
+      "end": {
+        "id": "7ee1f280-afba-4430-b444-ad36bd71f3f4",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "b02d2534-d61c-4883-9ecf-ecac4695f45e",
+        "target": "f2d1b21e-8b62-45dd-890b-447e8830e836"
+      }
+    },
+    {
+      "hub": {
+        "id": "2f92bc75-2d35-482a-9476-abbdb4f1fc73",
+        "type": "kaos.RefinementLinkHub",
+        "x": 697,
+        "y": 281.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "4fe522e9-5076-4f81-a117-2181cc9604c6",
+          "type": "kaos.RefinementLinkStart",
+          "source": "7f3f1292-dfea-453c-8d0e-a09c50621f85",
+          "target": "2f92bc75-2d35-482a-9476-abbdb4f1fc73"
+        }
+      ],
+      "end": {
+        "id": "bf10c2af-e13a-4178-b459-9ca1ec899132",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "2f92bc75-2d35-482a-9476-abbdb4f1fc73",
+        "target": "e0adccdc-6372-4b28-8db0-b825b43c3d3b"
+      }
+    },
+    {
+      "id": "64eecebc-ed64-49b2-a82e-b73c12022395",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "bbe7f898-0bb0-47b4-9121-892e49ed4ef6",
+      "target": "5ec4e3a4-1114-415b-8d2b-094a83ca0b09"
+    },
+    {
+      "id": "bf6fc35f-a529-4fe2-be73-7048c2c28cd3",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "a8a7bc6d-b456-418c-bce4-fbbdbf0730b8",
+      "target": "7f3f1292-dfea-453c-8d0e-a09c50621f85"
+    },
+    {
+      "id": "0f778d46-907b-4439-af04-30735657f8be",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "073624ea-88e8-4ab2-aebb-86800bf453d0",
+      "target": "7d3ae4e5-1537-4a35-83a5-3e26aa7636eb"
+    },
+    {
+      "id": "b19ca8d8-fd91-4cdc-9eb4-537e8ba1bf93",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "073624ea-88e8-4ab2-aebb-86800bf453d0",
+      "target": "03eed3ca-96db-48f5-94c1-dca540cc49ab"
+    }
+  ],
+  "display": {
+    "5ec4e3a4-1114-415b-8d2b-094a83ca0b09": {
+      "backgroundColor": "#FAF522"
+    },
+    "094846b0-7440-4f5b-af98-c98c48ea6319": {
+      "width": 173.609375,
+      "height": 49.84375
+    },
+    "e0adccdc-6372-4b28-8db0-b825b43c3d3b": {
+      "backgroundColor": "#FA3931"
+    },
+    "2f92bc75-2d35-482a-9476-abbdb4f1fc73": {
+      "width": 20,
+      "height": 20
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Sun, 21 Apr 2024 09:17:05 GMT",
+  "diagram": {
+    "width": 2043,
+    "height": 1300,
+    "customProperties": {
+      "Description": ""
+    }
+  }
+}

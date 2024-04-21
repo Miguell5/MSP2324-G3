@@ -1,0 +1,594 @@
+{
+  "actors": [],
+  "orphans": [
+    {
+      "id": "a7107573-c824-45de-a15e-ed750b490a69",
+      "text": "DeviceReadSatisfied",
+      "type": "kaos.BehavioralGoal",
+      "x": 819,
+      "y": 34,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "8d59c07e-afa0-4058-b2aa-1bfd392344d5",
+      "text": "Device Connection Succeeded",
+      "type": "kaos.BehavioralGoal",
+      "x": 528,
+      "y": 179,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "a880bd2a-f55e-42e7-99a1-cb17ac202e2d",
+      "text": "User paired device",
+      "type": "kaos.BehavioralGoal",
+      "x": 613,
+      "y": 287,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "d0629212-87f3-496d-ab72-3edd0a7b022f",
+      "text": "Information Sent",
+      "type": "kaos.BehavioralGoal",
+      "x": 1573,
+      "y": 137,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "989b0a32-7643-4e5f-9d73-a0fab5c770a4",
+      "text": "Connection Established",
+      "type": "kaos.BehavioralGoal",
+      "x": 377,
+      "y": 291,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "7e4993b7-343f-4773-9455-864fe57d85f0",
+      "text": "User",
+      "type": "kaos.Agent",
+      "x": 611,
+      "y": 413
+    },
+    {
+      "id": "d96de472-1f09-4d91-99eb-fb1e2e7e5421",
+      "text": "Device Read Controller",
+      "type": "kaos.Agent",
+      "x": 781,
+      "y": 531
+    },
+    {
+      "id": "49ceef01-14a4-4c9a-a76c-1426a9abac6c",
+      "text": "Device Type Identified",
+      "type": "kaos.BehavioralGoal",
+      "x": 762,
+      "y": 214,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "3534dd8f-f8e1-4dd2-b914-8b8b00d1951e",
+      "text": "Graph generated",
+      "type": "kaos.BehavioralGoal",
+      "x": 1422,
+      "y": 249,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "e5cc8702-86ff-43de-98f4-d532da550f11",
+      "text": "Numeric Value read",
+      "type": "kaos.BehavioralGoal",
+      "x": 1672,
+      "y": 259,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "bd436a33-0aed-4e04-8368-845ad741619d",
+      "text": "Information Compiler Controller",
+      "type": "kaos.Agent",
+      "x": 1497,
+      "y": 400
+    },
+    {
+      "id": "3b882adc-758e-4b4b-8798-602d4b8559fa",
+      "text": "Check Device Type",
+      "type": "kaos.BehavioralGoal",
+      "x": 761.5,
+      "y": 334,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "4610a4ba-8230-456d-983b-11e0619d8a67",
+      "text": "Device Type Unidentified",
+      "type": "kaos.BehavioralGoal",
+      "x": 930,
+      "y": 219,
+      "customProperties": {
+        "Type": "Obstacle",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "424e6810-9798-4700-9f4b-90178f1d3563",
+      "text": "Warn user",
+      "type": "kaos.BehavioralGoal",
+      "x": 1151,
+      "y": 182,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    }
+  ],
+  "dependencies": [],
+  "links": [
+    {
+      "hub": {
+        "id": "2f2eb257-75cd-451d-b63f-21fdfe192a99",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 853,
+        "y": 100,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "1ede6b0d-6e53-4c8c-9b83-05e6ac60d5f5",
+          "type": "kaos.RefinementLinkStart",
+          "source": "8d59c07e-afa0-4058-b2aa-1bfd392344d5",
+          "target": "2f2eb257-75cd-451d-b63f-21fdfe192a99"
+        }
+      ],
+      "end": {
+        "id": "a018f240-c23b-4809-8a18-b927518c24d6",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "2f2eb257-75cd-451d-b63f-21fdfe192a99",
+        "target": "a7107573-c824-45de-a15e-ed750b490a69"
+      }
+    },
+    {
+      "hub": {
+        "id": "08f46481-59fa-4987-8d4b-1f3a1549a522",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 852,
+        "y": 99,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [],
+      "end": {
+        "id": "d6892332-1a97-44a0-8e71-7a696fa866ea",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "08f46481-59fa-4987-8d4b-1f3a1549a522",
+        "target": "a7107573-c824-45de-a15e-ed750b490a69"
+      }
+    },
+    {
+      "hub": {
+        "id": "b85e49d4-6614-4fa1-9460-8c2d3b50e576",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 853,
+        "y": 98,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "65e6668d-ce04-4c9d-8f1d-00b28cfca48d",
+          "type": "kaos.RefinementLinkStart",
+          "source": "d0629212-87f3-496d-ab72-3edd0a7b022f",
+          "target": "b85e49d4-6614-4fa1-9460-8c2d3b50e576"
+        }
+      ],
+      "end": {
+        "id": "93aa09be-0937-43b5-ba46-5e000ef45e77",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "b85e49d4-6614-4fa1-9460-8c2d3b50e576",
+        "target": "a7107573-c824-45de-a15e-ed750b490a69"
+      }
+    },
+    {
+      "hub": {
+        "id": "8c5dc3e7-e13f-4f92-8d72-f82e2fa4e410",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 562,
+        "y": 238,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "cbebedb6-7737-487f-8acf-b223be92738b",
+          "type": "kaos.RefinementLinkStart",
+          "source": "989b0a32-7643-4e5f-9d73-a0fab5c770a4",
+          "target": "8c5dc3e7-e13f-4f92-8d72-f82e2fa4e410"
+        }
+      ],
+      "end": {
+        "id": "b4db98fa-611f-4345-9039-6548ac5645d4",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "8c5dc3e7-e13f-4f92-8d72-f82e2fa4e410",
+        "target": "8d59c07e-afa0-4058-b2aa-1bfd392344d5"
+      }
+    },
+    {
+      "hub": {
+        "id": "251a9e18-6775-4bd4-bccf-bac7e481de39",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 562,
+        "y": 239,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "e2e5265a-1140-4334-9c86-d42d8924d5fe",
+          "type": "kaos.RefinementLinkStart",
+          "source": "a880bd2a-f55e-42e7-99a1-cb17ac202e2d",
+          "target": "251a9e18-6775-4bd4-bccf-bac7e481de39"
+        }
+      ],
+      "end": {
+        "id": "33e3e482-af2b-41d9-8f54-d3a2f3b203cf",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "251a9e18-6775-4bd4-bccf-bac7e481de39",
+        "target": "8d59c07e-afa0-4058-b2aa-1bfd392344d5"
+      }
+    },
+    {
+      "hub": {
+        "id": "1a0c0b75-cef7-4402-8a6e-0f30fba1dee4",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 851,
+        "y": 99,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "3170dce6-7f0b-4289-a200-c04c5a325d81",
+          "type": "kaos.RefinementLinkStart",
+          "source": "49ceef01-14a4-4c9a-a76c-1426a9abac6c",
+          "target": "1a0c0b75-cef7-4402-8a6e-0f30fba1dee4"
+        }
+      ],
+      "end": {
+        "id": "b0119db8-a8d7-4719-a6ad-34dde2cd20e9",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "1a0c0b75-cef7-4402-8a6e-0f30fba1dee4",
+        "target": "a7107573-c824-45de-a15e-ed750b490a69"
+      }
+    },
+    {
+      "hub": {
+        "id": "e491f859-9afc-4283-bf2f-b244eb459bd1",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 1545,
+        "y": 195,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "be91827b-44d8-437e-ae11-57b0feadc8ab",
+          "type": "kaos.RefinementLinkStart",
+          "source": "3534dd8f-f8e1-4dd2-b914-8b8b00d1951e",
+          "target": "e491f859-9afc-4283-bf2f-b244eb459bd1"
+        }
+      ],
+      "end": {
+        "id": "3936e116-2730-4398-a901-1871f50d9e06",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "e491f859-9afc-4283-bf2f-b244eb459bd1",
+        "target": "d0629212-87f3-496d-ab72-3edd0a7b022f"
+      }
+    },
+    {
+      "hub": {
+        "id": "040fa249-4506-469b-b0f8-e2b839d19daa",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 1681,
+        "y": 196,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "3ab19c5d-444c-426d-9860-b3253b8c595c",
+          "type": "kaos.RefinementLinkStart",
+          "source": "e5cc8702-86ff-43de-98f4-d532da550f11",
+          "target": "040fa249-4506-469b-b0f8-e2b839d19daa"
+        }
+      ],
+      "end": {
+        "id": "5a642db9-6ce9-46da-b2a8-160de9bb920a",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "040fa249-4506-469b-b0f8-e2b839d19daa",
+        "target": "d0629212-87f3-496d-ab72-3edd0a7b022f"
+      }
+    },
+    {
+      "hub": {
+        "id": "9a8db192-f16b-472a-9de1-378758ef44be",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 804,
+        "y": 274,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "775727a8-9332-4a0e-8aad-9fa274ff8acb",
+          "type": "kaos.RefinementLinkStart",
+          "source": "3b882adc-758e-4b4b-8798-602d4b8559fa",
+          "target": "9a8db192-f16b-472a-9de1-378758ef44be"
+        }
+      ],
+      "end": {
+        "id": "c890f868-c702-43a8-b9b7-cea6bf35da8e",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "9a8db192-f16b-472a-9de1-378758ef44be",
+        "target": "49ceef01-14a4-4c9a-a76c-1426a9abac6c"
+      }
+    },
+    {
+      "hub": {
+        "id": "e204a664-e429-4f14-ae79-eaf71ee9b7af",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 891,
+        "y": 277,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "37503dd3-e3cb-4f4f-9ebd-acf8dded1384",
+          "type": "kaos.RefinementLinkStart",
+          "source": "3b882adc-758e-4b4b-8798-602d4b8559fa",
+          "target": "e204a664-e429-4f14-ae79-eaf71ee9b7af"
+        }
+      ],
+      "end": {
+        "id": "2400bbe8-913d-42ad-bddb-a8dd00c71af9",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "e204a664-e429-4f14-ae79-eaf71ee9b7af",
+        "target": "4610a4ba-8230-456d-983b-11e0619d8a67"
+      }
+    },
+    {
+      "hub": {
+        "id": "9553c233-1008-448b-94e9-4b85521b0ff5",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 1086,
+        "y": 199,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "9f806288-ac1d-43ca-bea6-a103ab8e0380",
+          "type": "kaos.RefinementLinkStart",
+          "source": "4610a4ba-8230-456d-983b-11e0619d8a67",
+          "target": "9553c233-1008-448b-94e9-4b85521b0ff5"
+        }
+      ],
+      "end": {
+        "id": "dfd6c8a5-b136-4cc9-9a43-306dc7b496d0",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "9553c233-1008-448b-94e9-4b85521b0ff5",
+        "target": "424e6810-9798-4700-9f4b-90178f1d3563"
+      }
+    },
+    {
+      "id": "c52b44fc-1e05-4b3a-8046-5a7ac4d122cc",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "7e4993b7-343f-4773-9455-864fe57d85f0",
+      "target": "a880bd2a-f55e-42e7-99a1-cb17ac202e2d"
+    },
+    {
+      "id": "c5bd5829-6594-487a-8a3d-2f3cbfaf71fe",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "d96de472-1f09-4d91-99eb-fb1e2e7e5421",
+      "target": "989b0a32-7643-4e5f-9d73-a0fab5c770a4"
+    },
+    {
+      "id": "9122c99e-328a-4d17-b86e-15fa0326ec7b",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "bd436a33-0aed-4e04-8368-845ad741619d",
+      "target": "3534dd8f-f8e1-4dd2-b914-8b8b00d1951e"
+    },
+    {
+      "id": "c8bf4fc5-309e-49e4-a1bd-f313d4a60f3a",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "bd436a33-0aed-4e04-8368-845ad741619d",
+      "target": "e5cc8702-86ff-43de-98f4-d532da550f11"
+    },
+    {
+      "id": "8d9d2e8c-2e60-4f9e-bbb0-71e5dcea88c5",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "d96de472-1f09-4d91-99eb-fb1e2e7e5421",
+      "target": "3b882adc-758e-4b4b-8798-602d4b8559fa"
+    },
+    {
+      "id": "f8c945aa-1ebd-4571-b62c-d40747579031",
+      "type": "kaos.Conflict",
+      "source": "49ceef01-14a4-4c9a-a76c-1426a9abac6c",
+      "target": "4610a4ba-8230-456d-983b-11e0619d8a67",
+      "customProperties": {
+        "BoundaryCondition": ""
+      }
+    }
+  ],
+  "display": {
+    "bd436a33-0aed-4e04-8368-845ad741619d": {
+      "width": 152.609375,
+      "height": 59.84375
+    },
+    "4610a4ba-8230-456d-983b-11e0619d8a67": {
+      "backgroundColor": "#FA3230"
+    },
+    "c5bd5829-6594-487a-8a3d-2f3cbfaf71fe": {
+      "vertices": [
+        {
+          "x": 487,
+          "y": 467
+        }
+      ]
+    }
+  },
+  "tool": "dsm3-goals",
+  "metamodelVersion": "1.0",
+  "saveDate": "Sun, 21 Apr 2024 09:15:28 GMT",
+  "diagram": {
+    "width": 2043,
+    "height": 1300,
+    "customProperties": {
+      "Description": ""
+    }
+  }
+}
