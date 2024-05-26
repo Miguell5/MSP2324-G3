@@ -1466,8 +1466,8 @@
       "id": "09b1a351-e216-4599-bf68-80c624dfd1fa",
       "text": "Information Was Checked",
       "type": "kaos.BehavioralGoal",
-      "x": 1914,
-      "y": 718,
+      "x": 1915,
+      "y": 720,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -1484,14 +1484,14 @@
       "id": "a8f8bd81-8901-42b0-a8bc-5a49d62bfb21",
       "text": "Hospital Administrator",
       "type": "kaos.Agent",
-      "x": 2019.5,
+      "x": 2020,
       "y": 876
     },
     {
       "id": "dfc3b5fb-5738-4ba3-838d-956a2379de59",
       "text": "Information Received",
       "type": "kaos.BehavioralGoal",
-      "x": 1742,
+      "x": 1749,
       "y": 751,
       "customProperties": {
         "Type": "",
@@ -1563,8 +1563,8 @@
       "id": "ef728974-d8e7-4a46-bfc6-8101fb9f5c3c",
       "text": "Wait 7 days for payment",
       "type": "kaos.BehavioralGoal",
-      "x": 3916,
-      "y": 1254,
+      "x": 3854,
+      "y": 1266,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -1581,8 +1581,8 @@
       "id": "1dcf37a6-3e85-4e8a-884f-810d058e076e",
       "text": "Send Invoice to Client",
       "type": "kaos.BehavioralGoal",
-      "x": 3918,
-      "y": 1355,
+      "x": 3906,
+      "y": 1368,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -1599,7 +1599,7 @@
       "id": "45c3dc8a-8111-4b39-b97f-125d7d26abd5",
       "text": "Create Invoice",
       "type": "kaos.BehavioralGoal",
-      "x": 3913,
+      "x": 3912,
       "y": 1453,
       "customProperties": {
         "Type": "",
@@ -1618,13 +1618,13 @@
       "text": "My Clinic",
       "type": "kaos.Agent",
       "x": 3909,
-      "y": 1570
+      "y": 1563
     },
     {
       "id": "cf682f87-dd17-4fa7-971e-1439a16d80fb",
       "text": "Didnt Received Payment",
       "type": "kaos.BehavioralGoal",
-      "x": 4036.5,
+      "x": 4037,
       "y": 1198,
       "customProperties": {
         "Type": "",
@@ -2404,8 +2404,8 @@
       "id": "eac2a498-c1fa-4213-b343-9ef81514b546",
       "text": "Personal Information is Expired",
       "type": "kaos.BehavioralGoal",
-      "x": 1567,
-      "y": 866,
+      "x": 1566,
+      "y": 867,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -2422,8 +2422,8 @@
       "id": "b252518b-3ec5-4645-82c3-7d69a7a2ebb3",
       "text": "Servert is Down",
       "type": "kaos.BehavioralGoal",
-      "x": 3909.5,
-      "y": 967,
+      "x": 3905,
+      "y": 973,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -2440,7 +2440,7 @@
       "id": "43ae523e-1ce5-462f-ad40-3fe2c033484d",
       "text": "Payment Information is incorrect",
       "type": "kaos.BehavioralGoal",
-      "x": 3751.5,
+      "x": 3752,
       "y": 1075,
       "customProperties": {
         "Type": "",
@@ -2640,6 +2640,114 @@
       "type": "kaos.BehavioralGoal",
       "x": 5797,
       "y": 1135,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "668c0f76-1776-4e1d-8c3d-11882c860869",
+      "text": "Use NIF instead of personal information",
+      "type": "kaos.BehavioralGoal",
+      "x": 1561,
+      "y": 754,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "673def49-aa60-44da-86b7-c295a2ef63f9",
+      "text": "Communicate again later",
+      "type": "kaos.BehavioralGoal",
+      "x": 2270,
+      "y": 624,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "8e473865-7686-4312-af4a-919abd762e0f",
+      "text": "Use Replicated Server",
+      "type": "kaos.BehavioralGoal",
+      "x": 1685,
+      "y": 347,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "a5d9bd83-9736-4113-9aea-e2c85edd1a75",
+      "text": "Ask to insert payment information again",
+      "type": "kaos.BehavioralGoal",
+      "x": 3619,
+      "y": 1156,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "c7c8b140-fd81-4907-b6c4-9bd7bb0e5377",
+      "text": "Use Replicated Server",
+      "type": "kaos.BehavioralGoal",
+      "x": 3699,
+      "y": 987,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "80d582b4-6a47-4294-9e0f-00f3d357d64f",
+      "text": "Communicate again later",
+      "type": "kaos.BehavioralGoal",
+      "x": 4218,
+      "y": 1562,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -4921,8 +5029,8 @@
         "id": "7fa4ccdd-8049-4453-9413-4bea9627d63f",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
-        "x": 3964,
-        "y": 1305,
+        "x": 3915,
+        "y": 1321,
         "customProperties": {
           "SysRef": "",
           "Status": "",
@@ -4949,8 +5057,8 @@
         "id": "7fcf0c52-9d97-4393-a4c4-877bd3729054",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
-        "x": 3965,
-        "y": 1393,
+        "x": 3961,
+        "y": 1403,
         "customProperties": {
           "SysRef": "",
           "Status": "",
@@ -6150,34 +6258,6 @@
     },
     {
       "hub": {
-        "id": "d28ea4bd-a47a-4d39-a259-9ed59d58257f",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 2108,
-        "y": 378,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "741723b8-04a1-4b80-ab26-253493ecbc35",
-          "type": "kaos.RefinementLinkStart",
-          "source": "b48e083d-83e8-4321-8596-811fc149d5a0",
-          "target": "d28ea4bd-a47a-4d39-a259-9ed59d58257f"
-        }
-      ],
-      "end": {
-        "id": "f2b09da3-1f06-43e1-b19a-2a16bca0890b",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "d28ea4bd-a47a-4d39-a259-9ed59d58257f",
-        "target": "a7a51f60-8ab7-4d7c-aca1-96227a30aa20"
-      }
-    },
-    {
-      "hub": {
         "id": "2a285878-1c66-4c3d-a2d6-b65ecacd356d",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
@@ -6234,62 +6314,6 @@
     },
     {
       "hub": {
-        "id": "d0eeee34-72a1-4217-9fd9-5d238feb4de5",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 2249,
-        "y": 571,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "84c9fe05-2e5b-4bc5-abcb-0d1adddf2e2c",
-          "type": "kaos.RefinementLinkStart",
-          "source": "1d982703-e459-4e9d-80a7-6fbe134ced52",
-          "target": "d0eeee34-72a1-4217-9fd9-5d238feb4de5"
-        }
-      ],
-      "end": {
-        "id": "fa3a2036-66a7-4561-9bab-20a18f838018",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "d0eeee34-72a1-4217-9fd9-5d238feb4de5",
-        "target": "2cf5e982-3676-45f7-b597-18b973841548"
-      }
-    },
-    {
-      "hub": {
-        "id": "0219a058-8c79-43f8-b5dd-c69b9dd2c42b",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 1718,
-        "y": 812,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "d4148c3d-123d-4353-86ba-e42b62ec8cfa",
-          "type": "kaos.RefinementLinkStart",
-          "source": "eac2a498-c1fa-4213-b343-9ef81514b546",
-          "target": "0219a058-8c79-43f8-b5dd-c69b9dd2c42b"
-        }
-      ],
-      "end": {
-        "id": "912819c1-b467-4060-af39-87ebf6af2abd",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "0219a058-8c79-43f8-b5dd-c69b9dd2c42b",
-        "target": "8fba5b7a-6192-4f21-905c-df87f8464c3c"
-      }
-    },
-    {
-      "hub": {
         "id": "615b7dd5-b28e-48f6-8605-bac158d107d3",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
@@ -6318,34 +6342,6 @@
     },
     {
       "hub": {
-        "id": "37865e8c-c9e9-4168-9cb8-2067e6334815",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 4043,
-        "y": 930,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "4cc74157-8ed2-4bb1-9d7f-07950e596151",
-          "type": "kaos.RefinementLinkStart",
-          "source": "b252518b-3ec5-4645-82c3-7d69a7a2ebb3",
-          "target": "37865e8c-c9e9-4168-9cb8-2067e6334815"
-        }
-      ],
-      "end": {
-        "id": "c88ae943-d73c-43b9-a9fb-1d74a76dcccd",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "37865e8c-c9e9-4168-9cb8-2067e6334815",
-        "target": "24809651-e1cf-4324-be18-5f5ae5f2de19"
-      }
-    },
-    {
-      "hub": {
         "id": "2c69e02a-b567-455e-859d-76c8d91beb4b",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
@@ -6370,34 +6366,6 @@
         "type": "kaos.RefinementLinkEnd",
         "source": "2c69e02a-b567-455e-859d-76c8d91beb4b",
         "target": "b252518b-3ec5-4645-82c3-7d69a7a2ebb3"
-      }
-    },
-    {
-      "hub": {
-        "id": "a70496c8-5301-412f-a815-48bc0bd9c80a",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 3890,
-        "y": 1030,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "bd81a0cd-52e4-410d-b535-125611d16281",
-          "type": "kaos.RefinementLinkStart",
-          "source": "43ae523e-1ce5-462f-ad40-3fe2c033484d",
-          "target": "a70496c8-5301-412f-a815-48bc0bd9c80a"
-        }
-      ],
-      "end": {
-        "id": "63dc88ef-ae52-467a-b23d-51d11cb6c81b",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "a70496c8-5301-412f-a815-48bc0bd9c80a",
-        "target": "fafd0935-c8cd-46d2-b756-23cd7aab5c46"
       }
     },
     {
@@ -6454,34 +6422,6 @@
         "type": "kaos.RefinementLinkEnd",
         "source": "47f1f27c-cd95-4070-99aa-df01b2fe3809",
         "target": "3861be4c-70b2-4dad-92b6-2a8ef11f8cf0"
-      }
-    },
-    {
-      "hub": {
-        "id": "9749ea6e-86d4-4e58-b064-62a71ba811c1",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 4212,
-        "y": 1407,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "667e2765-8740-4a1a-acee-2ccde7ef9968",
-          "type": "kaos.RefinementLinkStart",
-          "source": "3861be4c-70b2-4dad-92b6-2a8ef11f8cf0",
-          "target": "9749ea6e-86d4-4e58-b064-62a71ba811c1"
-        }
-      ],
-      "end": {
-        "id": "7e47b21d-f5df-431d-9194-86b5975c79e9",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "9749ea6e-86d4-4e58-b064-62a71ba811c1",
-        "target": "6f68cb2b-ed2c-4508-a778-fc0abf929989"
       }
     },
     {
@@ -6711,6 +6651,7 @@
     {
       "hub": {
         "id": "7078b89a-b562-4fa7-a19a-9e115e77a194",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 6938.45703125,
         "y": 668.5,
@@ -6738,6 +6679,7 @@
     {
       "hub": {
         "id": "b55058de-5b81-49ec-a761-7fb8e821be16",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 7030.33203125,
         "y": 446.5,
@@ -6765,6 +6707,7 @@
     {
       "hub": {
         "id": "acd730d8-bfe5-4c5b-888f-1cc1f0159211",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 2846,
         "y": 1015.5,
@@ -6792,6 +6735,7 @@
     {
       "hub": {
         "id": "b4f0253b-b6f0-4341-a7bf-33dea5ef7e66",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 2853,
         "y": 1047,
@@ -6819,6 +6763,7 @@
     {
       "hub": {
         "id": "f1294794-2f19-45ca-a22f-4e8a5fb28910",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 5821,
         "y": 751,
@@ -6846,6 +6791,7 @@
     {
       "hub": {
         "id": "06c72d3e-981f-4a7c-8c48-2bc1e43c44da",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 5870,
         "y": 997,
@@ -6873,6 +6819,7 @@
     {
       "hub": {
         "id": "55a2abe3-b5a5-4037-b917-9055bbc7746a",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 5867.5,
         "y": 996,
@@ -6900,6 +6847,7 @@
     {
       "hub": {
         "id": "820964f1-f6c1-44e9-a6e5-2124b2cc7885",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 5921.5,
         "y": 1206.5,
@@ -6922,6 +6870,195 @@
         "type": "kaos.RefinementLinkEnd",
         "source": "820964f1-f6c1-44e9-a6e5-2124b2cc7885",
         "target": "7261b044-5cb0-4213-aa9c-e03070fe0ede"
+      }
+    },
+    {
+      "hub": {
+        "id": "03448e95-6ce5-40d5-99e8-ee321426c90f",
+        "type": "kaos.RefinementLinkHub",
+        "x": 1608,
+        "y": 804,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "3502a94d-acef-4f6a-b981-3a247f8199e9",
+          "type": "kaos.RefinementLinkStart",
+          "source": "668c0f76-1776-4e1d-8c3d-11882c860869",
+          "target": "03448e95-6ce5-40d5-99e8-ee321426c90f"
+        }
+      ],
+      "end": {
+        "id": "da0d99ed-fa79-487a-88d2-013745fbf5bc",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "03448e95-6ce5-40d5-99e8-ee321426c90f",
+        "target": "eac2a498-c1fa-4213-b343-9ef81514b546"
+      }
+    },
+    {
+      "hub": {
+        "id": "919d2183-ddd0-487c-8b48-6325e7b34006",
+        "type": "kaos.RefinementLinkHub",
+        "x": 2320,
+        "y": 579,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "4ab648e1-4792-483f-aef9-d1961f85e0de",
+          "type": "kaos.RefinementLinkStart",
+          "source": "673def49-aa60-44da-86b7-c295a2ef63f9",
+          "target": "919d2183-ddd0-487c-8b48-6325e7b34006"
+        }
+      ],
+      "end": {
+        "id": "31f9aa07-ec74-4cf3-8d2e-eb64490e7743",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "919d2183-ddd0-487c-8b48-6325e7b34006",
+        "target": "1d982703-e459-4e9d-80a7-6fbe134ced52"
+      }
+    },
+    {
+      "hub": {
+        "id": "b596c136-cddd-4e44-a947-ebe5cbfd3d31",
+        "type": "kaos.RefinementLinkHub",
+        "x": 1861,
+        "y": 344,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "51caec10-4eba-4470-b2da-9af18e1c2cd3",
+          "type": "kaos.RefinementLinkStart",
+          "source": "8e473865-7686-4312-af4a-919abd762e0f",
+          "target": "b596c136-cddd-4e44-a947-ebe5cbfd3d31"
+        }
+      ],
+      "end": {
+        "id": "a8ce15a5-8227-449f-8ea2-42a0424c1181",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "b596c136-cddd-4e44-a947-ebe5cbfd3d31",
+        "target": "b48e083d-83e8-4321-8596-811fc149d5a0"
+      }
+    },
+    {
+      "hub": {
+        "id": "928690cd-1251-429d-989f-11650439503f",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3683,
+        "y": 1070,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "4568cd71-9703-46cd-baa7-b3e0f6aada17",
+          "type": "kaos.RefinementLinkStart",
+          "source": "a5d9bd83-9736-4113-9aea-e2c85edd1a75",
+          "target": "928690cd-1251-429d-989f-11650439503f"
+        }
+      ],
+      "end": {
+        "id": "a64ef00e-5769-4dba-b89b-233cb292f32c",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "928690cd-1251-429d-989f-11650439503f",
+        "target": "43ae523e-1ce5-462f-ad40-3fe2c033484d"
+      }
+    },
+    {
+      "hub": {
+        "id": "84e1d0ea-4a52-4e32-bb42-f0af82df41a9",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3839,
+        "y": 941,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "f8907bcf-b394-41ff-b390-f28e3edb94fe",
+          "type": "kaos.RefinementLinkStart",
+          "source": "c7c8b140-fd81-4907-b6c4-9bd7bb0e5377",
+          "target": "84e1d0ea-4a52-4e32-bb42-f0af82df41a9"
+        }
+      ],
+      "end": {
+        "id": "4059e22e-68a8-4be5-b941-2683b4c8acd3",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "84e1d0ea-4a52-4e32-bb42-f0af82df41a9",
+        "target": "b252518b-3ec5-4645-82c3-7d69a7a2ebb3"
+      }
+    },
+    {
+      "hub": {
+        "id": "0a1f991d-e680-47c0-a625-7cbf5a99ca22",
+        "type": "kaos.RefinementLinkHub",
+        "x": 4261,
+        "y": 1506,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "a6e384f1-ca1b-4def-bd28-dca298c43562",
+          "type": "kaos.RefinementLinkStart",
+          "source": "80d582b4-6a47-4294-9e0f-00f3d357d64f",
+          "target": "0a1f991d-e680-47c0-a625-7cbf5a99ca22"
+        }
+      ],
+      "end": {
+        "id": "dca8ed26-580d-415a-bf7f-999afdbeedc1",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "0a1f991d-e680-47c0-a625-7cbf5a99ca22",
+        "target": "3861be4c-70b2-4dad-92b6-2a8ef11f8cf0"
+      }
+    },
+    {
+      "hub": {
+        "id": "087f961b-5645-4072-a339-6a9c5d10ee7e",
+        "type": "kaos.RefinementLinkHub",
+        "x": 4034,
+        "y": 1263,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "b89997c7-2131-47b6-bde8-f385d991cc6a",
+          "type": "kaos.RefinementLinkStart",
+          "source": "ef728974-d8e7-4a46-bfc6-8101fb9f5c3c",
+          "target": "087f961b-5645-4072-a339-6a9c5d10ee7e"
+        }
+      ],
+      "end": {
+        "id": "f916037f-1935-42fb-bc01-5a761f05cd8e",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "087f961b-5645-4072-a339-6a9c5d10ee7e",
+        "target": "cf682f87-dd17-4fa7-971e-1439a16d80fb"
       }
     },
     {
@@ -7391,41 +7528,37 @@
       "width": 264.9140625,
       "height": 131.890625
     },
-    "7078b89a-b562-4fa7-a19a-9e115e77a194": {
-      "width": 20,
-      "height": 20
-    },
-    "b55058de-5b81-49ec-a761-7fb8e821be16": {
-      "width": 20,
-      "height": 20
-    },
     "178a3194-794a-4e68-b48f-92235eee7e35": {
       "backgroundColor": "#FA0000"
-    },
-    "acd730d8-bfe5-4c5b-888f-1cc1f0159211": {
-      "width": 20,
-      "height": 20
-    },
-    "b4f0253b-b6f0-4341-a7bf-33dea5ef7e66": {
-      "width": 20,
-      "height": 20
     },
     "7261b044-5cb0-4213-aa9c-e03070fe0ede": {
       "backgroundColor": "#FA0000"
     },
-    "f1294794-2f19-45ca-a22f-4e8a5fb28910": {
+    "03448e95-6ce5-40d5-99e8-ee321426c90f": {
       "width": 20,
       "height": 20
     },
-    "06c72d3e-981f-4a7c-8c48-2bc1e43c44da": {
+    "919d2183-ddd0-487c-8b48-6325e7b34006": {
       "width": 20,
       "height": 20
     },
-    "55a2abe3-b5a5-4037-b917-9055bbc7746a": {
+    "b596c136-cddd-4e44-a947-ebe5cbfd3d31": {
       "width": 20,
       "height": 20
     },
-    "820964f1-f6c1-44e9-a6e5-2124b2cc7885": {
+    "928690cd-1251-429d-989f-11650439503f": {
+      "width": 20,
+      "height": 20
+    },
+    "84e1d0ea-4a52-4e32-bb42-f0af82df41a9": {
+      "width": 20,
+      "height": 20
+    },
+    "0a1f991d-e680-47c0-a625-7cbf5a99ca22": {
+      "width": 20,
+      "height": 20
+    },
+    "087f961b-5645-4072-a339-6a9c5d10ee7e": {
       "width": 20,
       "height": 20
     },
@@ -7476,7 +7609,7 @@
   },
   "tool": "dsm3-goals",
   "metamodelVersion": "1.0",
-  "saveDate": "Sun, 21 Apr 2024 10:23:29 GMT",
+  "saveDate": "Sun, 26 May 2024 16:54:46 GMT",
   "diagram": {
     "width": 7323,
     "height": 1779,
