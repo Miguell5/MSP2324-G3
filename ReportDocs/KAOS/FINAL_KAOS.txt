@@ -56,24 +56,6 @@
       }
     },
     {
-      "id": "1c4b4179-7f54-4a1b-bf12-3346ffc3bb0b",
-      "text": "Exam booking Successfully",
-      "type": "kaos.BehavioralGoal",
-      "x": 3140,
-      "y": 550,
-      "customProperties": {
-        "Type": "",
-        "Category": "",
-        "Source": "",
-        "Priority": "",
-        "Issue": "",
-        "FormalSpec": "",
-        "FitCriterion": "",
-        "Stability": "",
-        "Description": ""
-      }
-    },
-    {
       "id": "6575125d-6a16-4a9d-98e4-7e997d00d276",
       "text": "Appointment booking Successfully",
       "type": "kaos.BehavioralGoal",
@@ -183,10 +165,10 @@
     },
     {
       "id": "49cbf073-b396-498d-8742-fb04659c6a5f",
-      "text": "Doctor",
+      "text": "Patient",
       "type": "kaos.Agent",
-      "x": 2780,
-      "y": 1153
+      "x": 3072,
+      "y": 1227
     },
     {
       "id": "24809651-e1cf-4324-be18-5f5ae5f2de19",
@@ -648,8 +630,8 @@
       "id": "d836351c-bf5e-4dd7-ad33-2ede2626a5da",
       "text": "Check Doctor Availability",
       "type": "kaos.BehavioralGoal",
-      "x": 2725,
-      "y": 839,
+      "x": 2656,
+      "y": 761,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -691,8 +673,8 @@
       "id": "baf620f1-45cc-4234-b52c-8343c0691783",
       "text": "Hospital Controller",
       "type": "kaos.Agent",
-      "x": 2746,
-      "y": 991
+      "x": 2584,
+      "y": 961
     },
     {
       "id": "e9dab94c-5160-4322-87ac-95fb85a5bc14",
@@ -993,60 +975,6 @@
       "y": 1564
     },
     {
-      "id": "550459c0-efd9-459b-a8f0-c93b9f2556db",
-      "text": "Doctor sent exam informatio",
-      "type": "kaos.BehavioralGoal",
-      "x": 2916,
-      "y": 947,
-      "customProperties": {
-        "Type": "",
-        "Category": "",
-        "Source": "",
-        "Priority": "",
-        "Issue": "",
-        "FormalSpec": "",
-        "FitCriterion": "",
-        "Stability": "",
-        "Description": ""
-      }
-    },
-    {
-      "id": "4c33e751-a6e6-4c0a-a8e8-44be85a281d7",
-      "text": "Information inserted",
-      "type": "kaos.BehavioralGoal",
-      "x": 2861,
-      "y": 737,
-      "customProperties": {
-        "Type": "",
-        "Category": "",
-        "Source": "",
-        "Priority": "",
-        "Issue": "",
-        "FormalSpec": "",
-        "FitCriterion": "",
-        "Stability": "",
-        "Description": ""
-      }
-    },
-    {
-      "id": "8a92b3b8-b01a-427c-9bb0-6b24340b4bb4",
-      "text": "Doctor confirms informatio",
-      "type": "kaos.BehavioralGoal",
-      "x": 3017,
-      "y": 1039,
-      "customProperties": {
-        "Type": "",
-        "Category": "",
-        "Source": "",
-        "Priority": "",
-        "Issue": "",
-        "FormalSpec": "",
-        "FitCriterion": "",
-        "Stability": "",
-        "Description": ""
-      }
-    },
-    {
       "id": "00cf0964-7399-4861-9827-09ffdb6dabf9",
       "text": "Donator",
       "type": "kaos.Agent",
@@ -1083,7 +1011,7 @@
       "text": "Hospital Controller",
       "type": "kaos.Agent",
       "x": 7151,
-      "y": 856
+      "y": 869
     },
     {
       "id": "3f83096f-6fc9-40ef-a347-9b9a9e161a86",
@@ -1197,8 +1125,8 @@
       "id": "c894ce8a-3fba-4745-902e-2fda3966000e",
       "text": "warn user",
       "type": "kaos.BehavioralGoal",
-      "x": 3525,
-      "y": 713,
+      "x": 3523,
+      "y": 702,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -2235,8 +2163,8 @@
       "id": "efcb1769-9dcf-4444-be7e-ff15218e1d86",
       "text": "server is down",
       "type": "kaos.BehavioralGoal",
-      "x": 4956,
-      "y": 801,
+      "x": 4969,
+      "y": 594,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -2305,7 +2233,7 @@
     },
     {
       "id": "1f0aa900-e8f6-40d1-97b1-0921a9486301",
-      "text": "BehavioralGoal",
+      "text": "data error",
       "type": "kaos.BehavioralGoal",
       "x": 5534,
       "y": 1323,
@@ -2548,8 +2476,8 @@
       "id": "d0e2b7d7-5d8a-4ffe-aa70-dbab011ed870",
       "text": "User can not choose a category",
       "type": "kaos.BehavioralGoal",
-      "x": 6925,
-      "y": 552,
+      "x": 6928,
+      "y": 639,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -2566,26 +2494,8 @@
       "id": "95ca8500-dd7a-4d60-bb5c-3625e788b379",
       "text": "Remote triage can not be done, Patient has to come to the clinic",
       "type": "kaos.BehavioralGoal",
-      "x": 6950,
-      "y": 296,
-      "customProperties": {
-        "Type": "",
-        "Category": "",
-        "Source": "",
-        "Priority": "",
-        "Issue": "",
-        "FormalSpec": "",
-        "FitCriterion": "",
-        "Stability": "",
-        "Description": ""
-      }
-    },
-    {
-      "id": "178a3194-794a-4e68-b48f-92235eee7e35",
-      "text": "Server is Down",
-      "type": "kaos.BehavioralGoal",
-      "x": 2643,
-      "y": 1108,
+      "x": 7137,
+      "y": 660,
       "customProperties": {
         "Type": "",
         "Category": "",
@@ -2759,6 +2669,452 @@
         "Stability": "",
         "Description": ""
       }
+    },
+    {
+      "id": "a5750515-f116-4560-8c7c-1d8eebad0cfa",
+      "text": "communication error",
+      "type": "kaos.BehavioralGoal",
+      "x": 3542,
+      "y": 625,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "fe6b043d-8006-41ac-b622-9fd67aa39071",
+      "text": "communicate again later",
+      "type": "kaos.BehavioralGoal",
+      "x": 3638,
+      "y": 549,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "5c4040eb-6bab-4b4e-91f1-f53c7a27f53c",
+      "text": "Give nif",
+      "type": "kaos.BehavioralGoal",
+      "x": 3146,
+      "y": 1039,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "c952480d-cf3b-4702-9ad8-039e09a18ff3",
+      "text": "communicate again later",
+      "type": "kaos.BehavioralGoal",
+      "x": 5579,
+      "y": 1070,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "7ba2bea7-a86c-4e15-bd2b-836302e88bad",
+      "text": "communication error",
+      "type": "kaos.BehavioralGoal",
+      "x": 5545,
+      "y": 1138,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "f9fd5dbc-7d24-474d-865f-aeb2bc4a035a",
+      "text": "Use Replicated Server",
+      "type": "kaos.BehavioralGoal",
+      "x": 5556,
+      "y": 646,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "802e825b-edce-4bf8-92be-5d7a937226a5",
+      "text": "Use replicated server",
+      "type": "kaos.BehavioralGoal",
+      "x": 5153,
+      "y": 618,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "93a0e018-2d44-4998-b315-209a1d196106",
+      "text": "communication error",
+      "type": "kaos.BehavioralGoal",
+      "x": 5118,
+      "y": 777,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "bb0b2060-abcf-4788-b580-618ca0b23330",
+      "text": "communicate again later",
+      "type": "kaos.BehavioralGoal",
+      "x": 5194,
+      "y": 696,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "cb01b024-5c95-4499-83e2-66a97294d8c3",
+      "text": "Hospital Controller",
+      "type": "kaos.Agent",
+      "x": 2531,
+      "y": 1174
+    },
+    {
+      "id": "230f0427-1d0d-45b2-8a36-5ca4f8068043",
+      "text": "Show exam types",
+      "type": "kaos.BehavioralGoal",
+      "x": 2785,
+      "y": 1246,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "096bb059-f8b7-4dae-88ab-d5ba74b2b24f",
+      "text": "Show available dates",
+      "type": "kaos.BehavioralGoal",
+      "x": 2725,
+      "y": 1096,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "86ae45c2-1c05-46c1-9148-1d2a69fba942",
+      "text": "Choose exam type",
+      "type": "kaos.BehavioralGoal",
+      "x": 2897,
+      "y": 1117,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "f2469770-5aac-45b8-a96b-9401383cd0ca",
+      "text": "Choose date",
+      "type": "kaos.BehavioralGoal",
+      "x": 2999,
+      "y": 1037,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "c59206d2-10d8-4cce-a2d1-38a9964dc067",
+      "text": "Patient does not like any dates",
+      "type": "kaos.BehavioralGoal",
+      "x": 3171,
+      "y": 1132,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "4d3d4f46-3c48-4e87-b629-5c14b95a572c",
+      "text": "Cancel Exam",
+      "type": "kaos.BehavioralGoal",
+      "x": 3234.5,
+      "y": 1247,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "5f4e239e-c502-42f8-8666-aadf729fb49a",
+      "text": "Exam confirmed",
+      "type": "kaos.BehavioralGoal",
+      "x": 3085,
+      "y": 833,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "67825b96-eaf0-4d3d-8bde-7ba226851c3f",
+      "text": "Add exam to DB",
+      "type": "kaos.BehavioralGoal",
+      "x": 2884,
+      "y": 847,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "cc51558f-0e99-4984-82d3-1c8814eb5480",
+      "text": "Exam booking successfully",
+      "type": "kaos.BehavioralGoal",
+      "x": 3011,
+      "y": 621,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "27d724a4-1782-497f-b422-3052f86e55f8",
+      "text": "Notification Controller",
+      "type": "kaos.Agent",
+      "x": 7012,
+      "y": 545
+    },
+    {
+      "id": "e494d4c4-9bad-4b35-b698-8a57bdf6e755",
+      "text": "Notify available Doctor",
+      "type": "kaos.BehavioralGoal",
+      "x": 6814,
+      "y": 466,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "56f35958-6a48-4f03-901b-5fe5bc5c3305",
+      "text": "No Doctor Available",
+      "type": "kaos.BehavioralGoal",
+      "x": 7006.5,
+      "y": 358,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "8a358b85-0609-4863-b292-df3589d0368f",
+      "text": "Notify when a Doctor is available",
+      "type": "kaos.BehavioralGoal",
+      "x": 7158,
+      "y": 456,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "f5a40208-ae5d-4494-8d20-4a9eda483690",
+      "text": "Cancel Blood Donation",
+      "type": "kaos.BehavioralGoal",
+      "x": 5941,
+      "y": 1420,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "f7902ada-983c-4908-acfd-7867c9178dd7",
+      "text": "Server is Down",
+      "type": "kaos.BehavioralGoal",
+      "x": 6103,
+      "y": 1248,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "d18461b2-4df0-41de-94b9-6a13e7593357",
+      "text": "Use replicated server",
+      "type": "kaos.BehavioralGoal",
+      "x": 6116,
+      "y": 1357,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
     }
   ],
   "dependencies": [],
@@ -2832,14 +3188,7 @@
           "Tactic": ""
         }
       },
-      "starts": [
-        {
-          "id": "a670c8cc-6336-43bd-bb9b-c8d63311a192",
-          "type": "kaos.RefinementLinkStart",
-          "source": "1c4b4179-7f54-4a1b-bf12-3346ffc3bb0b",
-          "target": "39fbaa7f-ac37-4941-a44c-0fcbc1d38fe1"
-        }
-      ],
+      "starts": [],
       "end": {
         "id": "dac3be7d-b4c7-4fe6-a65f-427ccddf8f87",
         "type": "kaos.RefinementLinkEnd",
@@ -4298,34 +4647,6 @@
     },
     {
       "hub": {
-        "id": "54c8a284-9c80-4b9d-9893-760c5e8db88d",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 2934,
-        "y": 829,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "86b4106f-b59a-4641-b9d4-5a81a077b867",
-          "type": "kaos.RefinementLinkStart",
-          "source": "550459c0-efd9-459b-a8f0-c93b9f2556db",
-          "target": "54c8a284-9c80-4b9d-9893-760c5e8db88d"
-        }
-      ],
-      "end": {
-        "id": "2c397374-6454-45ed-b629-15438d7dfcb0",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "54c8a284-9c80-4b9d-9893-760c5e8db88d",
-        "target": "4c33e751-a6e6-4c0a-a8e8-44be85a281d7"
-      }
-    },
-    {
-      "hub": {
         "id": "8c216733-fd99-48fa-8671-960861bf11b0",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
@@ -4718,34 +5039,6 @@
     },
     {
       "hub": {
-        "id": "0ca43b95-c065-4638-85c1-bced873f8462",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 3097,
-        "y": 748,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "2c3ba1c9-2855-447d-b272-92d1efda7ff1",
-          "type": "kaos.RefinementLinkStart",
-          "source": "4c33e751-a6e6-4c0a-a8e8-44be85a281d7",
-          "target": "0ca43b95-c065-4638-85c1-bced873f8462"
-        }
-      ],
-      "end": {
-        "id": "d6fe1541-2195-4147-b5fd-c50d52e839bf",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "0ca43b95-c065-4638-85c1-bced873f8462",
-        "target": "1c4b4179-7f54-4a1b-bf12-3346ffc3bb0b"
-      }
-    },
-    {
-      "hub": {
         "id": "70f395c3-2e68-4000-b500-4a003b55b7ea",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
@@ -4770,34 +5063,6 @@
         "type": "kaos.RefinementLinkEnd",
         "source": "70f395c3-2e68-4000-b500-4a003b55b7ea",
         "target": "a7a51f60-8ab7-4d7c-aca1-96227a30aa20"
-      }
-    },
-    {
-      "hub": {
-        "id": "f1f97fd5-c251-4185-a148-5d670f86be51",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 3096,
-        "y": 748,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "08fdb2b1-6fd1-4a89-becf-b26c60441b7b",
-          "type": "kaos.RefinementLinkStart",
-          "source": "8a92b3b8-b01a-427c-9bb0-6b24340b4bb4",
-          "target": "f1f97fd5-c251-4185-a148-5d670f86be51"
-        }
-      ],
-      "end": {
-        "id": "cbeb5008-e154-4199-ac02-655b90dd338b",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "f1f97fd5-c251-4185-a148-5d670f86be51",
-        "target": "1c4b4179-7f54-4a1b-bf12-3346ffc3bb0b"
       }
     },
     {
@@ -5950,67 +6215,11 @@
     },
     {
       "hub": {
-        "id": "abc60314-2e19-4a2f-91ad-3b3ba307a2e7",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 3251,
-        "y": 1006,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "4be2a892-230a-4f37-b360-b5b0932bcc46",
-          "type": "kaos.RefinementLinkStart",
-          "source": "ec2ee204-65c6-468c-8ec5-0b9ad96df9b7",
-          "target": "abc60314-2e19-4a2f-91ad-3b3ba307a2e7"
-        }
-      ],
-      "end": {
-        "id": "d07fcc24-1a28-42d4-b532-edcf02360d65",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "abc60314-2e19-4a2f-91ad-3b3ba307a2e7",
-        "target": "78077594-e998-4711-aa02-6d6271d437c7"
-      }
-    },
-    {
-      "hub": {
-        "id": "10f5c7c7-22de-48a6-bc4f-4a100bad0950",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 5079.02734375,
-        "y": 736,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "4c0a575d-9158-4f4f-a786-27115bca18fc",
-          "type": "kaos.RefinementLinkStart",
-          "source": "efcb1769-9dcf-4444-be7e-ff15218e1d86",
-          "target": "10f5c7c7-22de-48a6-bc4f-4a100bad0950"
-        }
-      ],
-      "end": {
-        "id": "0c7f5bae-da76-40bf-a8e4-f43d8fa8ea27",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "10f5c7c7-22de-48a6-bc4f-4a100bad0950",
-        "target": "6de50790-3734-4839-ab80-5c5c4cea3223"
-      }
-    },
-    {
-      "hub": {
         "id": "0059c9f2-a561-4f7e-b090-23a17d877991",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
-        "x": 5023,
-        "y": 748,
+        "x": 5020,
+        "y": 678,
         "customProperties": {
           "SysRef": "",
           "Status": "",
@@ -6142,34 +6351,6 @@
         "type": "kaos.RefinementLinkEnd",
         "source": "0fa0e9d7-f2a7-4a19-b426-ecaf8d188990",
         "target": "239c46e0-befa-4942-9ab9-b00f2337c0bb"
-      }
-    },
-    {
-      "hub": {
-        "id": "fa7f4cd2-f65c-4689-82cd-22766faf0376",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 5618.90234375,
-        "y": 528,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "d99d6bd9-865a-429f-a22e-65594e5273f0",
-          "type": "kaos.RefinementLinkStart",
-          "source": "0753dea2-6c8c-4956-81a5-bb4c05400674",
-          "target": "fa7f4cd2-f65c-4689-82cd-22766faf0376"
-        }
-      ],
-      "end": {
-        "id": "ab296435-0648-4278-8370-be04124c09bc",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "fa7f4cd2-f65c-4689-82cd-22766faf0376",
-        "target": "10ed7778-0523-41a7-9bb2-bc47e8db13b3"
       }
     },
     {
@@ -6653,8 +6834,8 @@
         "id": "7078b89a-b562-4fa7-a19a-9e115e77a194",
         "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
-        "x": 6938.45703125,
-        "y": 668.5,
+        "x": 6941,
+        "y": 740,
         "customProperties": {
           "SysRef": "",
           "Status": "",
@@ -6674,90 +6855,6 @@
         "type": "kaos.RefinementLinkEnd",
         "source": "7078b89a-b562-4fa7-a19a-9e115e77a194",
         "target": "d0e2b7d7-5d8a-4ffe-aa70-dbab011ed870"
-      }
-    },
-    {
-      "hub": {
-        "id": "b55058de-5b81-49ec-a761-7fb8e821be16",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 7030.33203125,
-        "y": 446.5,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "0d2b1f93-0937-4ea4-9a5c-5abd18a527e0",
-          "type": "kaos.RefinementLinkStart",
-          "source": "d0e2b7d7-5d8a-4ffe-aa70-dbab011ed870",
-          "target": "b55058de-5b81-49ec-a761-7fb8e821be16"
-        }
-      ],
-      "end": {
-        "id": "45b2a4f7-36f9-4617-b6a1-1f882c71323f",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "b55058de-5b81-49ec-a761-7fb8e821be16",
-        "target": "95ca8500-dd7a-4d60-bb5c-3625e788b379"
-      }
-    },
-    {
-      "hub": {
-        "id": "acd730d8-bfe5-4c5b-888f-1cc1f0159211",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 2846,
-        "y": 1015.5,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "b91e9d08-8e18-4a4c-b50e-72203ba5cf41",
-          "type": "kaos.RefinementLinkStart",
-          "source": "550459c0-efd9-459b-a8f0-c93b9f2556db",
-          "target": "acd730d8-bfe5-4c5b-888f-1cc1f0159211"
-        }
-      ],
-      "end": {
-        "id": "d2d805cb-9c5c-4081-bcd3-b503fd2a04a7",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "acd730d8-bfe5-4c5b-888f-1cc1f0159211",
-        "target": "178a3194-794a-4e68-b48f-92235eee7e35"
-      }
-    },
-    {
-      "hub": {
-        "id": "b4f0253b-b6f0-4341-a7bf-33dea5ef7e66",
-        "text": "RefinementLinkHub",
-        "type": "kaos.RefinementLinkHub",
-        "x": 2853,
-        "y": 1047,
-        "customProperties": {
-          "SysRef": "",
-          "Status": "",
-          "Tactic": ""
-        }
-      },
-      "starts": [
-        {
-          "id": "4c777545-d7a4-4f04-a0b2-01057d2f0cbe",
-          "type": "kaos.RefinementLinkStart",
-          "source": "178a3194-794a-4e68-b48f-92235eee7e35",
-          "target": "b4f0253b-b6f0-4341-a7bf-33dea5ef7e66"
-        }
-      ],
-      "end": {
-        "id": "13cf1785-0c82-440c-a1f8-e672787a0380",
-        "type": "kaos.RefinementLinkEnd",
-        "source": "b4f0253b-b6f0-4341-a7bf-33dea5ef7e66",
-        "target": "550459c0-efd9-459b-a8f0-c93b9f2556db"
       }
     },
     {
@@ -6875,6 +6972,7 @@
     {
       "hub": {
         "id": "03448e95-6ce5-40d5-99e8-ee321426c90f",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 1608,
         "y": 804,
@@ -6902,6 +7000,7 @@
     {
       "hub": {
         "id": "919d2183-ddd0-487c-8b48-6325e7b34006",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 2320,
         "y": 579,
@@ -6929,6 +7028,7 @@
     {
       "hub": {
         "id": "b596c136-cddd-4e44-a947-ebe5cbfd3d31",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 1861,
         "y": 344,
@@ -6956,6 +7056,7 @@
     {
       "hub": {
         "id": "928690cd-1251-429d-989f-11650439503f",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 3683,
         "y": 1070,
@@ -6983,6 +7084,7 @@
     {
       "hub": {
         "id": "84e1d0ea-4a52-4e32-bb42-f0af82df41a9",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 3839,
         "y": 941,
@@ -7010,6 +7112,7 @@
     {
       "hub": {
         "id": "0a1f991d-e680-47c0-a625-7cbf5a99ca22",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 4261,
         "y": 1506,
@@ -7037,6 +7140,7 @@
     {
       "hub": {
         "id": "087f961b-5645-4072-a339-6a9c5d10ee7e",
+        "text": "RefinementLinkHub",
         "type": "kaos.RefinementLinkHub",
         "x": 4034,
         "y": 1263,
@@ -7059,6 +7163,718 @@
         "type": "kaos.RefinementLinkEnd",
         "source": "087f961b-5645-4072-a339-6a9c5d10ee7e",
         "target": "cf682f87-dd17-4fa7-971e-1439a16d80fb"
+      }
+    },
+    {
+      "hub": {
+        "id": "5ecb3962-cfd0-4a9a-aba7-6e02a94f00cd",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3610,
+        "y": 669,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "90144307-0a7e-461f-a7e9-cf893474157f",
+          "type": "kaos.RefinementLinkStart",
+          "source": "c894ce8a-3fba-4745-902e-2fda3966000e",
+          "target": "5ecb3962-cfd0-4a9a-aba7-6e02a94f00cd"
+        }
+      ],
+      "end": {
+        "id": "177dc979-95ee-4981-b7da-0b41896180cc",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "5ecb3962-cfd0-4a9a-aba7-6e02a94f00cd",
+        "target": "a5750515-f116-4560-8c7c-1d8eebad0cfa"
+      }
+    },
+    {
+      "hub": {
+        "id": "75bba654-1e37-43b3-8f89-83d003508e56",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3658,
+        "y": 583,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "8fbbd001-f2ed-42b4-a5da-68ead072ad00",
+          "type": "kaos.RefinementLinkStart",
+          "source": "fe6b043d-8006-41ac-b622-9fd67aa39071",
+          "target": "75bba654-1e37-43b3-8f89-83d003508e56"
+        }
+      ],
+      "end": {
+        "id": "06fd78ca-9413-4cbe-a4ca-10c986cd940e",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "75bba654-1e37-43b3-8f89-83d003508e56",
+        "target": "a5750515-f116-4560-8c7c-1d8eebad0cfa"
+      }
+    },
+    {
+      "hub": {
+        "id": "408f06e3-6985-4fb4-ad5f-667664a9dbe1",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3226.80078125,
+        "y": 988,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "ca809caa-ec9d-4d33-96e0-c13ce84b4ddb",
+          "type": "kaos.RefinementLinkStart",
+          "source": "ec2ee204-65c6-468c-8ec5-0b9ad96df9b7",
+          "target": "408f06e3-6985-4fb4-ad5f-667664a9dbe1"
+        }
+      ],
+      "end": {
+        "id": "64aa559c-0704-46aa-9210-275086940eff",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "408f06e3-6985-4fb4-ad5f-667664a9dbe1",
+        "target": "5c4040eb-6bab-4b4e-91f1-f53c7a27f53c"
+      }
+    },
+    {
+      "hub": {
+        "id": "c03fd0bf-98f7-4dcd-af23-62953a1d50b5",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3291,
+        "y": 1065,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "409c320f-e769-451e-a9f8-c0dbc9be35c8",
+          "type": "kaos.RefinementLinkStart",
+          "source": "5c4040eb-6bab-4b4e-91f1-f53c7a27f53c",
+          "target": "c03fd0bf-98f7-4dcd-af23-62953a1d50b5"
+        }
+      ],
+      "end": {
+        "id": "fc5928be-411c-4abc-84b7-d57210487166",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "c03fd0bf-98f7-4dcd-af23-62953a1d50b5",
+        "target": "78077594-e998-4711-aa02-6d6271d437c7"
+      }
+    },
+    {
+      "hub": {
+        "id": "c34ba504-3463-4cc7-8e0a-bca34f124a01",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 5614.5,
+        "y": 1178.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "448ceb47-b4d3-4799-97a9-5ed89cb473b5",
+          "type": "kaos.RefinementLinkStart",
+          "source": "c7bb3873-6206-4d08-8b6f-b324d1a7382d",
+          "target": "c34ba504-3463-4cc7-8e0a-bca34f124a01"
+        }
+      ],
+      "end": {
+        "id": "8fb5d472-68b4-4dee-b7f5-1062748cf311",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "c34ba504-3463-4cc7-8e0a-bca34f124a01",
+        "target": "7ba2bea7-a86c-4e15-bd2b-836302e88bad"
+      }
+    },
+    {
+      "hub": {
+        "id": "3e48e1cf-a20c-45fc-9c4f-cdab1b6d95f8",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 5639,
+        "y": 1099,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "41c4416f-b170-43b0-a2a9-250827158310",
+          "type": "kaos.RefinementLinkStart",
+          "source": "c952480d-cf3b-4702-9ad8-039e09a18ff3",
+          "target": "3e48e1cf-a20c-45fc-9c4f-cdab1b6d95f8"
+        }
+      ],
+      "end": {
+        "id": "602bb6a3-6fca-44da-9a1a-ead55df4f784",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "3e48e1cf-a20c-45fc-9c4f-cdab1b6d95f8",
+        "target": "7ba2bea7-a86c-4e15-bd2b-836302e88bad"
+      }
+    },
+    {
+      "hub": {
+        "id": "3ed6c0d0-ab63-4587-ad99-1a7634e1d9ec",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 5673.25,
+        "y": 599.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "4ded6f7b-94cf-46f9-a88a-9aca7f5b03d1",
+          "type": "kaos.RefinementLinkStart",
+          "source": "f9fd5dbc-7d24-474d-865f-aeb2bc4a035a",
+          "target": "3ed6c0d0-ab63-4587-ad99-1a7634e1d9ec"
+        }
+      ],
+      "end": {
+        "id": "3361cbbc-c7a1-4420-9bee-b574ec07a6cc",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "3ed6c0d0-ab63-4587-ad99-1a7634e1d9ec",
+        "target": "0753dea2-6c8c-4956-81a5-bb4c05400674"
+      }
+    },
+    {
+      "hub": {
+        "id": "023fc6f8-020d-4ba2-aaf3-69434ccfb04f",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 5114,
+        "y": 604,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "da6eb097-9a01-431f-ab0d-07be58e627b9",
+          "type": "kaos.RefinementLinkStart",
+          "source": "802e825b-edce-4bf8-92be-5d7a937226a5",
+          "target": "023fc6f8-020d-4ba2-aaf3-69434ccfb04f"
+        }
+      ],
+      "end": {
+        "id": "d4096693-c2d8-496f-bb6b-386f7756503a",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "023fc6f8-020d-4ba2-aaf3-69434ccfb04f",
+        "target": "efcb1769-9dcf-4444-be7e-ff15218e1d86"
+      }
+    },
+    {
+      "hub": {
+        "id": "85615f17-7cc0-49d2-9815-07e49a6be7ea",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 5173,
+        "y": 820,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "bb071c86-687b-4f4c-8fb3-52ec7a78080a",
+          "type": "kaos.RefinementLinkStart",
+          "source": "239c46e0-befa-4942-9ab9-b00f2337c0bb",
+          "target": "85615f17-7cc0-49d2-9815-07e49a6be7ea"
+        }
+      ],
+      "end": {
+        "id": "2c8c3d35-56af-414c-80c9-8e4926a67b8a",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "85615f17-7cc0-49d2-9815-07e49a6be7ea",
+        "target": "93a0e018-2d44-4998-b315-209a1d196106"
+      }
+    },
+    {
+      "hub": {
+        "id": "955667cd-d1e1-4004-95cf-4b60cdc00577",
+        "text": "RefinementLinkHub",
+        "type": "kaos.RefinementLinkHub",
+        "x": 5223.5,
+        "y": 736.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "de4e21f4-11b9-4028-999d-a712cb8b9b4e",
+          "type": "kaos.RefinementLinkStart",
+          "source": "bb0b2060-abcf-4788-b580-618ca0b23330",
+          "target": "955667cd-d1e1-4004-95cf-4b60cdc00577"
+        }
+      ],
+      "end": {
+        "id": "3c4a2565-5ac5-4f76-877d-ace97c9db321",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "955667cd-d1e1-4004-95cf-4b60cdc00577",
+        "target": "93a0e018-2d44-4998-b315-209a1d196106"
+      }
+    },
+    {
+      "hub": {
+        "id": "60a153dd-53bb-4738-82a1-c8fe04a85af1",
+        "type": "kaos.RefinementLinkHub",
+        "x": 2890,
+        "y": 1168,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "ad11fdaf-2a75-463c-9346-db6846be399b",
+          "type": "kaos.RefinementLinkStart",
+          "source": "230f0427-1d0d-45b2-8a36-5ca4f8068043",
+          "target": "60a153dd-53bb-4738-82a1-c8fe04a85af1"
+        }
+      ],
+      "end": {
+        "id": "2e1009bf-fb10-4ea3-9be7-867363e01982",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "60a153dd-53bb-4738-82a1-c8fe04a85af1",
+        "target": "86ae45c2-1c05-46c1-9148-1d2a69fba942"
+      }
+    },
+    {
+      "hub": {
+        "id": "4d3e5132-6129-4d61-8d6d-e093bfbb3bd6",
+        "type": "kaos.RefinementLinkHub",
+        "x": 2884,
+        "y": 1070,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "3256b616-d996-41f0-8548-9a52596cf0a6",
+          "type": "kaos.RefinementLinkStart",
+          "source": "096bb059-f8b7-4dae-88ab-d5ba74b2b24f",
+          "target": "4d3e5132-6129-4d61-8d6d-e093bfbb3bd6"
+        }
+      ],
+      "end": {
+        "id": "f6348e0a-291a-44ee-a390-27cc7fe03b20",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "4d3e5132-6129-4d61-8d6d-e093bfbb3bd6",
+        "target": "f2469770-5aac-45b8-a96b-9401383cd0ca"
+      }
+    },
+    {
+      "hub": {
+        "id": "ffaa50b8-2975-4a8d-b1fc-7963b9efdff8",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3136.5,
+        "y": 1078,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "9db990eb-286b-4bb9-8d47-8ee5aa83c9b1",
+          "type": "kaos.RefinementLinkStart",
+          "source": "f2469770-5aac-45b8-a96b-9401383cd0ca",
+          "target": "ffaa50b8-2975-4a8d-b1fc-7963b9efdff8"
+        }
+      ],
+      "end": {
+        "id": "434ed0b6-de7e-4121-9c55-878620178fb4",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "ffaa50b8-2975-4a8d-b1fc-7963b9efdff8",
+        "target": "c59206d2-10d8-4cce-a2d1-38a9964dc067"
+      }
+    },
+    {
+      "hub": {
+        "id": "8c58e1ce-57d5-48e2-980c-c73539c3975a",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3270.25,
+        "y": 1189.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "802abeb8-bf18-465e-9b3f-9ab5ebb05b67",
+          "type": "kaos.RefinementLinkStart",
+          "source": "4d3d4f46-3c48-4e87-b629-5c14b95a572c",
+          "target": "8c58e1ce-57d5-48e2-980c-c73539c3975a"
+        }
+      ],
+      "end": {
+        "id": "d33b4e80-27fa-42ae-b8b9-50212fdca33f",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "8c58e1ce-57d5-48e2-980c-c73539c3975a",
+        "target": "c59206d2-10d8-4cce-a2d1-38a9964dc067"
+      }
+    },
+    {
+      "hub": {
+        "id": "7ff1682c-d177-4687-a093-60c24d90fe4e",
+        "type": "kaos.RefinementLinkHub",
+        "x": 2984,
+        "y": 943,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "db593ad3-f994-40ad-8440-12b1b9dd17dc",
+          "type": "kaos.RefinementLinkStart",
+          "source": "86ae45c2-1c05-46c1-9148-1d2a69fba942",
+          "target": "7ff1682c-d177-4687-a093-60c24d90fe4e"
+        }
+      ],
+      "end": {
+        "id": "322e1de8-292e-44e0-ab35-20c0493aceba",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "7ff1682c-d177-4687-a093-60c24d90fe4e",
+        "target": "5f4e239e-c502-42f8-8666-aadf729fb49a"
+      }
+    },
+    {
+      "hub": {
+        "id": "42e2ca61-7db6-4fd1-b7fa-f6d9c7f303fd",
+        "type": "kaos.RefinementLinkHub",
+        "x": 2983,
+        "y": 944,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "1c681a27-48f4-4a0b-ac5f-95d4445eab57",
+          "type": "kaos.RefinementLinkStart",
+          "source": "f2469770-5aac-45b8-a96b-9401383cd0ca",
+          "target": "42e2ca61-7db6-4fd1-b7fa-f6d9c7f303fd"
+        }
+      ],
+      "end": {
+        "id": "44ab91c8-ba14-447a-8e02-cdae12801f71",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "42e2ca61-7db6-4fd1-b7fa-f6d9c7f303fd",
+        "target": "5f4e239e-c502-42f8-8666-aadf729fb49a"
+      }
+    },
+    {
+      "hub": {
+        "id": "e22d65d0-e4f1-4c95-ac70-1dca166ed571",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3037,
+        "y": 755,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "8178cb29-48db-4a50-91a3-b91ad0577b99",
+          "type": "kaos.RefinementLinkStart",
+          "source": "67825b96-eaf0-4d3d-8bde-7ba226851c3f",
+          "target": "e22d65d0-e4f1-4c95-ac70-1dca166ed571"
+        }
+      ],
+      "end": {
+        "id": "2b886384-c608-433a-aa71-7b0bebd56a52",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "e22d65d0-e4f1-4c95-ac70-1dca166ed571",
+        "target": "cc51558f-0e99-4984-82d3-1c8814eb5480"
+      }
+    },
+    {
+      "hub": {
+        "id": "f8dd9b05-8372-4b8a-ac39-dd4cdb29911f",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3040,
+        "y": 755,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "a90c23ac-9aad-439e-b097-8118c3bb98cc",
+          "type": "kaos.RefinementLinkStart",
+          "source": "5f4e239e-c502-42f8-8666-aadf729fb49a",
+          "target": "f8dd9b05-8372-4b8a-ac39-dd4cdb29911f"
+        }
+      ],
+      "end": {
+        "id": "fba1f990-6665-4567-87ff-c40926443103",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "f8dd9b05-8372-4b8a-ac39-dd4cdb29911f",
+        "target": "cc51558f-0e99-4984-82d3-1c8814eb5480"
+      }
+    },
+    {
+      "hub": {
+        "id": "6d9c2825-1297-4369-a0da-1a5ecf578638",
+        "type": "kaos.RefinementLinkHub",
+        "x": 3119,
+        "y": 433,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "b2859cc5-9fb3-4479-aa8c-31b1f53bca80",
+          "type": "kaos.RefinementLinkStart",
+          "source": "cc51558f-0e99-4984-82d3-1c8814eb5480",
+          "target": "6d9c2825-1297-4369-a0da-1a5ecf578638"
+        }
+      ],
+      "end": {
+        "id": "2677f13a-d866-4fa3-b5c6-d061b416908f",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "6d9c2825-1297-4369-a0da-1a5ecf578638",
+        "target": "bd50a069-d176-404a-94f4-2b3c8d3410eb"
+      }
+    },
+    {
+      "hub": {
+        "id": "7344e083-fb55-4dec-9d0a-58d77cb61357",
+        "type": "kaos.RefinementLinkHub",
+        "x": 7117.95703125,
+        "y": 631.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "b44b0f09-4d88-4b1e-bb8c-a13848338cb7",
+          "type": "kaos.RefinementLinkStart",
+          "source": "95ca8500-dd7a-4d60-bb5c-3625e788b379",
+          "target": "7344e083-fb55-4dec-9d0a-58d77cb61357"
+        }
+      ],
+      "end": {
+        "id": "fc42a4b9-a4ce-4b6a-8b9a-c21ebc8c64cf",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "7344e083-fb55-4dec-9d0a-58d77cb61357",
+        "target": "d0e2b7d7-5d8a-4ffe-aa70-dbab011ed870"
+      }
+    },
+    {
+      "hub": {
+        "id": "41999e54-2eef-4543-bdd0-092afe0de211",
+        "type": "kaos.RefinementLinkHub",
+        "x": 6818.5,
+        "y": 539,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "aeaf39a0-51c7-4229-87b4-c812244a7489",
+          "type": "kaos.RefinementLinkStart",
+          "source": "3f83096f-6fc9-40ef-a347-9b9a9e161a86",
+          "target": "41999e54-2eef-4543-bdd0-092afe0de211"
+        }
+      ],
+      "end": {
+        "id": "9492ad01-da4d-4360-b542-7a585a519cf8",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "41999e54-2eef-4543-bdd0-092afe0de211",
+        "target": "e494d4c4-9bad-4b35-b698-8a57bdf6e755"
+      }
+    },
+    {
+      "hub": {
+        "id": "596a12bc-8cbc-4bc9-ac7a-f43b18e9d251",
+        "type": "kaos.RefinementLinkHub",
+        "x": 6977.75,
+        "y": 412,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "a022a94b-6035-420a-b4a7-6177ba8461f3",
+          "type": "kaos.RefinementLinkStart",
+          "source": "e494d4c4-9bad-4b35-b698-8a57bdf6e755",
+          "target": "596a12bc-8cbc-4bc9-ac7a-f43b18e9d251"
+        }
+      ],
+      "end": {
+        "id": "5a338181-3517-44a4-8c43-09d8f2f0b592",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "596a12bc-8cbc-4bc9-ac7a-f43b18e9d251",
+        "target": "56f35958-6a48-4f03-901b-5fe5bc5c3305"
+      }
+    },
+    {
+      "hub": {
+        "id": "890543ef-66f2-4189-b981-6d46b4a5a792",
+        "type": "kaos.RefinementLinkHub",
+        "x": 7108,
+        "y": 422,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "887a6f08-8f79-4610-a2f4-91520a08ba3f",
+          "type": "kaos.RefinementLinkStart",
+          "source": "8a358b85-0609-4863-b292-df3589d0368f",
+          "target": "890543ef-66f2-4189-b981-6d46b4a5a792"
+        }
+      ],
+      "end": {
+        "id": "a9b39d3b-f9b0-4268-9a4e-03bcf7602a35",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "890543ef-66f2-4189-b981-6d46b4a5a792",
+        "target": "56f35958-6a48-4f03-901b-5fe5bc5c3305"
+      }
+    },
+    {
+      "hub": {
+        "id": "035085f4-ecb7-48b7-9cb6-83f214f6f605",
+        "type": "kaos.RefinementLinkHub",
+        "x": 5982,
+        "y": 1364,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "adaf7c37-0038-4c2c-a930-6b4590272ad0",
+          "type": "kaos.RefinementLinkStart",
+          "source": "f5a40208-ae5d-4494-8d20-4a9eda483690",
+          "target": "035085f4-ecb7-48b7-9cb6-83f214f6f605"
+        }
+      ],
+      "end": {
+        "id": "4e5be9dc-ad7e-4cc7-84e7-a4feee27a4a6",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "035085f4-ecb7-48b7-9cb6-83f214f6f605",
+        "target": "7261b044-5cb0-4213-aa9c-e03070fe0ede"
+      }
+    },
+    {
+      "hub": {
+        "id": "86406782-9968-4307-b90d-524ce01c53c8",
+        "type": "kaos.RefinementLinkHub",
+        "x": 6179.5,
+        "y": 1310,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "da84028c-c8ec-40b5-a061-02b5c83441bb",
+          "type": "kaos.RefinementLinkStart",
+          "source": "d18461b2-4df0-41de-94b9-6a13e7593357",
+          "target": "86406782-9968-4307-b90d-524ce01c53c8"
+        }
+      ],
+      "end": {
+        "id": "3267063f-c295-4bd3-acab-9e2abcb742c9",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "86406782-9968-4307-b90d-524ce01c53c8",
+        "target": "f7902ada-983c-4908-acfd-7867c9178dd7"
+      }
+    },
+    {
+      "hub": {
+        "id": "036c85dd-fbb5-47e4-84df-20bcdaa42853",
+        "type": "kaos.RefinementLinkHub",
+        "x": 6105.228515625,
+        "y": 1174.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "1c2404c7-1d40-4a19-b0fa-d195f4c4ad7a",
+          "type": "kaos.RefinementLinkStart",
+          "source": "15576de7-df25-4982-b8ee-955998590c1a",
+          "target": "036c85dd-fbb5-47e4-84df-20bcdaa42853"
+        }
+      ],
+      "end": {
+        "id": "5d522864-ae0b-490f-be0c-f53ae3a674e9",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "036c85dd-fbb5-47e4-84df-20bcdaa42853",
+        "target": "f7902ada-983c-4908-acfd-7867c9178dd7"
       }
     },
     {
@@ -7156,18 +7972,6 @@
       "type": "kaos.ResponsibilityAssignment",
       "source": "85bf3304-54b6-4b52-bb13-a5f0c707f222",
       "target": "5b86c4cb-8f24-48a5-808b-7aff20d8db99"
-    },
-    {
-      "id": "09bdb0bb-ed17-4644-a811-785ce2ff2eae",
-      "type": "kaos.ResponsibilityAssignment",
-      "source": "49cbf073-b396-498d-8742-fb04659c6a5f",
-      "target": "550459c0-efd9-459b-a8f0-c93b9f2556db"
-    },
-    {
-      "id": "46dad6f5-c118-44ec-a684-eaa07587904b",
-      "type": "kaos.ResponsibilityAssignment",
-      "source": "49cbf073-b396-498d-8742-fb04659c6a5f",
-      "target": "8a92b3b8-b01a-427c-9bb0-6b24340b4bb4"
     },
     {
       "id": "c5f37f86-56d2-4ea7-abc3-c71253b578e0",
@@ -7393,6 +8197,42 @@
       "type": "kaos.ResponsibilityAssignment",
       "source": "00cf0964-7399-4861-9827-09ffdb6dabf9",
       "target": "e20bb693-5c00-45f7-b613-dcfc7a3b9893"
+    },
+    {
+      "id": "65fcfc94-9028-4127-8455-a25707121f84",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "cb01b024-5c95-4499-83e2-66a97294d8c3",
+      "target": "230f0427-1d0d-45b2-8a36-5ca4f8068043"
+    },
+    {
+      "id": "c6fb2087-bfbb-45ab-8ddc-476a8e9b5cc1",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "cb01b024-5c95-4499-83e2-66a97294d8c3",
+      "target": "096bb059-f8b7-4dae-88ab-d5ba74b2b24f"
+    },
+    {
+      "id": "300de20b-01e1-4836-952d-91f0d6020b81",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "49cbf073-b396-498d-8742-fb04659c6a5f",
+      "target": "86ae45c2-1c05-46c1-9148-1d2a69fba942"
+    },
+    {
+      "id": "4797b03f-c51a-4740-a601-3164ef73a1bb",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "49cbf073-b396-498d-8742-fb04659c6a5f",
+      "target": "f2469770-5aac-45b8-a96b-9401383cd0ca"
+    },
+    {
+      "id": "08e5b814-e8d8-44cb-9408-7124b981587a",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "cb01b024-5c95-4499-83e2-66a97294d8c3",
+      "target": "67825b96-eaf0-4d3d-8bde-7ba226851c3f"
+    },
+    {
+      "id": "a669724d-7af0-4b59-b1a3-c8c9cbc55086",
+      "type": "kaos.ResponsibilityAssignment",
+      "source": "27d724a4-1782-497f-b422-3052f86e55f8",
+      "target": "e494d4c4-9bad-4b35-b698-8a57bdf6e755"
     }
   ],
   "display": {
@@ -7525,40 +8365,91 @@
       "height": 76.890625
     },
     "95ca8500-dd7a-4d60-bb5c-3625e788b379": {
-      "width": 264.9140625,
-      "height": 131.890625
-    },
-    "178a3194-794a-4e68-b48f-92235eee7e35": {
-      "backgroundColor": "#FA0000"
+      "width": 190.4140625,
+      "height": 95.890625
     },
     "7261b044-5cb0-4213-aa9c-e03070fe0ede": {
       "backgroundColor": "#FA0000"
     },
-    "03448e95-6ce5-40d5-99e8-ee321426c90f": {
+    "a5750515-f116-4560-8c7c-1d8eebad0cfa": {
+      "backgroundColor": "#FA0000"
+    },
+    "7ba2bea7-a86c-4e15-bd2b-836302e88bad": {
+      "backgroundColor": "#FA0000"
+    },
+    "93a0e018-2d44-4998-b315-209a1d196106": {
+      "backgroundColor": "#FA0000"
+    },
+    "60a153dd-53bb-4738-82a1-c8fe04a85af1": {
       "width": 20,
       "height": 20
     },
-    "919d2183-ddd0-487c-8b48-6325e7b34006": {
+    "4d3e5132-6129-4d61-8d6d-e093bfbb3bd6": {
       "width": 20,
       "height": 20
     },
-    "b596c136-cddd-4e44-a947-ebe5cbfd3d31": {
+    "c59206d2-10d8-4cce-a2d1-38a9964dc067": {
+      "backgroundColor": "#FA0000"
+    },
+    "ffaa50b8-2975-4a8d-b1fc-7963b9efdff8": {
       "width": 20,
       "height": 20
     },
-    "928690cd-1251-429d-989f-11650439503f": {
+    "8c58e1ce-57d5-48e2-980c-c73539c3975a": {
       "width": 20,
       "height": 20
     },
-    "84e1d0ea-4a52-4e32-bb42-f0af82df41a9": {
+    "7ff1682c-d177-4687-a093-60c24d90fe4e": {
       "width": 20,
       "height": 20
     },
-    "0a1f991d-e680-47c0-a625-7cbf5a99ca22": {
+    "42e2ca61-7db6-4fd1-b7fa-f6d9c7f303fd": {
       "width": 20,
       "height": 20
     },
-    "087f961b-5645-4072-a339-6a9c5d10ee7e": {
+    "e22d65d0-e4f1-4c95-ac70-1dca166ed571": {
+      "width": 20,
+      "height": 20
+    },
+    "f8dd9b05-8372-4b8a-ac39-dd4cdb29911f": {
+      "width": 20,
+      "height": 20
+    },
+    "6d9c2825-1297-4369-a0da-1a5ecf578638": {
+      "width": 20,
+      "height": 20
+    },
+    "7344e083-fb55-4dec-9d0a-58d77cb61357": {
+      "width": 20,
+      "height": 20
+    },
+    "41999e54-2eef-4543-bdd0-092afe0de211": {
+      "width": 20,
+      "height": 20
+    },
+    "56f35958-6a48-4f03-901b-5fe5bc5c3305": {
+      "backgroundColor": "#FA0000"
+    },
+    "596a12bc-8cbc-4bc9-ac7a-f43b18e9d251": {
+      "width": 20,
+      "height": 20
+    },
+    "890543ef-66f2-4189-b981-6d46b4a5a792": {
+      "width": 20,
+      "height": 20
+    },
+    "035085f4-ecb7-48b7-9cb6-83f214f6f605": {
+      "width": 20,
+      "height": 20
+    },
+    "f7902ada-983c-4908-acfd-7867c9178dd7": {
+      "backgroundColor": "#FA0000"
+    },
+    "86406782-9968-4307-b90d-524ce01c53c8": {
+      "width": 20,
+      "height": 20
+    },
+    "036c85dd-fbb5-47e4-84df-20bcdaa42853": {
       "width": 20,
       "height": 20
     },
@@ -7605,13 +8496,25 @@
           "y": 656
         }
       ]
+    },
+    "300de20b-01e1-4836-952d-91f0d6020b81": {
+      "vertices": [
+        {
+          "x": 3023,
+          "y": 1202
+        },
+        {
+          "x": 3026,
+          "y": 1202
+        }
+      ]
     }
   },
   "tool": "dsm3-goals",
   "metamodelVersion": "1.0",
-  "saveDate": "Sun, 26 May 2024 16:54:46 GMT",
+  "saveDate": "Tue, 28 May 2024 15:16:36 GMT",
   "diagram": {
-    "width": 7323,
+    "width": 7372,
     "height": 1779,
     "name": "MyClinicComplete-KAOS",
     "customProperties": {
