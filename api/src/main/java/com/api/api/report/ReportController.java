@@ -93,7 +93,7 @@ public class ReportController {
     }
 
     @GetMapping(path = "/{patient}/reportsPatient", consumes = "application/json")
-    public ResponseEntity<List<ReportDAO>> getAppointmentsByPatient(@RequestHeader("Authorization") String token,
+    public ResponseEntity<List<ReportDAO>> getReportsByPatient(@RequestHeader("Authorization") String token,
                                                                     @PathVariable String patient) {
 
         TokenJWT tokenJWT = TokenManager.isTokenValid(token);

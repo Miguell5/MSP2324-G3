@@ -74,7 +74,7 @@ public class DoctorController {
     }
 
     @GetMapping(path = "/{email}/get", produces = "application/json")
-    public ResponseEntity<DoctorDAO> DoctorDAO(@RequestHeader("Authorization") String token,
+    public ResponseEntity<DoctorDAO> getDoctor(@RequestHeader("Authorization") String token,
                                                @PathVariable String email){
 
         TokenJWT tokenJWT = TokenManager.isTokenValid(token);
