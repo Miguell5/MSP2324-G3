@@ -3061,6 +3061,60 @@
         "Stability": "",
         "Description": ""
       }
+    },
+    {
+      "id": "f5a40208-ae5d-4494-8d20-4a9eda483690",
+      "text": "Cancel Blood Donation",
+      "type": "kaos.BehavioralGoal",
+      "x": 5941,
+      "y": 1420,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "f7902ada-983c-4908-acfd-7867c9178dd7",
+      "text": "Server is Down",
+      "type": "kaos.BehavioralGoal",
+      "x": 6103,
+      "y": 1248,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
+    },
+    {
+      "id": "d18461b2-4df0-41de-94b9-6a13e7593357",
+      "text": "Use replicated server",
+      "type": "kaos.BehavioralGoal",
+      "x": 6116,
+      "y": 1357,
+      "customProperties": {
+        "Type": "",
+        "Category": "",
+        "Source": "",
+        "Priority": "",
+        "Issue": "",
+        "FormalSpec": "",
+        "FitCriterion": "",
+        "Stability": "",
+        "Description": ""
+      }
     }
   ],
   "dependencies": [],
@@ -7743,6 +7797,87 @@
       }
     },
     {
+      "hub": {
+        "id": "035085f4-ecb7-48b7-9cb6-83f214f6f605",
+        "type": "kaos.RefinementLinkHub",
+        "x": 5982,
+        "y": 1364,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "adaf7c37-0038-4c2c-a930-6b4590272ad0",
+          "type": "kaos.RefinementLinkStart",
+          "source": "f5a40208-ae5d-4494-8d20-4a9eda483690",
+          "target": "035085f4-ecb7-48b7-9cb6-83f214f6f605"
+        }
+      ],
+      "end": {
+        "id": "4e5be9dc-ad7e-4cc7-84e7-a4feee27a4a6",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "035085f4-ecb7-48b7-9cb6-83f214f6f605",
+        "target": "7261b044-5cb0-4213-aa9c-e03070fe0ede"
+      }
+    },
+    {
+      "hub": {
+        "id": "86406782-9968-4307-b90d-524ce01c53c8",
+        "type": "kaos.RefinementLinkHub",
+        "x": 6179.5,
+        "y": 1310,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "da84028c-c8ec-40b5-a061-02b5c83441bb",
+          "type": "kaos.RefinementLinkStart",
+          "source": "d18461b2-4df0-41de-94b9-6a13e7593357",
+          "target": "86406782-9968-4307-b90d-524ce01c53c8"
+        }
+      ],
+      "end": {
+        "id": "3267063f-c295-4bd3-acab-9e2abcb742c9",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "86406782-9968-4307-b90d-524ce01c53c8",
+        "target": "f7902ada-983c-4908-acfd-7867c9178dd7"
+      }
+    },
+    {
+      "hub": {
+        "id": "036c85dd-fbb5-47e4-84df-20bcdaa42853",
+        "type": "kaos.RefinementLinkHub",
+        "x": 6105.228515625,
+        "y": 1174.5,
+        "customProperties": {
+          "SysRef": "",
+          "Status": "",
+          "Tactic": ""
+        }
+      },
+      "starts": [
+        {
+          "id": "1c2404c7-1d40-4a19-b0fa-d195f4c4ad7a",
+          "type": "kaos.RefinementLinkStart",
+          "source": "15576de7-df25-4982-b8ee-955998590c1a",
+          "target": "036c85dd-fbb5-47e4-84df-20bcdaa42853"
+        }
+      ],
+      "end": {
+        "id": "5d522864-ae0b-490f-be0c-f53ae3a674e9",
+        "type": "kaos.RefinementLinkEnd",
+        "source": "036c85dd-fbb5-47e4-84df-20bcdaa42853",
+        "target": "f7902ada-983c-4908-acfd-7867c9178dd7"
+      }
+    },
+    {
       "id": "f29941ba-bc75-447a-a5ee-c0932837f476",
       "type": "kaos.ResponsibilityAssignment",
       "source": "43015d35-2e5f-4b2f-b277-1fe3411e135e",
@@ -8303,6 +8438,21 @@
       "width": 20,
       "height": 20
     },
+    "035085f4-ecb7-48b7-9cb6-83f214f6f605": {
+      "width": 20,
+      "height": 20
+    },
+    "f7902ada-983c-4908-acfd-7867c9178dd7": {
+      "backgroundColor": "#FA0000"
+    },
+    "86406782-9968-4307-b90d-524ce01c53c8": {
+      "width": 20,
+      "height": 20
+    },
+    "036c85dd-fbb5-47e4-84df-20bcdaa42853": {
+      "width": 20,
+      "height": 20
+    },
     "cfdac448-0d18-46bd-a0c4-21330ddf2bda": {
       "vertices": [
         {
@@ -8362,7 +8512,7 @@
   },
   "tool": "dsm3-goals",
   "metamodelVersion": "1.0",
-  "saveDate": "Tue, 28 May 2024 14:39:31 GMT",
+  "saveDate": "Tue, 28 May 2024 15:16:36 GMT",
   "diagram": {
     "width": 7372,
     "height": 1779,
