@@ -18,10 +18,11 @@ import PasswordIcon from '@mui/icons-material/Password';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import DialogCreateDoctorAccount from './../components/DialogCreateDoctorAccount';
 
-function Profile() {
+function Profile({username}) {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.only('xs'));
   const [open,setOpen] = useState(false);
+
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -37,7 +38,7 @@ function Profile() {
         <Grid item  xs={12} sm={8} justifyContent="center" alignItems="flex-start">
         <Stack spacing={2} sx={{ textAlign: isXsScreen ? 'center' : 'left',height:"100%" }} justifyContent={isXsScreen ? 'center' : 'center'} alignItems={isXsScreen ? 'center' : 'flex-start'}>
           <Typography variant="h4" gutterBottom>
-            Rafael Costa
+            {username}
           </Typography>
           <Typography variant="h6" gutterBottom>
             rms.costa@campus.fct.unl.pt

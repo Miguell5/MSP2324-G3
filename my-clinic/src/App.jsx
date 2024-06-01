@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Suspense, lazy } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
@@ -21,13 +21,27 @@ import SearchDoctors from './pages/SearchDoctors';
 
 function App() {
   const [loginState, setLoginState] = useState(true);
+  
+var parsedLoginAccount = {name:"rafael"};
+
+  useEffect(() => {
+    var loginAccount = localStorage.getItem('login');
+    console.log("loginAccount (string):", loginAccount);
+
+    if (loginAccount === null) {
+      setLoginState(false);
+    } else {
+      parsedLoginAccount = JSON.parse(loginAccount);
+      console.log("loginAccount (parsed):", parsedLoginAccount);
+    }
+  }, []);
 
   return (
     <>
   <div style={{Height:"110%"}}>
 
 
-      {loginState && <AppBar setLoginState={setLoginState}/>}
+      {loginState && <AppBar setLoginState={setLoginState} name={parsedLoginAccount.name}/>}
       <Routes >
           {
             !loginState &&
@@ -82,7 +96,7 @@ function App() {
                 path="/profile"
                 element={
                   <Suspense fallback={<Loading />}>
-                    <Profile />
+                    <Profile username={parsedLoginAccount.name}/>
                   </Suspense>
                 }
               />
