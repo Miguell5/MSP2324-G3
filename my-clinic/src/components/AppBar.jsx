@@ -17,7 +17,7 @@ import QueueWaitTime from '../pages/QueueWaitTime';
 import PaymentAndBilling from '../pages/PaymentAndBilling';
 
 
-const pages = ['Queue Wait Time','Remote Triage'];
+const pages = ['Queue Wait Time','Remote Triage','Search Doctors'];
 const settings = ['Account', 'Logout','Payment And Billing'];
 
 function ResponsiveAppBar({ setLoginState }) {
@@ -40,9 +40,13 @@ function ResponsiveAppBar({ setLoginState }) {
     if (page === 'Queue Wait Time') {
       setDialogOpenQueue(true); 
     }
-    if (page === 'Remote Triage') {
+    else if (page === 'Remote Triage') {
       navigate("/remoteTriage");
     }
+    else if (page === 'Search Doctors') {
+      navigate("/search/doctors");
+    }
+    
   };
 
   const handleCloseUserMenu = (setting) => {
@@ -53,7 +57,7 @@ function ResponsiveAppBar({ setLoginState }) {
     } else if (setting === 'Account') {
       navigate("/profile");
     }
-    if (setting === 'Payment And Billing') {
+    else if (setting === 'Payment And Billing') {
       setDialogOpenPayment(true); 
     }
   };

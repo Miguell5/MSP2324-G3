@@ -16,6 +16,7 @@ import RemoteTriage from "./pages/RemoteTriagePage";
 import SchedulePage from "./pages/Schedule";
 import QueuePage from "./pages/QueueWaitTime";
 import { Height, Schedule } from '@mui/icons-material';
+import SearchDoctors from './pages/SearchDoctors';
 
 function App() {
 
@@ -50,9 +51,9 @@ function App() {
               <HomePage />
             </Suspense>
           }/>
-          <Route path='/register/patient' element={
+          <Route path='/search/doctors' element={
             <Suspense fallback={<Loading />}>
-              <h1>Registo</h1>
+              <SearchDoctors/>
             </Suspense>
           }/>
           <Route path='/checkIn' element={
