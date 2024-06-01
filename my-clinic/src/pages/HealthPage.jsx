@@ -20,6 +20,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import MonitorHealthTable from '../components/MonitorHealthTable';
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -98,11 +100,11 @@ export default function HealthPage() {
             {text}
           </DialogTitle>
           <DialogContent>
-            <DialogContentText id="alert-dialog-description">
-              Let Google help apps determine location. This means sending anonymous
-              location data to Google, even when no apps are running.
-            </DialogContentText>
+            <MonitorHealthTable title={text}/>
           </DialogContent>
+          <DialogActions>
+          <Button onClick={handleClose}>CLOSE</Button>
+        </DialogActions>
         </Dialog>
       </React.Fragment>
 
