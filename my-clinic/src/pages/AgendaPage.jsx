@@ -87,86 +87,39 @@ const AppointmentsPage = () => {
     const dd = String(today.getDate()).padStart(2, '0');
     const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
     const yyyy = today.getFullYear();
-    const currentDate = dd + '/' + mm + '/' + yyyy;
+    const currentDate = dd + '-' + mm + '-' + yyyy;
     return currentDate;
   }
-  const [appointments,setAppointments] = React.useState([
+  const [initialAppointments,setInitialAppointments] = React.useState([
     {
-      id:0,
-      date:"5/02/2023",
-      AppointmentType:"Consulta",
+      id: 5000,
+      date:"5-02-2023",
+      kind:"Consulta",
       specialty:"Otorrinolaringologia",
-      hour:"17:00",
+      time:"17:00",
       doctor:"Dr. José Correia",
       status:"done",
       checkIn:"done",
     },
     {
-      id:1,
-      date:"05/02/2023",
-      AppointmentType:"Consulta",
+      id: 5001,
+      date:getTodaysDate(),
+      kind:"Consulta",
       specialty:"Otorrinolaringologia",
-      hour:"17:00",
-      doctor:"Dr. José Correia",
-      status:"done",
-      checkIn:"done",
-    },
-    {
-      id:2,
-      date:"05/02/2023",
-      AppointmentType:"Consulta",
-      specialty:"Otorrinolaringologia",
-      hour:"17:00",
-      doctor:"Dr. José Correia",
-      status:"didNotOccur"
-    },
-    {
-      id:3,
-      date:"09/06/2023",
-      AppointmentType:"Consulta",
-      specialty:"Estomatologia",
-      hour:"11:00",
-      doctor:"Dr. José Correia",
-      status:"done",
-      checkIn:"done",
-    },
-    
-    {
-      id:4,
-      date:"21/06/2023",
-      AppointmentType:"Consulta",
-      specialty:"Otorrinolaringologia",
-      hour:"15:30",
-      doctor:"Dr. José Correia",
-      status:"done",
-      checkIn:"done",
-      },
-      {
-        id:5,
-        date:getTodaysDate(),
-        AppointmentType:"Consulta",
-        specialty:"Otorrinolaringologia",
-        hour:"17:45",
-        doctor:"Dr. José Correia",
-        status:"toDo",
-        checkIn:"toDo",
-        },
-    {
-      id:6,
-      date:"02/06/2024",
-      AppointmentType:"Consulta",
-      specialty:"Clinica geral",
-      hour:"18:15",
+      time:"17:00",
       doctor:"Dr. José Correia",
       status:"toDo",
       checkIn:"toDo",
-      },
+    },
+  ]);
     
-    
-    
-    
-    
-    ]);
+
+
+    const storedAppointments = localStorage.getItem("appointments");
+    const parsedStoredAppointments = storedAppointments ? JSON.parse(storedAppointments) : [];
+
+    const appointments = [...initialAppointments, ...parsedStoredAppointments];
+
 
   const groupAppointmentsByMonth = () => {
     const groupedAppointments = {};
@@ -174,7 +127,7 @@ const AppointmentsPage = () => {
 
     // Iterar sobre cada compromisso
     appointments.reverse().forEach(appointment => {
-      const [day, month, year] = appointment.date.split('/');
+      const [day, month, year] = appointment.date.split('-');
       const monthYearKey = `${month}/${year}`;
 
       // Se já existir um grupo para o mês, adicionar o compromisso, caso contrário, criar um novo grupo
@@ -190,21 +143,27 @@ const AppointmentsPage = () => {
 
   const groupedAppointments = groupAppointmentsByMonth();
 
-  function CheckIn(appointment){
-    const appointmentIndex = appointments.findIndex(item => item.id === appointment.id);
-    console.log(appointmentIndex);
+  function CheckIn(appointment) {
+    let appointmentIndex = appointments.findIndex(item => item.id === appointment.id);
     if (appointmentIndex !== -1) {
-
-        var updatedAppointments = [...appointments]; // Faz uma cópia da lista appointments
-        updatedAppointments[appointmentIndex] = { ...updatedAppointments[appointmentIndex], checkIn: "done" }; // Atualiza o campo checkIn do objeto no índice encontrado
-        console.log(updatedAppointments);
-        setAppointments(updatedAppointments); // Atualiza o estado com a nova lista modificada
-
+      if (parsedStoredAppointments.some(item => item.id === appointment.id)) {
+        appointmentIndex = parsedStoredAppointments.findIndex(item => item.id === appointment.id);
+      const updatedAppointments = [...parsedStoredAppointments];
+      updatedAppointments[appointmentIndex].checkIn = "done";
+      localStorage.setItem("appointments", JSON.stringify(updatedAppointments));
+  }
+  else{
+    appointmentIndex = initialAppointments.findIndex(item => item.id === appointment.id);
+    const updatedAppointments = [...initialAppointments];
+    updatedAppointments[appointmentIndex].checkIn = "done";
+    setInitialAppointments(updatedAppointments);
+    console.log(initialAppointments)
+  }
+     
     } else {
-        console.log("Appointment not found");
+      console.log("Appointment not found");
     }
   }
-
   return (
     <>
     <div style={{margin:"5%",marginBottom:"150px"}}>
@@ -250,7 +209,7 @@ const AppointmentsPage = () => {
                       <Typography variant="body1">{appointment.date}</Typography>
                     </Grid>
                     <Grid item xs={12}>
-                      <Typography variant="body1">{appointment.hour}</Typography>
+                      <Typography variant="body1">{appointment.time}</Typography>
                     </Grid>
                 
                   </Grid>
@@ -259,10 +218,10 @@ const AppointmentsPage = () => {
               <Grid item >
                   <Grid container  direction="column" alignItems="flex-start" justifyContent="flex-start">
                     <Grid item xs={12}>
-                      <b><Typography variant="body1" display="block">{appointment.AppointmentType}</Typography></b>
+                      <b><Typography variant="body1" display="block">{appointment.kind}</Typography></b>
                     </Grid>
                     <Grid item xs={12}>
-                      <Typography variant="h6" sx={{textAlign:"left",width:"100%"}}>{appointment.specialty}</Typography>
+                      <Typography variant="h6" sx={{textAlign:"left",width:"100%"}}>{appointment.appointmentType}</Typography>
                     </Grid>
                     <Grid item xs={12}>
                       <Typography variant="caption">{appointment.doctor}</Typography>

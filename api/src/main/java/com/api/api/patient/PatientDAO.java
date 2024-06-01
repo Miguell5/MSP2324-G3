@@ -19,6 +19,11 @@ public class PatientDAO {
         this.lastName = lastName;
     }
 
+    public PatientDAO(String email, String pwd){
+        this.email = email;
+        this.pwd = pwd;
+    }
+
     public boolean isValidToCreate(){
         return this.email != null && this.pwd != null && this.firstName != null && this.lastName != null;
     }

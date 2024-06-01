@@ -15,7 +15,7 @@ import java.util.Map;
 public class MongoClient {
 
     private static final String HOST = "db";
-    private static final int PORT = 8080;
+    private static final int PORT = 27017;
     private static final String DATABASE_NAME = "database";
     private static MongoDatabase database;
     private static final Map<MongoCollections,MongoCollection<Document>> collectionMap = new HashMap<>();
@@ -23,7 +23,7 @@ public class MongoClient {
     public static synchronized MongoCollection<Document> getCollection(MongoCollections collection) {
 
         if (database == null) {
-            String connectionString = String.format("http://%s:%d", HOST, PORT);
+            String connectionString = String.format("mongodb://root:msp2324@%s:%d/", HOST, PORT);
             ConnectionString connString = new ConnectionString(connectionString);
 
             MongoClientSettings settings = MongoClientSettings.builder()
