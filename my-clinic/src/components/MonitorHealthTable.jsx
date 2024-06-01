@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { DataGrid } from '@mui/x-data-grid';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
 
 const dados_peso = [
   { id: 1, date: '02/09/2022', hour: '15:00', weight: 70.5 },
@@ -82,6 +84,8 @@ export default function MonitorHealthTable(props) {
   const [rows, setRows] = useState([]);
   const [columns, setColumns] = useState([]);
   const [newData, setNewData] = useState({ date: '', hour: '', value1: '', value2: '' });
+
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setColumns(getColumns(title));
@@ -163,6 +167,7 @@ export default function MonitorHealthTable(props) {
     }
     setRows([...rows, newRow]);
     setNewData({ date: '', hour: '', value1: '', value2: '' });
+    setOpen(false);
   };
 
   const handleInputChange = (e) => {
@@ -170,8 +175,18 @@ export default function MonitorHealthTable(props) {
     setNewData({ ...newData, [name]: value });
   };
 
+  const toggleAddData = () => {
+    setOpen(!open);
+  };
+
+
   return (
-    <Box sx={{ height: 600, width: '100%' }}>
+    <>
+    <Button onClick={toggleAddData}>
+          {open ? <RemoveIcon />:<AddIcon />}
+        </Button>
+    {
+      (open==true)?
       <Box sx={{ mb: 2 }}>
         <TextField
           label="Date"
@@ -213,10 +228,15 @@ export default function MonitorHealthTable(props) {
             sx={{ mr: 2 }}
           />
         )}
-        <Button variant="contained" onClick={handleAddData}>
+        <Button variant="contained" sx={{marginTop:"10px"}} onClick={handleAddData}>
           Add Data
         </Button>
       </Box>
+      :
+      <>{(open==true)?"Close":"Add"}</>
+    }
+    <Box sx={{ height: 600, width: '100%' }}>
+      
       <DataGrid
         rows={rows}
         columns={columns}
@@ -234,5 +254,6 @@ export default function MonitorHealthTable(props) {
         disableRowSelectionOnClick
       />
     </Box>
+    </>
   );
 }

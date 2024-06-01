@@ -31,7 +31,7 @@ const Pagina = () => {
     <Root>
       <Container maxWidth="sm">
         <Overlay>
-          <Typography variant="h3" gutterBottom color='#3373d6'>
+          <Typography variant="h4" gutterBottom color='#3373d6'>
             My Clinic
           </Typography>
           <Typography variant="body1" color='#3373d6'>
