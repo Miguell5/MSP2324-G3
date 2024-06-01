@@ -21,7 +21,7 @@ import PaymentAndBilling from '../pages/PaymentAndBilling';
 const pages = ['Queue Wait Time','Remote Triage','Search Doctors'];
 const settings = ['Account', 'Logout','Payment And Billing','Triage requests'];
 
-function ResponsiveAppBar({ setLoginState,UserName }) {
+function ResponsiveAppBar({ UserName,logout }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [dialogOpenQueue, setDialogOpenQueue] = React.useState(false);
@@ -53,7 +53,7 @@ function ResponsiveAppBar({ setLoginState,UserName }) {
   const handleCloseUserMenu = (setting) => {
     setAnchorElUser(null);
     if (setting === 'Logout') {
-      setLoginState(false);
+      logout()
       navigate("/");
     } else if (setting === 'Account') {
       navigate("/profile");

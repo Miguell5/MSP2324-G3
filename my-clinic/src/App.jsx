@@ -36,12 +36,17 @@ var parsedLoginAccount = {name:"rafael"};
     }
   }, []);
 
+  function logout(){
+    localStorage.clear();
+    setLoginState(false);
+  }
+
   return (
     <>
   <div style={{Height:"110%"}}>
 
 
-      {loginState && <AppBar setLoginState={setLoginState} name={parsedLoginAccount.name}/>}
+      {loginState && <AppBar name={parsedLoginAccount.name} logout={logout}/>}
       <Routes >
           {
             !loginState &&
@@ -54,6 +59,11 @@ var parsedLoginAccount = {name:"rafael"};
           <Route path='/sign-up' element={
             <Suspense fallback={<Loading />}>
               <SignUp setLoginState={setLoginState}/>
+            </Suspense>
+          }/>
+          <Route path='/*' element={
+            <Suspense fallback={<Loading />}>
+              <LoginPage setLoginState={setLoginState}/>
             </Suspense>
           }/>
           </>
