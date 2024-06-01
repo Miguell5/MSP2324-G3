@@ -11,6 +11,7 @@ import AgendaPage from "./pages/AgendaPage";
 import HealthPage from "./pages/HealthPage";
 import LoginPage from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import RemoteTriage from "./pages/RemoteTriagePage";
 
 import SchedulePage from "./pages/Schedule";
 import QueuePage from "./pages/QueueWaitTime";
@@ -84,6 +85,14 @@ function App() {
               <QueuePage/>
             </Suspense>
           }/>
+          <Route
+                path="/remoteTriage"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <RemoteTriage />
+                  </Suspense>
+                }
+            />
 
           </>}
       </Routes>
