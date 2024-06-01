@@ -11,8 +11,10 @@ import AgendaPage from "./pages/AgendaPage";
 import HealthPage from "./pages/HealthPage";
 import LoginPage from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import RemoteTriage from "./pages/RemoteTriagePage";
 
 import SchedulePage from "./pages/Schedule";
+import QueuePage from "./pages/QueueWaitTime";
 import { Height, Schedule } from '@mui/icons-material';
 
 function App() {
@@ -78,6 +80,19 @@ function App() {
               <HealthPage/>
             </Suspense>
           }/>
+          <Route path='/queue' element={
+            <Suspense fallback={<Loading />}>
+              <QueuePage/>
+            </Suspense>
+          }/>
+          <Route
+                path="/remoteTriage"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <RemoteTriage />
+                  </Suspense>
+                }
+            />
 
           </>}
       </Routes>

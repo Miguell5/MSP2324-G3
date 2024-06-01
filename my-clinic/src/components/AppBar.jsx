@@ -11,61 +11,72 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import ClinicLogo from '../assets/logoMyClinic.png';
 import { useNavigate } from "react-router-dom";
+import QueueWaitTime from '../pages/QueueWaitTime';
+import PaymentAndBilling from '../pages/PaymentAndBilling';
 
-const pages = [];
-const settings = ['Account','Logout'];
 
-function ResponsiveAppBar({setLoginState}) {
+const pages = ['Queue Wait Time','Remote Triage'];
+const settings = ['Account', 'Logout','Payment And Billing'];
+
+function ResponsiveAppBar({ setLoginState }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [dialogOpenQueue, setDialogOpenQueue] = React.useState(false);
+  const [dialogOpenPayment, setDialogOpenPayment] = React.useState(false);
   const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (page) => {
     setAnchorElNav(null);
+    if (page === 'Queue Wait Time') {
+      setDialogOpenQueue(true); 
+    }
+    if (page === 'Remote Triage') {
+      navigate("/remoteTriage");
+    }
   };
 
-  function handleCloseUserMenu(setting){
+  const handleCloseUserMenu = (setting) => {
     setAnchorElUser(null);
-    if(setting==='Logout'){
+    if (setting === 'Logout') {
       setLoginState(false);
       navigate("/");
-    }
-    else if(setting==='Account'){
+    } else if (setting === 'Account') {
       navigate("/profile");
     }
-      
-  }
+    if (setting === 'Payment And Billing') {
+      setDialogOpenPayment(true); 
+    }
+  };
 
   return (
-    <AppBar position="static" sx={{backgroundColor:'white'}}>
+
+    <AppBar position="static" sx={{backgroundColor:'white',width: "102%"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-
           <Avatar
             src={ClinicLogo}
-            sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 ,width: 55, height: 55}} 
+            sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, width: 55, height: 55 }}
             alt="Clinic Logo"
           />
 
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ width: "100%",flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-
             >
               <MenuIcon />
             </IconButton>
@@ -82,14 +93,14 @@ function ResponsiveAppBar({setLoginState}) {
                 horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              onClose={() => handleCloseNavMenu(null)}
               sx={{
-                display: { xs: 'block', md: 'none' }, 
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" >{page}</Typography>
+                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -98,20 +109,18 @@ function ResponsiveAppBar({setLoginState}) {
               sx={{
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 0.01,
-                width:'50px',
+                width: '50px',
               }}
               alt="Clinic Logo"
             />
           </Box>
-       
 
-          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color:"#3373d6", display: 'block' }}
+                onClick={() => handleCloseNavMenu(page)}
+                sx={{ my: 2, color: "#3373d6", display: 'block' }}
               >
                 {page}
               </Button>
@@ -138,7 +147,7 @@ function ResponsiveAppBar({setLoginState}) {
                 horizontal: 'right',
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              onClose={() => handleCloseUserMenu(null)}
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={() => handleCloseUserMenu(setting)}>
@@ -149,7 +158,10 @@ function ResponsiveAppBar({setLoginState}) {
           </Box>
         </Toolbar>
       </Container>
+      <QueueWaitTime open={dialogOpenQueue} onClose={() => setDialogOpenQueue(false)} />
+      <PaymentAndBilling open={dialogOpenPayment} onClose={() => setDialogOpenPayment(false)} />
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;
