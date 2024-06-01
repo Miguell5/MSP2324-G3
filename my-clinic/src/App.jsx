@@ -42,14 +42,6 @@ function App() {
               <SignUp setLoginState={setLoginState}/>
             </Suspense>
           }/>
-          <Route
-            path="/sign-up"
-            element={
-              <Suspense fallback={<Loading />}>
-                <SignUp setLoginState={setLoginState} />
-              </Suspense>
-            }
-          />
           </>
           }
           {loginState && (
