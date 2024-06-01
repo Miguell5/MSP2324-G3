@@ -26,7 +26,7 @@ public class DoctorService {
         if(doctorDAO != null)
             throw new ResponseStatusException(HttpStatus.CONFLICT,"Already exists a Doctor with that ID");
 
-        doctor.setPwd(hash.hashPwd(doctor.getPwd()));
+        doctor.setPwd(doctor.getPwd());
 
         return doctorRepository.createDoctor(doctor);
     }
@@ -65,7 +65,7 @@ public class DoctorService {
 
         DoctorDAO doctor = doctorRepository.getDoctor(email);
 
-        if(doctor == null || !hash.checkPwd(pwd,doctor.getPwd()) )
+        if(doctor == null || !pwd.equals(doctor.getPwd()) )
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Username or password are incorrect.");
 
         return TokenManager.generateToken(email, roles.PATIENT.getValue());

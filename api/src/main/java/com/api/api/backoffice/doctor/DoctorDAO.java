@@ -22,6 +22,11 @@ public class DoctorDAO {
         this.expertise = expertise;
     }
 
+    public DoctorDAO(String email, String pwd){
+        this.email = email;
+        this.pwd = pwd;
+    }
+
     public boolean isValidCreate(){
 
         //TODO verify email ,names and pwd validity

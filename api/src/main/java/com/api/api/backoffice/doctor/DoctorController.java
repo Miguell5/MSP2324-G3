@@ -35,7 +35,7 @@ public class DoctorController {
     }
 
     @GetMapping(path = "/auth")
-    public ResponseEntity<String> authDoctor(DoctorDAO doctor){
+    public ResponseEntity<String> authDoctor(@RequestBody DoctorDAO doctor){
 
         if(!doctor.isValidAuth())
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Wrong parameters.");
