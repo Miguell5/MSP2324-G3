@@ -15,19 +15,15 @@ import RemoteTriage from "./pages/RemoteTriagePage";
 import DisplayTriageData from "./pages/DisplayTriageData";
 import SchedulePage from "./pages/Schedule";
 import QueuePage from "./pages/QueueWaitTime";
-<<<<<<< HEAD
 import { Height, Schedule } from '@mui/icons-material';
 import SearchDoctors from './pages/SearchDoctors';
-=======
-import { Height, Schedule } from "@mui/icons-material";
->>>>>>> 6fc66d88f0ae79a2a79bb41a261d547475c100e0
+
 
 function App() {
   const [loginState, setLoginState] = useState(true);
 
   return (
     <>
-<<<<<<< HEAD
   <div style={{Height:"110%"}}>
 
 
@@ -35,75 +31,17 @@ function App() {
       <Routes >
           {
             !loginState &&
-          
+          <>
           <Route path='/' element={
             <Suspense fallback={<Loading />}>
               <LoginPage setLoginState={setLoginState}/>
             </Suspense>
-          }/>}
+          }/>
           <Route path='/sign-up' element={
             <Suspense fallback={<Loading />}>
               <SignUp setLoginState={setLoginState}/>
             </Suspense>
           }/>
-          {
-            loginState &&
-            <>
-          <Route path='/' element={
-            <Suspense fallback={<Loading />}>
-              <HomePage />
-            </Suspense>
-          }/>
-          <Route path='/search/doctors' element={
-            <Suspense fallback={<Loading />}>
-              <SearchDoctors/>
-            </Suspense>
-          }/>
-          <Route path='/checkIn' element={
-            <Suspense fallback={<Loading />}>
-              <h1>Check-In</h1>
-            </Suspense>
-          }/>
-          <Route path='/schedule' element={
-            <Suspense fallback={<Loading />}>
-              <SchedulePage/>
-            </Suspense>
-          }/>
-          <Route path='/profile' element={
-            <Suspense fallback={<Loading />}>
-              <Profile/>
-            </Suspense>
-          }/>
-          <Route path='/agenda' element={
-            <Suspense fallback={<Loading />}>
-              <AgendaPage/>
-            </Suspense>
-          }/>
-          <Route path='/myHealth' element={
-            <Suspense fallback={<Loading />}>
-              <HealthPage/>
-            </Suspense>
-          }/>
-          <Route path='/queue' element={
-            <Suspense fallback={<Loading />}>
-              <QueuePage/>
-            </Suspense>
-          }/>
-=======
-      <div style={{ Height: "110%" }}>
-        {loginState && <AppBar setLoginState={setLoginState} />}
-        <Routes>
-          {!loginState && (
-            <Route
-              path="/"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <LoginPage setLoginState={setLoginState} />
-                </Suspense>
-              }
-            />
-          )}
->>>>>>> 6fc66d88f0ae79a2a79bb41a261d547475c100e0
           <Route
             path="/sign-up"
             element={
@@ -112,6 +50,8 @@ function App() {
               </Suspense>
             }
           />
+          </>
+          }
           {loginState && (
             <>
               <Route
