@@ -47,7 +47,7 @@ export default function HealthPage() {
 
   return (
   <>
-    <Box sx={{ width: '100%', marginTop:"2%", marginLeft:"2%" }}>
+    <Box sx={{ width: '100%', marginTop:"2%", marginLeft:"2%",marginBottom:"70px" }}>
       <Grid container spacing={2}>
         {options.map((option) => (
               
@@ -61,7 +61,7 @@ export default function HealthPage() {
               >
               <Avatar
                 src={option==="Blood pressure"?arm:( option==="Cholesterol"?cholestrol:( option==="Heart Rate"?heart:(( option==="Oximetry"?oximeter:(( option==="BMI"?bmi:(weighing)))))))}
-                sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 ,width: "70px", height: "70px"}} 
+                sx={{ mr: 1 ,width: "70px", height: "70px"}} 
                 alt="Clinic Logo"
               />
               <Grid container  direction="column"
