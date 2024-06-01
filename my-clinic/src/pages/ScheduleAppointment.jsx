@@ -6,7 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import DatePicker from "../components/DatePicker";
-import { SimpleDialog } from "../components/Dialog";
+import SimpleDialog from "../components/Dialog";
 
 export default function ScheduleAppointment() {
   const [clinic, setClinic] = React.useState("");
@@ -15,7 +15,6 @@ export default function ScheduleAppointment() {
   const [selectedDate, setSelectedDate] = React.useState(null);
 
   const [open, setOpen] = React.useState(false);
-
   const handleChangeClinic = (event) => {
     setClinic(event.target.value);
   };
@@ -28,14 +27,26 @@ export default function ScheduleAppointment() {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+
   const handleClickOpen = () => {
+    const newAppointment = {
+      clinic,
+      doctor,
+      appointmentType,
+      selectedDate,
+    };
+
+    const storedAppointments = localStorage.getItem("appointments");
+    const appointments = storedAppointments ? JSON.parse(storedAppointments) : [];
+    localStorage.setItem("appointments", JSON.stringify([...appointments, newAppointment]));
     setOpen(true);
   };
 
-  const handleClose = (value) => {
+  const handleClose = () => {
     setOpen(false);
   };
-  const isFormValid = clinic && doctor && selectedDate;
+
+  const isFormValid = clinic && doctor && appointmentType && selectedDate;
 
   return (
     <Box
@@ -67,7 +78,7 @@ export default function ScheduleAppointment() {
 
       <div style={{ marginBottom: "16px" }}></div>
 
-      <label id="speciality-label" style={{ marginBottom: "4px" }}>
+      <label id="doctor-label" style={{ marginBottom: "4px" }}>
         Doctor
       </label>
       <FormControl fullWidth>
@@ -88,7 +99,7 @@ export default function ScheduleAppointment() {
 
       <div style={{ marginBottom: "16px" }}></div>
       <label id="speciality-label" style={{ marginBottom: "4px" }}>
-      Specialty
+        Specialty
       </label>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Choose the Specialty</InputLabel>
@@ -107,7 +118,7 @@ export default function ScheduleAppointment() {
       </FormControl>
 
       <div style={{ marginBottom: "16px" }}></div>
-      <label id="speciality-label" style={{ marginBottom: "4px" }}>
+      <label id="date-label" style={{ marginBottom: "4px" }}>
         Date
       </label>
       <FormControl fullWidth>
