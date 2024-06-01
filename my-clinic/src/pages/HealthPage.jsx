@@ -75,7 +75,7 @@ export default function HealthPage() {
                 </Grid>
                 <Grid item>
                   <Typography variant="h5" gutterBottom>
-                    150
+                    
                   </Typography>
                 </Grid>
               </Grid>

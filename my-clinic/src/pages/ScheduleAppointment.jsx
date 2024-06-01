@@ -68,6 +68,7 @@ export default function ScheduleAppointment() {
         flexDirection: "column",
         alignItems: "flex-start",
         minWidth: 120,
+        marginBottom:"80px"
       }}
     >
       <label id="clinic-label" style={{ marginBottom: "4px" }}>
