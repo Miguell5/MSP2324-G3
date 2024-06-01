@@ -1,8 +1,4 @@
 import * as React from "react";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogTitle from "@mui/material/DialogTitle";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
@@ -14,7 +10,6 @@ import Button from "@mui/material/Button";
 export default function SearchDoctors() {
   const [service, setService] = React.useState('');
   const [selectedDoctors, setSelectedDoctors] = React.useState([]);
-  const [openDialog, setOpenDialog] = React.useState(false);
 
   const medicalSpecialties = [
     'Cardiology',
@@ -60,12 +55,8 @@ export default function SearchDoctors() {
   const handleChange = (event) => {
     setService(event.target.value);
     setSelectedDoctors(doctorsFromMedicalSpecialties[event.target.value]);
-    setOpenDialog(true);
   };
 
-  const handleCloseDialog = () => {
-    setOpenDialog(false);
-  };
 
   return (
     <Box
@@ -74,7 +65,8 @@ export default function SearchDoctors() {
         flexDirection: "column",
         alignItems: "center",
         marginTop: 4,
-        padding:2
+        padding:2,height:"auto"
+        
       }}
     >
       <Typography variant="h4" gutterBottom>
@@ -94,6 +86,7 @@ export default function SearchDoctors() {
           ))}
         </Select>
       </FormControl>
+      <div style={{marginBottom:"60px"}}>
       {selectedDoctors.map((doctor, index) => (
             <Box key={index} sx={{ marginBottom: 2 }}>
               <Typography variant="subtitle1" gutterBottom>{doctor.name}</Typography>
@@ -102,6 +95,7 @@ export default function SearchDoctors() {
               <Button variant="outlined" size="small" href={`mailto:${doctor.email}`} sx={{ marginTop: 1 }}>Contact</Button>
             </Box>
           ))}
+      </div>
     </Box>
   );
 }
