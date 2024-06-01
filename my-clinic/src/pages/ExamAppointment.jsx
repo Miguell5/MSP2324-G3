@@ -19,15 +19,19 @@ export default function ScheduleAppointment() {
   const handleChangeClinic = (event) => {
     setClinic(event.target.value);
   };
+  
   const handleChangeDoctor = (event) => {
     setDoctor(event.target.value);
   };
+
   const handleChangeExam = (event) => {
     setExamtType(event.target.value);
   };
+
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+
   const handleClickOpen = () => {
     setOpen(true);
   };
