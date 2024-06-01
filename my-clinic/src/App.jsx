@@ -63,10 +63,10 @@ function App() {
                 }
               />
               <Route
-                path="/register/patient"
+                path="/search/doctors"
                 element={
                   <Suspense fallback={<Loading />}>
-                    <h1>Registo</h1>
+                    <SearchDoctors/>
                   </Suspense>
                 }
               />
