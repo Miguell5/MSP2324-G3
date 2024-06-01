@@ -1,0 +1,35 @@
+version: '3.8'
+name: myclinic
+services:
+
+  myClinic_backend:
+    image: daniel1eugenio/myclinic-api:latest
+    container_name: backend
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    networks:
+      appnet:
+
+  mongodb:
+    image: "mongo"
+    container_name: db
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: msp2324
+    ports:
+      - "27017:27017"
+    networks:
+      appnet:
+    volumes:
+      - myData:/data/db
+
+networks:
+  appnet:
+
+volumes:
+  myData:
+    name: myclinic-data

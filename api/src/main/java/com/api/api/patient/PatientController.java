@@ -27,7 +27,7 @@ public class PatientController {
     @PostMapping(path = "/create", consumes = "application/json")
     public ResponseEntity<String> createPatient(@RequestBody PatientDAO patient){
 
-        if(patient.isValidToCreate())
+        if(!patient.isValidToCreate())
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Wrong parameters.");
 
         PatientDAO patientDAO = patientService.createPatient(patient);
@@ -36,7 +36,7 @@ public class PatientController {
     }
 
     @GetMapping(path = "/auth")
-    public ResponseEntity<String> authPatient(PatientDAO patient){
+    public ResponseEntity<String> authPatient(@RequestBody PatientDAO patient){
 
         if(!patient.isValidAuth())
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Wrong parameters.");

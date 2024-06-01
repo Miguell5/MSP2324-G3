@@ -26,7 +26,7 @@ public class PatientService {
         if(patientDAO != null)
             throw new ResponseStatusException(HttpStatus.CONFLICT,"Already exists an account with that email.");
 
-        patient.setPwd(hash.hashPwd(patient.getPwd()));
+        patient.setPwd(patient.getPwd());
 
         return patientRepository.createPatient(patient);
     }
@@ -35,7 +35,7 @@ public class PatientService {
 
         PatientDAO patient = patientRepository.getPatient(email);
 
-        if(patient == null || !hash.checkPwd(pwd,patient.getPwd()) )
+        if(patient == null || !pwd.equals(patient.getPwd()))
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Username or password are incorrect.");
 
         return TokenManager.generateToken(email, roles.PATIENT.getValue());
