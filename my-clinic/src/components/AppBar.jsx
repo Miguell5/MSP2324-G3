@@ -16,7 +16,8 @@ import { useNavigate } from "react-router-dom";
 import QueueWaitTime from '../pages/QueueWaitTime';
 import PaymentAndBilling from '../pages/PaymentAndBilling';
 
-const pages = ['Queue Wait Time'];
+
+const pages = ['Queue Wait Time','Remote Triage'];
 const settings = ['Account', 'Logout','Payment And Billing'];
 
 function ResponsiveAppBar({ setLoginState }) {
@@ -38,6 +39,9 @@ function ResponsiveAppBar({ setLoginState }) {
     setAnchorElNav(null);
     if (page === 'Queue Wait Time') {
       setDialogOpenQueue(true); 
+    }
+    if (page === 'Remote Triage') {
+      navigate("/remoteTriage");
     }
   };
 
