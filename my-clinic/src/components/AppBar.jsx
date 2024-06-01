@@ -18,7 +18,7 @@ import PaymentAndBilling from '../pages/PaymentAndBilling';
 
 
 const pages = ['Queue Wait Time','Remote Triage'];
-const settings = ['Account', 'Logout','Payment And Billing'];
+const settings = ['Account', 'Logout','Payment And Billing','Triage requests'];
 
 function ResponsiveAppBar({ setLoginState }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -55,6 +55,9 @@ function ResponsiveAppBar({ setLoginState }) {
     }
     if (setting === 'Payment And Billing') {
       setDialogOpenPayment(true); 
+    }
+    if (setting === 'Triage requests') {
+      navigate("/triageInfo");
     }
   };
 
