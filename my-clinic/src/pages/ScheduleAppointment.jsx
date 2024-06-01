@@ -7,7 +7,7 @@ import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import DatePicker from "../components/DatePicker";
 import SimpleDialog from "../components/Dialog";
-
+import moment from 'moment';
 export default function ScheduleAppointment() {
   const [clinic, setClinic] = React.useState("");
   const [doctor, setDoctor] = React.useState("");
@@ -27,14 +27,27 @@ export default function ScheduleAppointment() {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
-
+ 
   const handleClickOpen = () => {
+    const status = "toDo";
+    const checkIn = "toDo";
+    const kind = "Appointments";
+    const date = moment(selectedDate).format('DD-MM-YYYY');
+    const time = moment(selectedDate).format('HH:mm');
+    const id = localStorage.getItem("appointments") ? JSON.parse(localStorage.getItem("appointments")).length : 0;
     const newAppointment = {
       clinic,
       doctor,
       appointmentType,
-      selectedDate,
+      date,
+      time,
+      status,
+      kind,
+      checkIn,
+      id
     };
+
+
 
     const storedAppointments = localStorage.getItem("appointments");
     const appointments = storedAppointments ? JSON.parse(storedAppointments) : [];
