@@ -47,7 +47,7 @@ function ResponsiveAppBar({setLoginState}) {
   }
 
   return (
-    <AppBar position="static" sx={{backgroundColor:'white'}}>
+    <AppBar position="static" sx={{backgroundColor:'white',width: "102%"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -57,8 +57,7 @@ function ResponsiveAppBar({setLoginState}) {
             alt="Clinic Logo"
           />
 
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ width: "100%",flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
