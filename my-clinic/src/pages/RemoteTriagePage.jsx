@@ -27,7 +27,7 @@ const RemoteTriagePage = () => {
   };
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" sx={{minHeight:"1000px"}}>
       <Box mt={4} p={2} boxShadow={3} borderRadius={2} bgcolor="white">
         {step === 1 && <CategoryList onSelectCategory={handleCategorySelect} />}
         {step === 2 && <SymptomForm onSubmitSymptoms={handleSymptomSubmit} onBack={() => setStep(1)} />}
