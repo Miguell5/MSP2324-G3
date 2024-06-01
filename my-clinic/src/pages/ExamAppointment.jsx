@@ -32,7 +32,7 @@ export default function ScheduleAppointment() {
     setOpen(true);
   };
 
-  const handleClose = (value) => {
+  const handleClose = () => {
     setOpen(false);
   };
   const isFormValid = clinic && doctor && selectedDate;
@@ -46,7 +46,7 @@ export default function ScheduleAppointment() {
         minWidth: 120,
       }}
     >
-      <label id="clinic-label" sx={{ marginBottom: "4px" }}>
+      <label id="clinic-label" style={{ marginBottom: "4px" }}>
         Clinic
       </label>
       <FormControl fullWidth>
@@ -67,7 +67,7 @@ export default function ScheduleAppointment() {
 
       <div style={{ marginBottom: "16px" }}></div>
 
-      <label id="speciality-label" sx={{ marginBottom: "4px" }}>
+      <label id="speciality-label" style={{ marginBottom: "4px" }}>
         Doctor
       </label>
       <FormControl fullWidth>
@@ -87,7 +87,7 @@ export default function ScheduleAppointment() {
       </FormControl>
 
       <div style={{ marginBottom: "16px" }}></div>
-      <label id="speciality-label" sx={{ marginBottom: "4px" }}>
+      <label id="speciality-label" style={{ marginBottom: "4px" }}>
       Exam
       </label>
       <FormControl fullWidth>
@@ -107,7 +107,7 @@ export default function ScheduleAppointment() {
       </FormControl>
 
       <div style={{ marginBottom: "16px" }}></div>
-      <label id="speciality-label" sx={{ marginBottom: "4px" }}>
+      <label id="speciality-label" style={{ marginBottom: "4px" }}>
         Date
       </label>
       <FormControl fullWidth>
