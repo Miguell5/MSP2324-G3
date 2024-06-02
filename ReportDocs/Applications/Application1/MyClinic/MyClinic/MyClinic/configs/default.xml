@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature name="MyClinic"/>
+	<feature name="CheckIn"/>
+	<feature name="Check appointment"/>
+	<feature name="Check credentials"/>
+	<feature name="Register Patient"/>
+	<feature name="Patient"/>
+	<feature name="Patient Personal Data"/>
+	<feature name="Register"/>
+	<feature name="Cancel"/>
+	<feature name="Data Base"/>
+	<feature name="Store Patient Information"/>
+	<feature name="Register Doctor"/>
+	<feature name="Register Appointment"/>
+	<feature name="Book exam"/>
+	<feature name="History of appointments and exams"/>
+	<feature name="Payment and Billing"/>
+	<feature name="Payment"/>
+	<feature name="Card"/>
+	<feature name="MBWay"/>
+	<feature name="Fine"/>
+	<feature name="Send Invoice"/>
+	<feature name="Notification of appointments"/>
+	<feature name="Send Notification"/>
+	<feature name="Queue Wait Time"/>
+	<feature name="Profile Management"/>
+	<feature name="Administration of profile"/>
+	<feature name="Search Doctors"/>
+	<feature name="Health Monitor"/>
+	<feature name="Show Data"/>
+	<feature name="Blood Donation"/>
+	<feature name="Remote Triage"/>
+	<feature name="Remote Device"/>
+</configuration>

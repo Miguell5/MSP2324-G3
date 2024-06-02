@@ -15,16 +15,14 @@
 			<and mandatory="true" name="Register Doctor">
 				<graphics key="collapsed" value="false"/>
 				<feature mandatory="true" name="Doctor Personal Data"/>
-				<alt mandatory="true" name="Register ">
+				<and mandatory="true" name="Register ">
 					<graphics key="collapsed" value="false"/>
-					<feature name="Approve"/>
 					<feature name="Reject"/>
-				</alt>
-				<alt mandatory="true" name="Database">
+				</and>
+				<and mandatory="true" name="Database">
 					<graphics key="collapsed" value="false"/>
-					<feature name="Store Doctor Data"/>
 					<feature name="Cancel operation"/>
-				</alt>
+				</and>
 			</and>
 			<and mandatory="true" name="CheckIn">
 				<graphics key="collapsed" value="false"/>
@@ -44,10 +42,9 @@
 					<graphics key="collapsed" value="false"/>
 					<feature name="Cancel"/>
 				</and>
-				<and mandatory="true" name="Data Base">
+				<feature mandatory="true" name="Data Base">
 					<graphics key="collapsed" value="false"/>
-					<feature mandatory="true" name="Store Patient Information"/>
-				</and>
+				</feature>
 			</and>
 			<and mandatory="true" name="Register Appointment">
 				<feature mandatory="true" name="Choose Doctor"/>
@@ -55,11 +52,10 @@
 			</and>
 			<and mandatory="true" name="Book exam">
 				<graphics key="collapsed" value="false"/>
-				<alt mandatory="true" name="Exam">
+				<and mandatory="true" name="Exam">
 					<graphics key="collapsed" value="false"/>
-					<feature name="Cancel   "/>
 					<feature name="Date"/>
-				</alt>
+				</and>
 				<and mandatory="true" name="DB ">
 					<graphics key="collapsed" value="false"/>
 					<feature name="Store exam"/>
@@ -75,11 +71,10 @@
 			</and>
 			<and mandatory="true" name="Payment and Billing">
 				<graphics key="collapsed" value="false"/>
-				<alt mandatory="true" name="Payment">
+				<and mandatory="true" name="Payment">
 					<graphics key="collapsed" value="false"/>
 					<feature name="Card"/>
-					<feature name="MBWay"/>
-				</alt>
+				</and>
 				<feature name="Fine"/>
 				<feature mandatory="true" name="Send Invoice"/>
 			</and>
@@ -96,12 +91,9 @@
 			</and>
 			<and mandatory="true" name="Profile Management">
 				<graphics key="collapsed" value="false"/>
-				<or mandatory="true" name="Administration of profile">
-					<feature name="Email"/>
-					<feature name="Profile Photo"/>
+				<and mandatory="true" name="Administration of profile">
 					<feature name="Payment Methods"/>
-					<feature name="Insurance Provider"/>
-				</or>
+				</and>
 			</and>
 			<and mandatory="true" name="Search Doctors">
 				<feature mandatory="true" name="Suggested"/>
@@ -111,14 +103,12 @@
 					<feature name="Insurances"/>
 				</or>
 			</and>
-			<or mandatory="true" name="Health Monitor">
+			<and mandatory="true" name="Health Monitor">
 				<graphics key="collapsed" value="false"/>
 				<feature name="Weight "/>
-				<feature name="Colesterol"/>
 				<feature name="Oximetry"/>
-				<feature name="Heart Rate"/>
 				<feature name="BMI"/>
-			</or>
+			</and>
 			<and mandatory="true" name="Blood Donation">
 				<graphics key="collapsed" value="false"/>
 				<feature mandatory="true" name="Donator">
@@ -145,13 +135,10 @@
 				</and>
 			</and>
 			<and mandatory="true" name="Remote Device">
-				<alt mandatory="true" name="Connectivity">
+				<and mandatory="true" name="Connectivity">
 					<feature name="Bluetooth"/>
-					<feature name="Cable"/>
-				</alt>
-				<and name="Store">
-					<feature name="Cancel "/>
 				</and>
+				<feature name="Store"/>
 			</and>
 		</and>
 	</struct>
@@ -170,15 +157,20 @@
 		</rule>
 		<rule>
 			<imp>
-				<var>Approve</var>
-				<var>Store Doctor Data</var>
-			</imp>
-		</rule>
-		<rule>
-			<imp>
 				<var>Date</var>
 				<var>Store exam</var>
 			</imp>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Cancel operation</var>
+				</not>
+				<not>
+					<var>Register </var>
+				</not>
+				<var>Reject</var>
+			</disj>
 		</rule>
 	</constraints>
 </featureModel>
