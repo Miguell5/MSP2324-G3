@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="MyClinic">
+			<and mandatory="true" name="Register Doctor">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="Doctor Personal Data"/>
+				<alt mandatory="true" name="Register ">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Approve"/>
+					<feature name="Reject"/>
+				</alt>
+				<alt mandatory="true" name="Database">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Store Doctor Data"/>
+					<feature name="Cancel operation"/>
+				</alt>
+			</and>
+			<and mandatory="true" name="CheckIn">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="Check appointment">
+					<graphics key="collapsed" value="false"/>
+				</feature>
+				<feature mandatory="true" name="Check credentials"/>
+				<feature mandatory="true" name="Ticket"/>
+			</and>
+			<and mandatory="true" name="Register Patient">
+				<graphics key="collapsed" value="false"/>
+				<and mandatory="true" name="Patient">
+					<graphics key="collapsed" value="false"/>
+					<feature mandatory="true" name="Patient Personal Data"/>
+				</and>
+				<and mandatory="true" name="Register">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Cancel"/>
+				</and>
+				<and mandatory="true" name="Data Base">
+					<graphics key="collapsed" value="false"/>
+					<feature mandatory="true" name="Store Patient Information"/>
+				</and>
+			</and>
+			<and mandatory="true" name="Register Appointment">
+				<feature mandatory="true" name="Choose Doctor"/>
+				<feature mandatory="true" name="Choose Time"/>
+				<alt name="Payment ">
+					<feature name="Card "/>
+					<feature name="MBWay "/>
+				</alt>
+			</and>
+			<and mandatory="true" name="Book exam">
+				<graphics key="collapsed" value="false"/>
+				<alt mandatory="true" name="Exam">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Cancel   "/>
+					<feature name="Date"/>
+				</alt>
+				<and mandatory="true" name="DB ">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Store exam"/>
+					<feature mandatory="true" name="Show available dates"/>
+				</and>
+			</and>
+			<feature mandatory="true" name="History of appointments and exams"/>
+			<and mandatory="true" name="Payment and Billing">
+				<graphics key="collapsed" value="false"/>
+				<or mandatory="true" name="Payment">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Card"/>
+					<feature name="MBWay"/>
+				</or>
+				<feature name="Fine"/>
+				<feature mandatory="true" name="Send Invoice"/>
+			</and>
+			<and mandatory="true" name="Notification of appointments">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="Send Notification"/>
+			</and>
+			<and mandatory="true" name="Queue Wait Time">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="Calculate Average Wait Time"/>
+				<feature mandatory="true" name="Update Current people waiting"/>
+				<feature mandatory="true" name="Store wait times"/>
+				<feature name="Patients Check-in"/>
+			</and>
+			<and mandatory="true" name="Profile Management">
+				<graphics key="collapsed" value="false"/>
+				<or mandatory="true" name="Administration of profile">
+					<feature name="Email"/>
+					<feature name="Profile Photo"/>
+					<feature name="Payment Methods"/>
+					<feature name="Insurance Provider"/>
+				</or>
+				<or mandatory="true" name="Administration Health Monitor">
+					<feature name="Weight"/>
+					<feature name="Colesterol"/>
+					<feature name="Oximetry"/>
+					<feature name="Heart Rate"/>
+					<feature name="BMI"/>
+				</or>
+			</and>
+			<and mandatory="true" name="Search Doctors">
+				<feature mandatory="true" name="Suggested"/>
+				<or mandatory="true" name="With Filters">
+					<feature name="Expertise"/>
+					<feature name="Name"/>
+					<feature name="Insurances"/>
+				</or>
+			</and>
+			<and mandatory="true" name="Health Monitor">
+				<graphics key="collapsed" value="false"/>
+				<feature name="Show Data"/>
+			</and>
+			<and mandatory="true" name="Blood Donation">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="Donator">
+					<graphics key="collapsed" value="false"/>
+				</feature>
+				<and mandatory="true" name="DB    ">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Get clinics information"/>
+				</and>
+				<feature name="Send clinic information"/>
+			</and>
+			<and mandatory="true" name="Remote Triage">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="Patient       "/>
+				<feature name="Doctor"/>
+				<or mandatory="true" name="Triage request">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Condition type"/>
+					<feature name="Condition Information"/>
+				</or>
+				<and mandatory="true" name="DB">
+					<graphics key="collapsed" value="false"/>
+					<feature mandatory="true" name="Store Triage"/>
+				</and>
+			</and>
+			<and mandatory="true" name="Remote Device">
+				<or mandatory="true" name="Connectivity">
+					<feature name="Bluetooth"/>
+					<feature name="Cable"/>
+				</or>
+				<and name="Store">
+					<feature name="Cancel "/>
+				</and>
+			</and>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Fine</var>
+				<var>Payment</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Reject</var>
+				<var>Cancel operation</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Approve</var>
+				<var>Store Doctor Data</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Date</var>
+				<var>Store exam</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>
